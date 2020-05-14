@@ -17,4 +17,10 @@ function checkCredentials(){
 
 
 
+//////////////////////////////// New Account Class
+
+function createNewAccount(){
+
+}
+
 ////////////////////////////////

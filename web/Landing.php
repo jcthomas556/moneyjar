@@ -59,7 +59,7 @@ catch (PDOException $ex)
                             <div class="container">
                                 <br>
                                 <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="uname" required>
+                                <input type="text" placeholder="Enter Email" name="uname" required>
                                 <br>
                                 <label for="psw"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="psw" required>
@@ -76,15 +76,38 @@ catch (PDOException $ex)
                 </div>
         </div>
         <br><br>
-        <button>Create Account</button>
+        <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="/action_page.php">
+
+                        <div class="sign-in-background">
+                            <div class="container">
+                                <br>
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Email" name="uname" required>
+                                <br>
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                <br>
+                                <button type="submit" onclick=checkCredentials();createNewAccount()>Login</button>
+                                
+                            </div>
+                            <div class="container">
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                    </form>
+                </div>
     </div>
 
     <?php
-        $statement = $db->query('SELECT * FROM account');
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        {
-            echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
-        }
+        // $statement = $db->query('SELECT * FROM account');
+        // while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+        // {
+        //     echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
+        // }
     ?>
 
     </div>
