@@ -1,6 +1,7 @@
 <?php
 try
 {
+    echo 'f'$dbUrl;
   $dbUrl = getenv('DATABASE_URL');
 
   $dbOpts = parse_url($dbUrl);
