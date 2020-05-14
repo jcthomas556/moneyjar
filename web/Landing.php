@@ -79,6 +79,14 @@ catch (PDOException $ex)
         <button>Create Account</button>
     </div>
 
+    <?php
+        $statement = $db->query('SELECT * FROM account');
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+            echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
+        }
+    ?>
+
     </div>
 
 
