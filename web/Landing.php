@@ -33,9 +33,13 @@ catch (PDOException $ex)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 </head>
 
 <body class="background">
+
+    <?php echo 'hello'; ?>
 
     <div class="text-center">
         <h1>Money Jar</h1>
@@ -44,7 +48,7 @@ catch (PDOException $ex)
 
     <div class="container">
         <div class="text-center">
-            <h2>Sign in</h3>
+            <h2>Sign in</h2>
                 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
                 <!-- The Modal -->
@@ -72,11 +76,15 @@ catch (PDOException $ex)
                             <div class="container">
                                 <span class="psw">Forgot <a href="#">password?</a></span>
                             </div>
+                        </div>
                     </form>
                 </div>
-        </div>
-        <br><br>
-        <div id="id02" class="modal">
+                
+                
+                <br><br>
+
+                <button onclick="document.getElementById('id02').style.display='block'">Sign Up</button>
+                <div id="id02" class="modal">
                     <span onclick="document.getElementById('id02').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
 
@@ -86,21 +94,21 @@ catch (PDOException $ex)
                         <div class="sign-in-background">
                             <div class="container">
                                 <br>
-                                <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Email" name="uname" required>
+                                <label for="uname2"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Email" name="uname2" required>
                                 <br>
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                <label for="psw2"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw2" required>
                                 <br>
-                                <button type="submit" onclick=checkCredentials();createNewAccount()>Login</button>
+                                <button type="submit" onclick=checkCredentials();createNewAccount()>Sign Up</button>
                                 
                             </div>
-                            <div class="container">
-                                <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>
+                        </div>
                     </form>
                 </div>
+        </div>
     </div>
+            
 
     <?php
         // $statement = $db->query('SELECT * FROM account');
@@ -110,7 +118,7 @@ catch (PDOException $ex)
         // }
     ?>
 
-    </div>
+ 
 
 
     <script src="MoneyJar.js"></script>
