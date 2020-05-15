@@ -20,8 +20,12 @@ include('database_connection.php');
 
 <body class="background">
 
-    <?php echo 'hello'; 
-    echo $_POST["email"];
+    <?php 
+    $email = $_POST["email"];
+    if($email = "admin@admin.com"){
+        echo 'hello';
+    }
+    
 ?>
     <div class="text-center">
         <h1>Money Jar</h1>
