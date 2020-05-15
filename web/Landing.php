@@ -21,10 +21,11 @@ include('database_connection.php');
 <body class="background">
 
     <?php 
-
+        
         $email = $_POST["email"];
-        if($email == "admin@admin.com"){
-            echo $email;
+        $password = $_POST["password"];
+        if($email == "admin@admin.com" && $password = "skeleton0"){
+            echo "login successful";
         }
     
     ?>
@@ -64,7 +65,7 @@ include('database_connection.php');
                                 <span class="psw">Forgot <a href="#">password?</a></span>
                             </div>
                         </div>
-                  
+                    </form>
                 </div>
                 
                 
@@ -75,7 +76,8 @@ include('database_connection.php');
                     <span onclick="document.getElementById('id02').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
 
-                   
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="/action_page.php">
 
                         <div class="sign-in-background">
                             <div class="container">
