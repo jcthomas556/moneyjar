@@ -21,7 +21,7 @@ include('database_connection.php');
 <body class="background">
 
     <?php echo 'hello'; 
-    echo $_POST["uname"];
+    echo $_POST["email"];
 ?>
     <div class="text-center">
         <h1>Money Jar</h1>
@@ -45,7 +45,7 @@ include('database_connection.php');
                             <div class="container">
                                 <br>
                                 <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Email" name="uname" required>
+                                <input type="text" placeholder="Enter Email" name="email" required>
                                 <br>
                                 <label for="psw"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="psw" required>
