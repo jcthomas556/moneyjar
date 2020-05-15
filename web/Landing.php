@@ -37,7 +37,7 @@ include('database_connection.php');
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
-                    <form class="modal-content animate" action="/action_page.php">
+                    <form class="modal-content animate" method="POST" action="/action_page.php">
 
                         <div class="sign-in-background">
                             <div class="container">
@@ -91,14 +91,14 @@ include('database_connection.php');
             
 
     <?php
+        echo $_POST["uname"];
 
 
-
-$statement = $db->query('SELECT * FROM accounts');
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        {
-            echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
-        }
+// $statement = $db->query('SELECT * FROM accounts');
+//         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+//         {
+//             echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
+//         }
     ?>
 
  
