@@ -20,8 +20,9 @@ include('database_connection.php');
 
 <body class="background">
 
-    <?php echo 'hello'; ?>
-
+    <?php echo 'hello'; 
+    echo $_POST["uname"];
+?>
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
@@ -92,7 +93,7 @@ include('database_connection.php');
             
 
     <?php
-        echo $_POST["uname"];
+     
 
 
 // $statement = $db->query('SELECT * FROM accounts');
