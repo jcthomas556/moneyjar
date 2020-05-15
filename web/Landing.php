@@ -28,7 +28,8 @@ include('database_connection.php');
         $logInRequest->bindValue(':password', $password, PDO::PARAM_INT);
         
         //$email == "admin@admin.com" && $password = "skeleton0"
-        if($logInRequest->execute() = $email){
+        //$result = $logInRequest->execute();
+        if($logInRequest->execute() == $email){
             echo "login successful";
         }
         else{
