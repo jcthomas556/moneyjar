@@ -23,7 +23,7 @@ include('database_connection.php');
     <?php 
      
         $email = $_POST["email"];
-        if($email = "admin@admin.com"){
+        if($email == "admin@admin.com"){
             echo $email;
         }
     
