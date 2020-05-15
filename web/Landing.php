@@ -111,11 +111,11 @@ catch (PDOException $ex)
             
 
     <?php
-        // $statement = $db->query('SELECT * FROM account');
-        // while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        // {
-        //     echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
-        // }
+        $statement = $db->query('SELECT * FROM accounts');
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+            echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
+        }
     ?>
 
  
