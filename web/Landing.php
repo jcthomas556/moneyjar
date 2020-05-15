@@ -21,12 +21,13 @@ include('database_connection.php');
 <body class="background">
 
     <?php 
-    $email = $_POST["email"];
-    if($email = "admin@admin.com"){
-        echo 'Unicorn';
-    }
+     
+        $email = $_POST["email"];
+        if($email = "admin@admin.com"){
+            echo $email;
+        }
     
-?>
+    ?>
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
