@@ -39,7 +39,7 @@ include('database_connection.php');
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
-                    <form class="modal-content animate" method="POST" action="/action_page.php">
+                    <form class="modal-content animate" method="POST" action="Landing.php">
 
                         <div class="sign-in-background">
                             <div class="container">
