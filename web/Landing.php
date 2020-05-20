@@ -36,28 +36,28 @@ include('database_connection.php');
         //     echo "Login Failed";
         // }
        
-        // foreach($db->query(
-        //     "SELECT user_id FROM accounts WHERE email=crypt('$email', email)", PDO::FETCH_ASSOC) as $holder)
-        //     {
-        //         if($holder['user_id'] > 0){
-        //             echo 'Successfully logged in, welcome user ' . $holder['user_id'];
-        //         }
-        //     // echo "testTwo::";
-        //     // echo $holder['user_id'];
-        //     // echo "::hereTwo";
-        //     }
-        echo $email;
-echo $passwords;
-            foreach($db->query(
-                "SELECT user_id FROM accounts WHERE passwords='$passwords'", PDO::FETCH_ASSOC) as $holder)
-                {
-                    // if($holder['user_id'] > 0){
-                    //     echo 'Successfully logged in, welcome user ' . $holder['user_id'];
-                    // }
-                echo "testTwo::";
-                echo $holder['user_id'];
-                echo "::hereTwo";
+        foreach($db->query(
+            "SELECT user_id FROM accounts WHERE email=crypt('$email', email) AND passwords='$passwords'", PDO::FETCH_ASSOC) as $holder)
+            {
+                if($holder['user_id'] > 0){
+                    echo 'Successfully logged in, welcome user ' . $holder['user_id'];
                 }
+            // echo "testTwo::";
+            // echo $holder['user_id'];
+            // echo "::hereTwo";
+            }
+//         echo $email;
+// echo $passwords;
+//             foreach($db->query(
+//                 "SELECT user_id FROM accounts WHERE passwords='$passwords'", PDO::FETCH_ASSOC) as $holder)
+//                 {
+//                     // if($holder['user_id'] > 0){
+//                     //     echo 'Successfully logged in, welcome user ' . $holder['user_id'];
+//                     // }
+//                 echo "testTwo::";
+//                 echo $holder['user_id'];
+//                 echo "::hereTwo";
+//                 }
             
 
 // password=crypt('skeleton0', password)
