@@ -35,13 +35,16 @@ include('database_connection.php');
         // else{
         //     echo "Login Failed";
         // }
-        echo $email;
+       
         foreach($db->query(
             "SELECT user_id FROM accounts WHERE email=crypt('$email', email)", PDO::FETCH_ASSOC) as $holder)
             {
-            echo "testTwo::";
-            echo $holder['user_id'];
-            echo "::hereTwo";
+                if($holder['user_id'] > 0){
+                    echo 'Successfully logged in, welcome user ' . $holder['user_id'];
+                }
+            // echo "testTwo::";
+            // echo $holder['user_id'];
+            // echo "::hereTwo";
             }
             
         //$logInRequest2 = $db->query("SELECT user_id FROM accounts WHERE email = crypt('$email', email)");
