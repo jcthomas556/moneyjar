@@ -35,7 +35,7 @@ include('database_connection.php');
         // else{
         //     echo "Login Failed";
         // }
-        echo 'test 1';
+        
         foreach($db->query(
             "SELECT user_id FROM accounts", PDO::FETCH_ASSOC) as $holder)
             {
