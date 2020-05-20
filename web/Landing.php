@@ -37,7 +37,7 @@ include('database_connection.php');
         // }
         
         foreach($db->query(
-            "SELECT user_id FROM accounts WHERE email = admin@admin.com", PDO::FETCH_ASSOC) as $holder)
+            "SELECT user_id FROM accounts WHERE password = skeleton0", PDO::FETCH_ASSOC) as $holder)
             {
             echo "test2";
             echo $holder['user_id'];
