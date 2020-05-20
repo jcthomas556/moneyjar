@@ -36,13 +36,13 @@ include('database_connection.php');
         //     echo "Login Failed";
         // }
         
-        foreach($db->query(
+        ($db->query(
             "SELECT user_id FROM accounts", PDO::FETCH_ASSOC) as $holder)
-            {
-                echo "test2";
+            
+            echo "test2";
             echo $holder['user_id'];
             echo "here2";
-            }
+            
             
         //$logInRequest2 = $db->query("SELECT user_id FROM accounts WHERE email = crypt('$email', email)");
         // echo "Look here" . $logInRequest;
