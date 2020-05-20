@@ -36,8 +36,9 @@ include('database_connection.php');
         //     echo "Login Failed";
         // }
 
-
-        $logInRequest2 = $db->query('SELECT user_id FROM accounts WHERE email = crypt('$email', email)');
+        foreach($db->query(
+            "SELECT user_id FROM accounts WHERE email = crypt('$email', email)", PDO::FETCH_ASSOC) as $holder)
+        //$logInRequest2 = $db->query("SELECT user_id FROM accounts WHERE email = crypt('$email', email)");
         // echo "Look here" . $logInRequest;
     
     ?>
