@@ -40,7 +40,7 @@ include('database_connection.php');
             "SELECT user_id FROM accounts WHERE email = crypt('$email', email)", PDO::FETCH_ASSOC) as $holder)
             {
                 echo "test";
-            echo $holder;
+            echo $holder['user_id'];
             echo "here";
             }
             
