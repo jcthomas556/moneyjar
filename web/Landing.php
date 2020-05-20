@@ -21,20 +21,24 @@ include('database_connection.php');
 <body class="background">
 
     <?php 
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $logInRequest = $db->prepare('SELECT user_id FROM accounts WHERE user_id=:email AND password =:password');
-        $logInRequest->bindValue(':email', $email, PDO::PARAM_INT);
-        $logInRequest->bindValue(':password', $password, PDO::PARAM_INT);
+        // $email = $_POST["email"];
+        // $password = $_POST["password"];
+        // $logInRequest = $db->prepare('SELECT user_id FROM accounts WHERE email=:email AND password =:password');
+        // $logInRequest->bindValue(':email', $email, PDO::PARAM_INT);
+        // $logInRequest->bindValue(':password', $password, PDO::PARAM_INT);
         
-        //$email == "admin@admin.com" && $password = "skeleton0"
-        //$result = $logInRequest->execute();
-        if($logInRequest->execute() == $email){
-            echo "login successful";
-        }
-        else{
-            echo "Login Failed";
-        }
+        // //$email == "admin@admin.com" && $password = "skeleton0"
+        // //$result = $logInRequest->execute();
+        // if($logInRequest->execute() == $email){
+        //     echo "login successful";
+        // }
+        // else{
+        //     echo "Login Failed";
+        // }
+
+
+        $logInRequest2 = $db->query('SELECT user_id FROM accounts WHERE email = crypt('$email', email)');
+        echo "Look here" . $logInRequest;
     
     ?>
     <div class="text-center">
