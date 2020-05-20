@@ -37,11 +37,11 @@ include('database_connection.php');
         // }
         $email = "admin@admin.com";
         foreach($db->query(
-            "SELECT user_id FROM accounts WHERE email=crypt(''$email', email)''", PDO::FETCH_ASSOC) as $holder)
+            "SELECT user_id FROM accounts WHERE email=crypt(''$email'', email)", PDO::FETCH_ASSOC) as $holder)
             {
-            echo "test2";
+            echo "testTwo::";
             echo $holder['user_id'];
-            echo "here2";
+            echo "::hereTwo";
             }
             
         //$logInRequest2 = $db->query("SELECT user_id FROM accounts WHERE email = crypt('$email', email)");
