@@ -51,7 +51,7 @@ include('database_connection.php');
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
-        <?php> echo "hello"; ?>
+       
     </div>
 
     <div class="container">
