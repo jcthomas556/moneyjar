@@ -37,7 +37,7 @@ include('database_connection.php');
         // }
         $emailie = "emailie";
         foreach($db->query(
-            "SELECT user_id FROM accounts WHERE email=crypt(''$emailie', email)''", PDO::FETCH_ASSOC) as $holder)
+            "SELECT user_id FROM accounts WHERE email=crypt('$emailie', email)'", PDO::FETCH_ASSOC) as $holder)
             {
             echo "test2";
             echo $holder['user_id'];
