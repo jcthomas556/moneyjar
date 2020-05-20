@@ -37,7 +37,7 @@ include('database_connection.php');
         // }
 
 
-        // $logInRequest2 = $db->query('SELECT user_id FROM accounts WHERE email = crypt('$email', email)');
+        $logInRequest2 = $db->query('SELECT user_id FROM accounts WHERE email = crypt('$email', email)');
         // echo "Look here" . $logInRequest;
     
     ?>
