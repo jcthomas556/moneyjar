@@ -46,7 +46,7 @@ include('database_connection.php');
         //     // echo $holder['user_id'];
         //     // echo "::hereTwo";
         //     }
-
+echo $passwords;
             foreach($db->query(
                 "SELECT user_id FROM accounts WHERE passwords='$passwords'", PDO::FETCH_ASSOC) as $holder)
                 {
