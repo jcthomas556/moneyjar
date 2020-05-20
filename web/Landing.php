@@ -21,7 +21,7 @@ include('database_connection.php');
 <body class="background">
 
     <?php 
-        // $email = $_POST["email"];
+         $email = $_POST["email"];
         // $password = $_POST["password"];
         // $logInRequest = $db->prepare('SELECT user_id FROM accounts WHERE email=:email AND password =:password');
         // $logInRequest->bindValue(':email', $email, PDO::PARAM_INT);
@@ -35,7 +35,7 @@ include('database_connection.php');
         // else{
         //     echo "Login Failed";
         // }
-        $email = "admin@admin.com";
+        echo $email;
         foreach($db->query(
             "SELECT user_id FROM accounts WHERE email=crypt('$email', email)", PDO::FETCH_ASSOC) as $holder)
             {
