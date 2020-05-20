@@ -48,7 +48,7 @@ include('database_connection.php');
         //     }
 
             foreach($db->query(
-                "SELECT user_id FROM accounts WHERE 'password'='bobby'", PDO::FETCH_ASSOC) as $holder)
+                "SELECT user_id FROM accounts WHERE password='bobby'", PDO::FETCH_ASSOC) as $holder)
                 {
                     // if($holder['user_id'] > 0){
                     //     echo 'Successfully logged in, welcome user ' . $holder['user_id'];
