@@ -35,7 +35,7 @@ include('database_connection.php');
         // else{
         //     echo "Login Failed";
         // }
-        $emaily = "emailie";
+        $emailie = "emailie";
         foreach($db->query(
             "SELECT user_id FROM accounts WHERE email='$emailie'", PDO::FETCH_ASSOC) as $holder)
             {
