@@ -2,7 +2,7 @@ drop table accounts;
 
 CREATE TABLE accounts(
 	user_id serial PRIMARY KEY,
-	password TEXT NOT NULL,
+	passwords TEXT NOT NULL,
 	email TEXT UNIQUE NOT NULL,
 	created_on TIMESTAMP NOT NULL	
 );
@@ -10,7 +10,7 @@ CREATE TABLE accounts(
 
 
 INSERT into accounts (
-    password,
+    passwords,
     email,
     created_on
 )
@@ -20,8 +20,23 @@ VALUES(
     CURRENT_DATE
 );
 
+INSERT into accounts (
+    passwords,
+    email,
+    created_on
+)
+VALUES(
+    'bobby',
+    'emailie',
+    CURRENT_DATE
+);
 
-SELECT user_id
-FROM accounts
-WHERE password = crypt('skeleton0', password)
-AND email = crypt('admin@admin.com', email);
+
+-- SELECT user_id
+-- FROM accounts
+-- WHERE password = crypt('skeleton0', password)
+-- AND email = crypt('admin@admin.com', email);
+
+-- SELECT user_id
+-- FROM accounts
+-- WHERE email = crypt('admin@admin.com', email);
