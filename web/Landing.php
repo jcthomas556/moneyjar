@@ -49,16 +49,10 @@ include('database_connection.php');
         //     }
 
         $db->query(
-            "INSERT INTO accounts 
-            (
-                passwords,
-                email,
-                user_name
-            )
-            VALUES
-            (
-                crypt('$passwords', gen_salt('bf')),
-                crypt('$email', gen_salt('bf')),
+            "INSERT INTO accounts (passwords, email, user_name)
+            VALUES(
+                'crypt('$passwords', gen_salt('bf'))',
+                'crypt('$email', gen_salt('bf'))',
                 '$name')"
                 
             ); 
