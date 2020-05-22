@@ -37,23 +37,23 @@ include('database_connection.php');
 
     //new Account code
 
-            $name = $_POST["name"];
+        $name = $_POST["name"];
 
-        $db->query(
-            "INSERT into accounts 
-            (
-                passwords,
-                email,
-                user_name,
-                created_on
-            )
-            VALUES
-            (
-                crypt('$passwords', gen_salt('bf')),
-                crypt('$email', gen_salt('bf')),
-                '$name',
-                CURRENT_DATE"
-        );
+        // $db->query(
+        //     "INSERT into accounts 
+        //     (
+        //         passwords,
+        //         email,
+        //         user_name,
+        //         created_on
+        //     )
+        //     VALUES
+        //     (
+        //         crypt('$passwords', gen_salt('bf')),
+        //         crypt('$email', gen_salt('bf')),
+        //         '$name',
+        //         CURRENT_DATE"
+        // );
 
     ?>
     <div class="text-center">
