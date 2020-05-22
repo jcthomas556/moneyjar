@@ -53,7 +53,7 @@ include('database_connection.php');
         $db->query(
             "INSERT INTO accounts (passwords, email, user_name)
             VALUES(
-                'crypt('$passwords', gen_salt('bf'))',
+                crypt('$passwords', gen_salt('bf')),
                 '$email',
                 '$name')"
                 
