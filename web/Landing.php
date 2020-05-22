@@ -40,23 +40,23 @@ include('database_connection.php');
 
     //new Account code
 
-        $name = $_POST["name2"];
-         $email = $_POST["email2"];
-         $passwords = $_POST["password2"];
-       echo $name;
-       echo $email;
-       echo $passwords;
+    //     $name = $_POST["name2"];
+    //      $email = $_POST["email2"];
+    //      $passwords = $_POST["password2"];
+    //    echo $name;
+    //    echo $email;
+    //    echo $passwords;
 
     
-        $db->query(
-            "INSERT INTO accounts (passwords, email, user_name, created_on)
-            VALUES(
-                '$passwords',
-                '$email', 
-                '$name',
-                CURRENT_DATE)"
+    //     $db->query(
+    //         "INSERT INTO accounts (passwords, email, user_name, created_on)
+    //         VALUES(
+    //             '$passwords',
+    //             '$email', 
+    //             '$name',
+    //             CURRENT_DATE)"
                 
-            ); 
+    //         ); 
 
 
 
