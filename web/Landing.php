@@ -33,8 +33,7 @@ include('database_connection.php');
                     echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                 }
             }
-    ?>
-    <?php
+    
 
     //new Account code
 
