@@ -55,18 +55,18 @@ include('database_connection.php');
             (
                 passwords,
                 email,
-                user_name,
-                created_on
+                user_name
             )
             VALUES
             (
                 'passworsd',
                 'emails',
-                'jac',
+                'jac',"
                 -- crypt('$passwords', gen_salt('bf')),
                 -- crypt('$email', gen_salt('bf')),
                 -- '$name',
-                CURRENT_DATE", PDO::FETCH_ASSOC) as $row)
+                //CURRENT_DATE"
+                , PDO::FETCH_ASSOC) as $row)
             {
                 echo "success";
             }
