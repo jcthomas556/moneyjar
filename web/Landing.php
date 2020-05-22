@@ -60,9 +60,9 @@ include('database_connection.php');
                 'passworsd',
                 'emails',
                 'jac')"
-                -- // -- crypt('$passwords', gen_salt('bf')),
-                -- // -- crypt('$email', gen_salt('bf')),
-                -- // -- '$name',
+                 // -- crypt('$passwords', gen_salt('bf')),
+                 // -- crypt('$email', gen_salt('bf')),
+                 // -- '$name',
                 
             ); 
          
