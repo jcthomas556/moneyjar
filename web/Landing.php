@@ -60,11 +60,12 @@ include('database_connection.php');
             )
             VALUES
             (
-                'passworsd'
-                'emails'
+                'passworsd',
+                'emails',
+                'jac',
                 -- crypt('$passwords', gen_salt('bf')),
                 -- crypt('$email', gen_salt('bf')),
-                '$name',
+                -- '$name',
                 CURRENT_DATE", PDO::FETCH_ASSOC) as $row)
             {
                 echo "success";
