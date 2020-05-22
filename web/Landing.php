@@ -39,33 +39,34 @@ include('database_connection.php');
     //new Account code
 
         $name = $_POST["name"];
-
-
-        foreach($db->query(
-            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
-            {
-                if($holder['user_id'] > 0){
-                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                }
-            }
+        $email = $_POST["email"];
+        $passwords = $_POST["password"];
 
         // foreach($db->query(
-        //     "INSERT into accounts 
-        //     (
-        //         passwords,
-        //         email,
-        //         user_name,
-        //         created_on
-        //     )
-        //     VALUES
-        //     (
-        //         crypt('$passwords', gen_salt('bf')),
-        //         crypt('$email', gen_salt('bf')),
-        //         '$name',
-        //         CURRENT_DATE", PDO::FETCH_ASSOC) as $row)
+        //     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
         //     {
-        //         echo "success";
+        //         if($holder['user_id'] > 0){
+        //             echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+        //         }
         //     }
+
+        foreach($db->query(
+            "INSERT into accounts 
+            (
+                passwords,
+                email,
+                user_name,
+                created_on
+            )
+            VALUES
+            (
+                crypt('$passwords', gen_salt('bf')),
+                crypt('$email', gen_salt('bf')),
+                '$name',
+                CURRENT_DATE", PDO::FETCH_ASSOC) as $row)
+            {
+                echo "success";
+            }
         
 
     ?>
