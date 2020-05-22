@@ -44,8 +44,7 @@ include('database_connection.php');
          $email2 = $_POST["email2"];
          $passwords2 = $_POST["password2"];
        echo $name;
-       echo $email;
-       echo $passwords;
+       
 
     
         $db->query(
