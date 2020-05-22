@@ -40,7 +40,7 @@ include('database_connection.php');
 
     //new Account code
 
-        $name = $_POST["name"];
+        $name = $_POST["name2"];
         // $email = $_POST["email"];
         // $passwords = $_POST["password"];
        echo $name;
@@ -118,7 +118,7 @@ include('database_connection.php');
                             <div class="container">
                                 <br>
                                 <label for="name"><b>Name</b></label>
-                                <input type="text" placeholder="Enter Name" name="name" required>
+                                <input type="text" placeholder="Enter Name" name="name2" required>
                                 <br>
                                 <label for="email"><b>Email Address</b></label>
                                 <input type="text" placeholder="Enter Email" name="email2" required>
