@@ -26,16 +26,16 @@ include('database_connection.php');
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-        $email = $_POST["email"];
-        $passwords = $_POST["password"];
+        // $email = $_POST["email"];
+        // $passwords = $_POST["password"];
     
-        foreach($db->query(
-            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
-            {
-                if($holder['user_id'] > 0){
-                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                }
-            }
+        // foreach($db->query(
+        //     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
+        //     {
+        //         if($holder['user_id'] > 0){
+        //             echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+        //         }
+        //     }
     
 
     //new Account code
@@ -124,7 +124,7 @@ include('database_connection.php');
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
-                    <form class="modal-content animate" action="Landing.php">
+                    <form class="modal-content animate" method="POST" action="Landing.php">
 
                         <div class="sign-in-background">
                             <div class="container">
