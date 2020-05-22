@@ -50,8 +50,8 @@ include('database_connection.php');
         //         }
         //     }
 
-        foreach($db->query(
-            "INSERT into accounts 
+        $db->query(
+            "INSERT INTO accounts 
             (
                 passwords,
                 email,
@@ -61,15 +61,13 @@ include('database_connection.php');
             (
                 'passworsd',
                 'emails',
-                'jac',"
-                // -- crypt('$passwords', gen_salt('bf')),
-                // -- crypt('$email', gen_salt('bf')),
-                // -- '$name',
-                //CURRENT_DATE"
-                , PDO::FETCH_ASSOC) as $row)
-            {
-                echo "success";
-            }
+                'jac')"
+                -- // -- crypt('$passwords', gen_salt('bf')),
+                -- // -- crypt('$email', gen_salt('bf')),
+                -- // -- '$name',
+                
+            ); 
+         
         
 
     ?>
