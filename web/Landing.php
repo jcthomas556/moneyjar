@@ -116,13 +116,13 @@ include('database_connection.php');
                             <div class="container">
                                 <br>
                                 <label for="name"><b>Name</b></label>
-                                <input type="text" placeholder="Enter Name" name="name2" required>
+                                <input type="text" placeholder="Enter Name" name="name" required>
                                 <br>
                                 <label for="email"><b>Email Address</b></label>
-                                <input type="text" placeholder="Enter Email" name="email2" required>
+                                <input type="text" placeholder="Enter Email" name="email" required>
                                 <br>
                                 <label for="password"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="password2" required>
+                                <input type="password" placeholder="Enter Password" name="password" required>
                                 <br>
                                 <button type="submit" onclick=checkCredentials()>Sign Up</button>
                                 
