@@ -53,9 +53,9 @@ include('database_connection.php');
         $db->query(
             "INSERT INTO accounts (passwords, email, user_name)
             VALUES(
-               'word',
-               'word',
-                'word')"
+               '$passwords',
+               '$email',
+                '$name')"
                 
             ); 
          
