@@ -40,23 +40,23 @@ include('database_connection.php');
 
     //new Account code
 
-    //     $name = $_POST["name2"];
-    //      $email = $_POST["email2"];
-    //      $passwords = $_POST["password2"];
-    //    echo $name;
-    //    echo $email;
-    //    echo $passwords;
+        $name = $_POST["name2"];
+         $email2 = $_POST["email2"];
+         $passwords2 = $_POST["password2"];
+       echo $name;
+       echo $email;
+       echo $passwords;
 
     
-    //     $db->query(
-    //         "INSERT INTO accounts (passwords, email, user_name, created_on)
-    //         VALUES(
-    //             '$passwords',
-    //             '$email', 
-    //             '$name',
-    //             CURRENT_DATE)"
+        $db->query(
+            "INSERT INTO accounts (passwords, email, user_name, created_on)
+            VALUES(
+                '$passwords2',
+                '$email2', 
+                '$name',
+                CURRENT_DATE)"
                 
-    //         ); 
+            ); 
 
 
 
@@ -118,7 +118,7 @@ include('database_connection.php');
                             <div class="container">
                                 <br>
                                 <label for="name"><b>Name</b></label>
-                                <input type="text" placeholder="Enter Name" name="name2" required>
+                                <input type="text" placeholder="Enter Name" name="name" required>
                                 <br>
                                 <label for="email"><b>Email Address</b></label>
                                 <input type="text" placeholder="Enter Email" name="email2" required>
