@@ -28,22 +28,23 @@ include('database_connection.php');
 
          $email = $_POST["email"];
          $passwords = $_POST["password"];
-    
+     $name = $_POST["name2"];
+         $email2 = $_POST["email2"];
+         $passwords2 = $_POST["password2"];
+       
         foreach($db->query(
             "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
             {
                 if($holder['user_id'] > 0){
                     echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+                    echo $name;
                 }
             }
     
 
     //new Account code
 
-        $name = $_POST["name2"];
-         $email2 = $_POST["email2"];
-         $passwords2 = $_POST["password2"];
-       echo $name;
+       
        
 
     
