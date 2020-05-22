@@ -54,12 +54,17 @@ include('database_connection.php');
         $db->query(
             "INSERT INTO accounts (passwords, email, user_name, created_on)
             VALUES(
-                crypt('$passwords', gen_salt('bf')),
-                crypt('$email', gen_salt('bf')), 
+                '$passwords',
+                '$email', 
                 '$name',
                 CURRENT_DATE)"
                 
             ); 
+
+            // crypt('$passwords', gen_salt('bf')),
+            //     crypt('$email', gen_salt('bf')), 
+            //     '$name',
+            //     CURRENT_DATE)"
                
 
 
