@@ -21,51 +21,40 @@ include('database_connection.php');
 <body class="background">
 
     <?php 
-         $email = $_POST["email"];
-         $passwords = $_POST["password"];
-        // $logInRequest = $db->prepare('SELECT user_id FROM accounts WHERE email=:email AND password =:password');
-        // $logInRequest->bindValue(':email', $email, PDO::PARAM_INT);
-        // $logInRequest->bindValue(':password', $password, PDO::PARAM_INT);
-        
-        // //$email == "admin@admin.com" && $password = "skeleton0"
-        // //$result = $logInRequest->execute();
-        // if($logInRequest->execute() == $email){
-        //     echo "login successful";
-        // }
-        // else{
-        //     echo "Login Failed";
-        // }
-       
+    //Log In Code
+
+        $email = $_POST["email"];
+        $passwords = $_POST["password"];
+    
         foreach($db->query(
             "SELECT user_id FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
             {
                 if($holder['user_id'] > 0){
                     echo 'Successfully logged in, welcome user ' . $holder['user_id'];
                 }
-            // echo "testTwo::";
-            // echo $holder['user_id'];
-            // echo "::hereTwo";
             }
-//         echo $email;
-// echo $passwords;
-//             foreach($db->query(
-//                 "SELECT user_id FROM accounts WHERE passwords='$passwords'", PDO::FETCH_ASSOC) as $holder)
-//                 {
-//                     // if($holder['user_id'] > 0){
-//                     //     echo 'Successfully logged in, welcome user ' . $holder['user_id'];
-//                     // }
-//                 echo "testTwo::";
-//                 echo $holder['user_id'];
-//                 echo "::hereTwo";
-//                 }
-            
-
-// password=crypt('skeleton0', password)
-
-
-        //$logInRequest2 = $db->query("SELECT user_id FROM accounts WHERE email = crypt('$email', email)");
-        // echo "Look here" . $logInRequest;
     
+
+    //new Account code
+
+            $name = $_POST["name"];
+
+        $db->query(
+            "INSERT into accounts 
+            (
+                passwords,
+                email,
+                user_name,
+                created_on
+            )
+            VALUES
+            (
+                crypt('$passwords', gen_salt('bf')),
+                crypt('$email', gen_salt('bf')),
+                '$name',
+                CURRENT_DATE"
+        );
+
     ?>
     <div class="text-center">
         <h1>Money Jar</h1>
@@ -121,11 +110,14 @@ include('database_connection.php');
                         <div class="sign-in-background">
                             <div class="container">
                                 <br>
-                                <label for="uname2"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Email" name="uname2" required>
+                                <label for="name"><b>Name</b></label>
+                                <input type="text" placeholder="Enter Name" name="name" required>
                                 <br>
-                                <label for="psw2"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw2" required>
+                                <label for="email"><b>Email Address</b></label>
+                                <input type="text" placeholder="Enter Email" name="email" required>
+                                <br>
+                                <label for="password"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="password" required>
                                 <br>
                                 <button type="submit" onclick=checkCredentials();createNewAccount()>Sign Up</button>
                                 
