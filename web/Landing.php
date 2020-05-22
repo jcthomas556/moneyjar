@@ -27,10 +27,10 @@ include('database_connection.php');
         $passwords = $_POST["password"];
     
         foreach($db->query(
-            "SELECT user_id FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
+            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
             {
                 if($holder['user_id'] > 0){
-                    echo 'Successfully logged in, welcome user ' . $holder['user_id'];
+                    echo 'Successfully logged in, welcome user ' . $holder['user_name'];
                 }
             }
     
