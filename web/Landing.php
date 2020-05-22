@@ -125,7 +125,7 @@ include('database_connection.php');
                                 <label for="password"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="password2" required>
                                 <br>
-                                <button type="submit" onclick=checkCredentials()>Sign Up</button>
+                                <button type="submit" onclick=checkCredentials();>Sign Up</button>
                                 
                             </div>
                         </div>
