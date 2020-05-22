@@ -37,9 +37,9 @@ VALUES(
 );
 
 
--- SELECT user_id
+-- SELECT user_id, user_name
 -- FROM accounts
--- WHERE password = crypt('skeleton0', password)
+-- WHERE passwords = crypt('skeleton0', passwords)
 -- AND email = crypt('admin@admin.com', email);
 
 -- SELECT user_id

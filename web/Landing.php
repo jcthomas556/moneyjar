@@ -22,6 +22,7 @@ include('database_connection.php');
 
     <?php 
     //Log In Code
+    
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -40,7 +41,7 @@ include('database_connection.php');
     //new Account code
 
         $name = $_POST["name"];
-       
+       echo $name;
 
         // foreach($db->query(
         //     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
