@@ -23,6 +23,8 @@ include('database_connection.php');
     <?php 
     //Log In Code
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
         $email = $_POST["email"];
         $passwords = $_POST["password"];
     
@@ -59,6 +61,9 @@ include('database_connection.php');
          
             // 'crypt('$passwords', gen_salt('bf'))',
             // 'crypt('$email', gen_salt('bf'))',        
+
+
+        }
 
     ?>
     <div class="text-center">
