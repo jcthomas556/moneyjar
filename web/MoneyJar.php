@@ -26,7 +26,11 @@ window.onclick = function(event) {
 //  });
 // }
 
-
+function checkCredentials(){
+  <?php 
+    login();
+    ?>
+}
 
 
 
