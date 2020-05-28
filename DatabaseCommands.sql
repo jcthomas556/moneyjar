@@ -37,11 +37,20 @@ VALUES(
 );
 
 
--- SELECT user_id, user_name
--- FROM accounts
--- WHERE passwords = crypt('skeleton0', passwords)
--- AND email = crypt('admin@admin.com', email);
+INSERT INTO accounts (passwords, email, user_name, created_on)
+            VALUES(
+                crypt('Dan', gen_salt('bf')),
+                crypt('Dan@gmail.com', gen_salt('bf')), 
+                'Dan',
+                CURRENT_DATE)
 
--- SELECT user_id
--- FROM accounts
--- WHERE email = crypt('admin@admin.com', email);
+
+SELECT user_id, user_name
+FROM accounts
+WHERE passwords = crypt('skeleton0', passwords)
+AND email = crypt('admin@admin.com', email);
+
+
+SELECT user_id
+FROM accounts
+WHERE email = crypt('ken@gmail.com', email);

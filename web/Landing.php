@@ -28,7 +28,15 @@ include('database_connection.php');
 
          $email = $_POST["email"];
          $passwords = $_POST["password"];
-    
+
+         $name = $_POST["name2"];
+         $email2 = $_POST["email2"];
+         $passwords2 = $_POST["password2"];
+         echo $name;
+    }
+
+
+    function login(){
         foreach($db->query(
             "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
             {
@@ -36,17 +44,10 @@ include('database_connection.php');
                     echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                 }
             }
-    
+        }
 
-    //new Account code
 
-        $name = $_POST["name2"];
-         $email2 = $_POST["email2"];
-         $passwords2 = $_POST["password2"];
-       echo $name;
-       
-
-    
+    function signUp(){    
         $db->query(
             "INSERT INTO accounts (passwords, email, user_name, created_on)
             VALUES(
@@ -57,9 +58,9 @@ include('database_connection.php');
                 
             ); 
 
-
-
         }
+
+        
 
     ?>
     <div class="text-center">
