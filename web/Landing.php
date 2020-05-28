@@ -42,8 +42,9 @@ include('database_connection.php');
          echo $passwords2;
          echo $name;
 
+         //if there is no name, run the login code
          if($name == ""){
-             echo "NoName";
+            login();
          }
    
 
