@@ -37,6 +37,9 @@ include('database_connection.php');
 
          echo $email;
          echo $passwords;
+
+         echo $email2;
+         echo $passwords2;
          echo $name;
     }
 
