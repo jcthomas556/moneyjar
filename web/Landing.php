@@ -25,7 +25,7 @@ include('database_connection.php');
     
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+        echo "test";
          $email = $_POST["email"];
          $passwords = $_POST["password"];
 
