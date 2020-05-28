@@ -22,15 +22,7 @@ include('database_connection.php');
 
     <?php 
     //Log In Code
-    function login(){
-        foreach($db->query(
-            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
-            {
-                if($holder['user_id'] > 0){
-                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                }
-            }
-        }
+   
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //echo "test";
@@ -58,11 +50,24 @@ include('database_connection.php');
                     if($holder['user_id'] > 0){
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
+                    else
+                        echo 'Credentials are incorrect, please try again';
                 }
          }
    
 
     }
+
+//why can't I call this from the if statement above?
+    function login(){
+        foreach($db->query(
+            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
+            {
+                if($holder['user_id'] > 0){
+                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+                }
+            }
+        }
 
 
    
