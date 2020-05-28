@@ -31,7 +31,7 @@ include('database_connection.php');
          $email = $_POST["email"];
          $passwords = $_POST["password"];
 
-         $name = $_POST["name2"];
+         $name = $_POST["name"];
          $email2 = $_POST["email2"];
          $passwords2 = $_POST["password2"];
 
