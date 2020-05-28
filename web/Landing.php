@@ -160,7 +160,7 @@ include('database_connection.php');
  
 
 
-    <script src="MoneyJar.js"></script>
+    <script src="MoneyJar.php"></script>
 </body>
 
 </html>
