@@ -51,7 +51,7 @@ include('database_connection.php');
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
                     else{
-                        echo 'Credentials are incorrect, please try again';
+                        echo 'UNNSuccessfully logged in, welcome;
                     }
                 }
          }
