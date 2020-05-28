@@ -161,6 +161,12 @@ include('database_connection.php');
 
 
     <script src="MoneyJar.js"></script>
+    
+    <script type="text/javascript">
+    alert("<?php echo "WOW" ?>");
+    <script type="text/javascript">
+    alert("<?php login()?>");
+    
 </body>
 
 </html>
