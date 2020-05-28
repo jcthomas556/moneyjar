@@ -22,10 +22,18 @@ include('database_connection.php');
 
     <?php 
     //Log In Code
-    
+    function login(){
+        foreach($db->query(
+            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
+            {
+                if($holder['user_id'] > 0){
+                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+                }
+            }
+        }
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        echo "test";
+        //echo "test";
         
 
          $email = $_POST["email"];
@@ -35,12 +43,12 @@ include('database_connection.php');
          $email2 = $_POST["email2"];
          $passwords2 = $_POST["password2"];
 
-         echo $email;
-         echo $passwords;
+        //  echo $email;
+        //  echo $passwords;
 
-         echo $email2;
-         echo $passwords2;
-         echo $name;
+        //  echo $email2;
+        //  echo $passwords2;
+        //  echo $name;
 
          //if there is no name, run the login code
          if($name == ""){
@@ -51,15 +59,7 @@ include('database_connection.php');
     }
 
 
-    function login(){
-        foreach($db->query(
-            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
-            {
-                if($holder['user_id'] > 0){
-                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                }
-            }
-        }
+   
 
 
     function signUp(){    
