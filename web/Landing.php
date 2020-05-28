@@ -50,7 +50,8 @@ include('database_connection.php');
                     if($holder['user_id'] > 0){
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
-                    else{
+                    //tODO, fix this negative check
+                    elseif($holder == ""){
                         echo 'UNNSuccessfully logged in, welcome';
                     }
                 }
