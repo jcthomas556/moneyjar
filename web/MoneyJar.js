@@ -16,15 +16,15 @@ window.onclick = function(event) {
 
 /////////////////////////////////Logon class
 
-function checkCredentials(){
-  $.ajax({
-    url:"Landing.php", //the page containing php script
-    type: "POST", //request type
-    success:function(result){
+// function checkCredentials(){
+//   $.ajax({
+//     url:"Landing.php", //the page containing php script
+//     type: "POST", //request type
+//     success:function(result){
      
-   }
- });
-}
+//    }
+//  });
+// }
 
 
 
