@@ -50,8 +50,9 @@ include('database_connection.php');
                     if($holder['user_id'] > 0){
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
-                    else
+                    else{
                         echo 'Credentials are incorrect, please try again';
+                    }
                 }
          }
    
