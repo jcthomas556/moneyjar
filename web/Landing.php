@@ -42,7 +42,7 @@ include('database_connection.php');
          echo $passwords2;
          echo $name;
 
-         if($name === ""){
+         if($name == ""){
              echo "NoName";
          }
    
