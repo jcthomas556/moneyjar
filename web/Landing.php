@@ -51,7 +51,7 @@ include('database_connection.php');
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
                     else{
-                        echo 'UNNSuccessfully logged in, welcome;
+                        echo 'UNNSuccessfully logged in, welcome';
                     }
                 }
          }
