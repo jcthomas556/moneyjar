@@ -57,11 +57,13 @@ include('database_connection.php');
                     //tODO, fix this negative check
                     
                 }
-                if($userSignedIn == false && $signInAttempted == true){
-                    echo 'Log in failed';
-                }
+                
                 // echo "...jumped query...";
-         }
+        }
+        
+        if($userSignedIn == false && $signInAttempted == true){
+            echo 'Log in failed';
+        }
          else{
             echo "made it in else";
             // $db->query(
