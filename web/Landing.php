@@ -28,6 +28,8 @@ include('database_connection.php');
 
         $userSignedIn = false;
         $signInAttempted = false;
+        $accountCreationAttempted = false;
+        $accountCreated = false;
 
          $email = $_POST["email"];
          $passwords = $_POST["password"];
@@ -51,6 +53,7 @@ include('database_connection.php');
                 }
         }
         else{//otherwise, they are signing up, run the sign up code.
+            $accountCreationAttempted = true;
             $db->query(
                 "INSERT INTO accounts (passwords, email, user_name, created_on)
                 VALUES(
@@ -60,8 +63,21 @@ include('database_connection.php');
                     CURRENT_DATE)"
                 ); 
             }
+            $db->query(
+                "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email2', email) AND passwords=crypt('$passwords2, passwords)", PDO::FETCH_ASSOC) as $holder2)
+                {
+                    if($holder2['user_id'] > 0){
+                        $accountCreated = true;
+                        echo 'Account created! Please sign in!';//TODO turn sign in into a function so it can be called here so the user doesn't have to sign in again.
+                    }
+                }
+                
+            )
          if($userSignedIn == false && $signInAttempted == true){
             echo 'Log in failed';
+        }
+        if($accountCreationAttempted == true && $accountCreated == true){
+            echo 'Account Creation Failed';
         }
     }   
     ?>
