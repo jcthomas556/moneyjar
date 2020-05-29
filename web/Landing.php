@@ -43,8 +43,8 @@ include('database_connection.php');
         //  echo $name;
 
          //if there is no name, run the login code
-         if($name == ""){
-             echo "...entered If...";
+         if($name == ""){          
+            
             foreach($db->query(
                 "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
                 {
@@ -58,6 +58,21 @@ include('database_connection.php');
                     }
                 }
                 echo "...jumped query...";
+         }
+         else{
+             echo "made it in else";
+            $db->query(
+                "INSERT INTO accounts (passwords, email, user_name, created_on)
+                VALUES(
+                    crypt('$passwords2', gen_salt('bf')),
+                    crypt('$email2', gen_salt('bf')),
+                    '$name',
+                    CURRENT_DATE)"
+                    
+                ); 
+    
+            }
+
          }
    
 
