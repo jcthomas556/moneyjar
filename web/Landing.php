@@ -62,7 +62,14 @@ include('database_connection.php');
                     '$name',
                     CURRENT_DATE)"
                 ); 
-                
+                foreach($db->query(
+                    "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
+                    {
+                        if($holder['user_id'] > 0){
+                            $userSignedIn = true;
+                            echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+                        }
+                    }
             }
             // foreach($db->query(
             //     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email2', email) AND passwords=crypt('$passwords2, passwords)", PDO::FETCH_ASSOC) as $holder2)
@@ -72,14 +79,7 @@ include('database_connection.php');
             //             echo 'Account created! Please sign in!';//TODO turn sign in into a function so it can be called here so the user doesn't have to sign in again.
             //         }
             //     }
-            foreach($db->query(
-                "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
-                {
-                    if($holder['user_id'] > 0){
-                        $userSignedIn = true;
-                        echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                    }
-                }
+            
                 
             
          if($userSignedIn == false && $signInAttempted == true){
