@@ -47,7 +47,8 @@ include('database_connection.php');
             foreach($db->query(
                 "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
                 {
-                    if(!$holder['user_id'] > 0){
+                    echo $holder['user_id'];
+                    if($holder['user_id'] > 0){
                         echo 'Log in Failed'
                     }
                     //tODO, fix this negative check
