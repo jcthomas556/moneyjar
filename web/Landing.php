@@ -60,11 +60,7 @@ include('database_connection.php');
                 
                 // echo "...jumped query...";
         }
-        
-        if($userSignedIn == false && $signInAttempted == true){
-            echo 'Log in failed';
-        }
-         else{
+        else{
             echo "made it in else";
             // $db->query(
             //     "INSERT INTO accounts (passwords, email, user_name, created_on)
@@ -79,6 +75,10 @@ include('database_connection.php');
             // }
 
          }
+
+         if($userSignedIn == false && $signInAttempted == true){
+            echo 'Log in failed';
+        }
    
 
     }
