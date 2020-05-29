@@ -25,7 +25,7 @@ include('database_connection.php');
    
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        //echo "test";
+
         $userSignedIn = false;
         $signInAttempted = false;
 
@@ -36,32 +36,21 @@ include('database_connection.php');
          $email2 = $_POST["email2"];
          $passwords2 = $_POST["password2"];
 
-        //  echo $email;
-        //  echo $passwords;
+   
 
-        //  echo $email2;
-        //  echo $passwords2;
-        //  echo $name;
-
-         //if there is no name, run the login code
+         //if there is no name, they must be logging in, run the login code
          if($name == ""){          
          $signInAttempted = true;
             foreach($db->query(
                 "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
                 {
-                   // echo "...entered foreach select...";
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
-                    //tODO, fix this negative check
-                    
                 }
-                
-                // echo "...jumped query...";
         }
-        else{
-        
+        else{//otherwise, they are signing up, run the sign up code.
             $db->query(
                 "INSERT INTO accounts (passwords, email, user_name, created_on)
                 VALUES(
@@ -69,51 +58,14 @@ include('database_connection.php');
                     crypt('$email2', gen_salt('bf')),
                     '$name',
                     CURRENT_DATE)"
-                    
                 ); 
-    
             }
-
-         
-
          if($userSignedIn == false && $signInAttempted == true){
             echo 'Log in failed';
         }
-   
-
-    }
-
-//why can't I call this from the if statement above?
-    function login(){
-        foreach($db->query(
-            "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
-            {
-                if($holder['user_id'] > 0){
-                    echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                }
-            }
-        }
-
-
-   
-
-
-    function signUp(){    
-        $db->query(
-            "INSERT INTO accounts (passwords, email, user_name, created_on)
-            VALUES(
-                crypt('$passwords2', gen_salt('bf')),
-                crypt('$email2', gen_salt('bf')),
-                '$name',
-                CURRENT_DATE)"
-                
-            ); 
-
-        }
-
-        
-
+    }   
     ?>
+
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
