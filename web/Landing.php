@@ -61,17 +61,17 @@ include('database_connection.php');
          }
          else{
              echo "made it in else";
-            $db->query(
-                "INSERT INTO accounts (passwords, email, user_name, created_on)
-                VALUES(
-                    crypt('$passwords2', gen_salt('bf')),
-                    crypt('$email2', gen_salt('bf')),
-                    '$name',
-                    CURRENT_DATE)"
+            // $db->query(
+            //     "INSERT INTO accounts (passwords, email, user_name, created_on)
+            //     VALUES(
+            //         crypt('$passwords2', gen_salt('bf')),
+            //         crypt('$email2', gen_salt('bf')),
+            //         '$name',
+            //         CURRENT_DATE)"
                     
-                ); 
+            //     ); 
     
-            }
+            // }
 
          }
    
