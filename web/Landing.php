@@ -27,6 +27,7 @@ include('database_connection.php');
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //echo "test";
         $userSignedIn = false;
+        $signInAttempted = false;
 
          $email = $_POST["email"];
          $passwords = $_POST["password"];
@@ -44,7 +45,7 @@ include('database_connection.php');
 
          //if there is no name, run the login code
          if($name == ""){          
-         
+         $signInAttempted = true;
             foreach($db->query(
                 "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
                 {
@@ -56,8 +57,8 @@ include('database_connection.php');
                     //tODO, fix this negative check
                     
                 }
-                if($userSignedIn == false){
-                    echo 'UNNSuccessfully logged in, welcome';
+                if($userSignedIn == false && $signInAttempted == true){
+                    echo 'Log in failed';
                 }
                 // echo "...jumped query...";
          }
