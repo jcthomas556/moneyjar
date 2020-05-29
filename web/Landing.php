@@ -61,23 +61,20 @@ include('database_connection.php');
                 // echo "...jumped query...";
         }
         else{
-            echo $passwords2;
-            echo $email2;
-            echo $name;
-
-            // $db->query(
-            //     "INSERT INTO accounts (passwords, email, user_name, created_on)
-            //     VALUES(
-            //         crypt('$passwords2', gen_salt('bf')),
-            //         crypt('$email2', gen_salt('bf')),
-            //         '$name',
-            //         CURRENT_DATE)"
+        
+            $db->query(
+                "INSERT INTO accounts (passwords, email, user_name, created_on)
+                VALUES(
+                    crypt('$passwords2', gen_salt('bf')),
+                    crypt('$email2', gen_salt('bf')),
+                    '$name',
+                    CURRENT_DATE)"
                     
-            //     ); 
+                ); 
     
-            // }
+            }
 
-         }
+         
 
          if($userSignedIn == false && $signInAttempted == true){
             echo 'Log in failed';
