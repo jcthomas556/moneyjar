@@ -52,7 +52,7 @@ include('database_connection.php');
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                     }
                     //tODO, fix this negative check
-                    elseif($holder === "Array"){
+                    else{
                         echo 'UNNSuccessfully logged in, welcome';
                     }
                 }
