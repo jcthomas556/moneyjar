@@ -62,7 +62,8 @@ include('database_connection.php');
                     '$name',
                     CURRENT_DATE)"
                 ); 
-            $db->query(
+                
+            foreach($db->query(
                 "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email2', email) AND passwords=crypt('$passwords2, passwords)", PDO::FETCH_ASSOC) as $holder2)
                 {
                     if($holder2['user_id'] > 0){
@@ -73,7 +74,7 @@ include('database_connection.php');
                 
             );
         }
-          
+           
          if($userSignedIn == false && $signInAttempted == true){
             echo 'Log in failed';
         }
