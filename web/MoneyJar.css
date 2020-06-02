@@ -71,3 +71,15 @@
     from {transform: scale(0)}
     to {transform: scale(1)}
   }
+
+
+  #cupboard {
+    border-radius: 25px;
+    background: lightgrey;
+    padding: 20px; 
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-right: 60px;;
+    width: auto;
+    height: auto;  
+  }
