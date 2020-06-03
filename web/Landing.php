@@ -52,7 +52,7 @@ include('database_connection.php');
                         $userSignedIn = true;
                         echo "<div style='background-color:blue;'>";
                         echo "<br><br><br><br><br><br>";
-                        echo "<p id='signedInMessage' style = 'color: red;'";
+                        echo "<p id='signedInMessage' style = 'color: red;'>";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                         echo "</p></div>";
 
