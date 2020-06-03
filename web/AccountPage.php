@@ -51,7 +51,7 @@ $username = $_SESSION['username'];
 
             echo '<h3> This is ';
             echo $username;
-            echo 's Account </h3>';
+            echo "'s Account </h3>";
         // $email = $_POST["email"];
         // $passwords = $_POST["password"];
 
