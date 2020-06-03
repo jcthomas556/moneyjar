@@ -48,9 +48,9 @@ include('database_connection.php');
                 {
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
-                        echo "<h1 id='signedInMessage' style = 'color: red;'";
+                        echo "<h2 id='signedInMessage' style = 'color: red;'";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                        echo "</h1>";
+                        echo "</h2>";
 
 
 
