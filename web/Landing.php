@@ -20,6 +20,8 @@ include('database_connection.php');
 
 <body class="background">
 
+<div style="background-color:blue;">
+
     <?php 
     //Log In Code
    
@@ -50,7 +52,7 @@ include('database_connection.php');
                         $userSignedIn = true;
                         echo "<p id='signedInMessage' style = 'color: red;'";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                        echo "</p>";
+                        echo "</p></div>";
 
 
 
