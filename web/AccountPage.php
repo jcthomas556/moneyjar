@@ -73,7 +73,7 @@ $username = $_SESSION['username'];
     
     
     <div class="text-center">
-        <h1>Account Page</h1>
+      
 
     </div>
 
