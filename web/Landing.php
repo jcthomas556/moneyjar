@@ -99,7 +99,7 @@ include('database_connection.php');
         }
     }   
     ?>
-
+</div>
     <button onclick="window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php'" type="button" class="btn btn-success pull-right" aria-label="right Align">
         <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
     </button>
