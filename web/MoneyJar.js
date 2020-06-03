@@ -34,7 +34,7 @@ function checkCredentials(){
 
 function checkUserAccount(){
     var checker = document.getElementById('signedInMessage');
-    if(checker == 'null'){
+    if(checker === 'null'){
       alert("Please sign in or sign up");
     }
     else{
