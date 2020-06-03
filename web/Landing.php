@@ -98,7 +98,7 @@ include('database_connection.php');
 
 
     <!-- My account page button -->
-    <form action = "", method = 'post'>
+    <form action = "AccountPage.php", method = 'post'>
         <button onclick="checkUserAccount()" type="submit" name="accountPageButton" class="btn btn-success pull-right" aria-label="right Align">
             <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
         </button>
