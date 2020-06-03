@@ -50,6 +50,9 @@ include('database_connection.php');
                 {
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
+                        session_start();
+                        $userName = $holder['user_name'];
+                        $_SESSION['username'] = $userName;
                                             
                         echo "<p id='signedInMessage';>";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
@@ -95,11 +98,11 @@ include('database_connection.php');
 
 
     <!-- My account page button -->
-    <form action="AccountPage.php" method="post">
-        <button onclick="checkUserAccount()" type="submit" name="accountPageButton" class="btn btn-success pull-right" aria-label="right Align">
-            <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
-        </button>
-    </form>
+    
+    <button onclick="checkUserAccount()" type="submit" name="accountPageButton" class="btn btn-success pull-right" aria-label="right Align">
+        <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
+    </button>
+
     <br><br>
 
 
