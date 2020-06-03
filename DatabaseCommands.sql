@@ -8,7 +8,26 @@ CREATE TABLE accounts(
 	created_on TIMESTAMP NOT NULL	
 );
 
+CREATE TABLE jars(
+    jar_id serial PRIMARY KEY,
+    user_id int references accounts(user_id),
+    jar_owner TEXT NOT NULL,
+    jar_total MONEY NOT NULL,
+    jar_active BOOLEAN NOT NULL
+);
 
+INSERT into jars(
+    user_id,
+    jar_owner,
+    jar_total,
+    jar_active
+)
+VALUES(
+    (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
+    (SELECT user_name FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
+    '34.43',
+    true
+);
 
 INSERT into accounts (
     passwords,
