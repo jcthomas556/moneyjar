@@ -39,9 +39,12 @@ include('database_connection.php');
         //echo $value;
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+            echo "made it to 1.";
+
         $email = $_POST["email"];
         $passwords = $_POST["password"];
 
+        echo "this is my email";
         echo $email;
 
         foreach($db->query(
