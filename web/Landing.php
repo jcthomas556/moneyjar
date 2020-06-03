@@ -20,7 +20,7 @@ include('database_connection.php');
 
 <body class="background">
 
-<div style="background-color:blue;">
+
 
     <?php 
     //Log In Code
@@ -50,6 +50,8 @@ include('database_connection.php');
                 {
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
+                        echo "<div style='background-color:blue;'>";
+                        echo "<br><br><br><br><br><br>"
                         echo "<p id='signedInMessage' style = 'color: red;'";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                         echo "</p></div>";
@@ -99,7 +101,7 @@ include('database_connection.php');
         }
     }   
     ?>
-</div>
+
     <button onclick="window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php'" type="button" class="btn btn-success pull-right" aria-label="right Align">
         <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
     </button>
