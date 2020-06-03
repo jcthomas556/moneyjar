@@ -96,7 +96,7 @@ include('database_connection.php');
 
     <!-- My account page button -->
 
-    <button onclick=checkUserAccount(); type="button" class="btn btn-success pull-right" aria-label="right Align">
+    <button onclick="checkUserAccount()" type="button" class="btn btn-success pull-right" aria-label="right Align">
         <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
     </button>
     <br><br>
