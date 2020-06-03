@@ -83,3 +83,7 @@
     width: auto;
     height: auto;  
   }
+
+  .signedInMessage{
+    color: blue;
+  }
