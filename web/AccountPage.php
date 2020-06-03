@@ -38,7 +38,7 @@ include('database_connection.php');
                     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email2', email) AND passwords=crypt('$passwords2', passwords)", PDO::FETCH_ASSOC) as $holder)
                     {
                         if($holder['user_id'] > 0){
-                            echo $holder['user_name'] "'s ";
+                            echo 'Account created! Successfully logged in, welcome, ' . $holder['user_name'];
                         }
                     }
     ?>
