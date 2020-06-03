@@ -34,6 +34,11 @@ include('database_connection.php');
 
     <!-- DB query for user details -->
     <?php
+        $value = $_POST['accountPageButton']
+
+        echo $value;
+
+
         foreach($db->query(
                     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email2', email) AND passwords=crypt('$passwords2', passwords)", PDO::FETCH_ASSOC) as $holder)
                     {
