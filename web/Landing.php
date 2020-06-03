@@ -48,8 +48,11 @@ include('database_connection.php');
                 {
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
-                        //echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                        echo "<p style='color:red;'>'Successfully logged in, welcome, '" . $holder['user_name']"</p>";
+                        
+                        //echo "<p style='color:red;'>'Successfully logged in, welcome, '" . $holder['user_name']"</p>";
+                        echo "<p style = 'color: red;'";
+                        echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+                        echo "</p>";
                     }
                 }
         }
