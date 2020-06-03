@@ -48,11 +48,9 @@ include('database_connection.php');
                 {
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
-                        
-                        //echo "<p style='color:red;'>'Successfully logged in, welcome, '" . $holder['user_name']"</p>";
-                        echo "<p style = 'color: red;'";
+                        //echo "<p style = 'color: red;'";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                        echo "</p>";
+                        //echo "</p>";
                     }
                 }
         }
@@ -78,7 +76,7 @@ include('database_connection.php');
                     
                 
             
-         if($userSignedIn == false && $signInAttempted == true){
+        if($userSignedIn == false && $signInAttempted == true){
             echo 'Log in failed';
         }
         if($accountCreationAttempted == true && $accountCreated == true){
