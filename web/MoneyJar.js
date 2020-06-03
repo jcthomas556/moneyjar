@@ -30,10 +30,11 @@ function checkCredentials(){
 
 
 
-//////////////////////////////// New Account Class
+//////////////////////////////// Check user account Class
 
-function createNewAccount(){
-
+function checkUserAccount(){
+  alert("Here we go");
 }
 
 ////////////////////////////////
+

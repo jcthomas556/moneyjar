@@ -50,23 +50,10 @@ include('database_connection.php');
                 {
                     if($holder['user_id'] > 0){
                         $userSignedIn = true;
-                        
-                        
+                                            
                         echo "<p id='signedInMessage';>";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                         echo "</p>";
-
-
-
-
-
-
-
-
-
-
-
-
 
                     }
                 }
@@ -102,10 +89,24 @@ include('database_connection.php');
     }   
     ?>
 
-    <button onclick="window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php'" type="button" class="btn btn-success pull-right" aria-label="right Align">
+
+
+
+
+
+    <!-- My account page button -->
+
+    <button onclick=checkUserAccount(); type="button" class="btn btn-success pull-right" aria-label="right Align">
         <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
     </button>
     <br><br>
+
+
+
+
+
+
+
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
