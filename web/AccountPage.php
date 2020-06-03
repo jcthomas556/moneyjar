@@ -34,7 +34,7 @@ include('database_connection.php');
 
     <!-- DB query for user details -->
     <?php
-        $value = $_POST['accountPageButton']
+        //$value = $_POST['accountPageButton']
 
         //echo $value;
 
