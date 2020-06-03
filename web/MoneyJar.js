@@ -33,7 +33,8 @@ function checkCredentials(){
 //////////////////////////////// Check user account Class
 
 function checkUserAccount(){
-  alert("Here we go");
+    var checker = document.getElementById('signedInMessage');
+    alert(checker);
 }
 
 ////////////////////////////////
