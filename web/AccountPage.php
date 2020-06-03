@@ -49,7 +49,7 @@ $username = $_SESSION['username'];
 
            
 
-            echo '<h3> This is ';
+            echo '<h3 class="text-center"> This is ';
             echo $username;
             echo "'s Account </h3>";
         // $email = $_POST["email"];
