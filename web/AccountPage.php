@@ -37,7 +37,12 @@ include('database_connection.php');
         //$value = $_POST['accountPageButton']
 
         //echo $value;
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+        $email = $_POST["email"];
+        $passwords = $_POST["password"];
+
+        echo $email;
 
         foreach($db->query(
                     "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email2', email) AND passwords=crypt('$passwords2', passwords)", PDO::FETCH_ASSOC) as $holder)
@@ -47,6 +52,9 @@ include('database_connection.php');
                             echo 'Account created! Successfully logged in, welcome, ' . $holder['user_name'];
                         }
                     }
+
+
+        }
     ?>
     
     
