@@ -47,9 +47,9 @@ $username = $_SESSION['username'];
         //echo $value;
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-            echo "made it to 1.";
+           
 
-            echo $username;
+            echo "<h3> This is " . $username "'s Account </h3>";
         // $email = $_POST["email"];
         // $passwords = $_POST["password"];
 
