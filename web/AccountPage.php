@@ -36,7 +36,7 @@ include('database_connection.php');
     <?php
         $value = $_POST['accountPageButton']
 
-        echo $value;
+        //echo $value;
 
 
         foreach($db->query(
