@@ -34,7 +34,12 @@ function checkCredentials(){
 
 function checkUserAccount(){
     var checker = document.getElementById('signedInMessage');
-    alert(checker);
+    if(cheker == 'null'){
+      alert("Please sign in or sign up");
+    }
+    else{
+      window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php';
+    }
 }
 
 ////////////////////////////////
