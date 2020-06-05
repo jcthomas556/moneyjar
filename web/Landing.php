@@ -52,7 +52,9 @@ include('database_connection.php');
                         $userSignedIn = true;
                         session_start();
                         $userName = $holder['user_name'];
+                        $userID = $holder['user_id'];
                         $_SESSION['username'] = $userName;
+                        $_SESSION['user_id'] = $userID;
                                             
                         echo "<p id='signedInMessage';>";
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];

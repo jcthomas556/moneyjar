@@ -8,6 +8,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
+$userID = $_SESSION['user_id'];
 ?>
 
 
@@ -52,6 +53,8 @@ $username = $_SESSION['username'];
             echo '<h3 class="text-center"> This is ';
             echo $username;
             echo "'s Account </h3>";
+
+            echo "<br> ID = " .$userID;
         // $email = $_POST["email"];
         // $passwords = $_POST["password"];
 
