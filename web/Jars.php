@@ -3,7 +3,7 @@ include('database_connection.php');
 
 if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     // redirect to your login page
-    exit();
+    //exit();
 }
 
 $username = $_SESSION['username'];
