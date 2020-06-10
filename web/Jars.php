@@ -57,13 +57,13 @@ $userID = $_SESSION['user_id'];
 
                         // $sql = mysqli_query($connection, "SELECT username FROM users");
                         foreach($db->query(
-                            "SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
+                            "SELECT jar_total, jar_active, user_id, jar_name, jar_id FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
                             {
                                 if($holder['jar_active'] == 't'){
                                     
                                 }
                         ?>
-                        <option value="test"><?php echo $holder['jar_name']; ?></option>
+                        <option value="<?php echo $holder['jar_total']; ?>"><?php echo $holder['jar_name']; ?></option>
                             
                         <?php } ?> </select>
                         <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
@@ -77,8 +77,8 @@ $userID = $_SESSION['user_id'];
 
     <?php
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-            $jarName = $_GET["jarSelector"];
-            echo $jarName;
+            $jarTotal = $_GET["jarSelector"];
+            echo $jarTotal;
         }
     ?>
     
