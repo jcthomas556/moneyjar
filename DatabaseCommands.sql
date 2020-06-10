@@ -13,21 +13,43 @@ CREATE TABLE jars(
     user_id int references accounts(user_id),
     jar_owner TEXT NOT NULL,
     jar_total MONEY NOT NULL,
-    jar_active BOOLEAN NOT NULL
+    jar_active BOOLEAN NOT NULL,
+    jar_name TEXT NOT NULL
 );
 
 INSERT into jars(
     user_id,
     jar_owner,
     jar_total,
-    jar_active
+    jar_active,
+    jar_name
 )
 VALUES(
     (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
     (SELECT user_name FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
     '34.43',
-    true
+    true,
+    'Jacobs jar'
 );
+
+INSERT into jars(
+    user_id,
+    jar_owner,
+    jar_total,
+    jar_active,
+    jar_name
+)
+VALUES(
+    (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
+    (SELECT user_name FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
+    '24.41',
+    true,
+    'Jacobs better jar'
+);
+
+
+
+SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1';
 
 INSERT into accounts (
     passwords,
