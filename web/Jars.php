@@ -54,7 +54,7 @@ $userID = $_SESSION['user_id'];
 
             // $sql = mysqli_query($connection, "SELECT username FROM users");
             foreach($db->query(
-                "SELECT jar_total, jar_active, user_id FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
+                "SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
                 {
                     if($holder['jar_active'] == 't'){
                         echo ("got a jar");
