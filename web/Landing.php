@@ -61,7 +61,7 @@ include('database_connection.php');
                         // echo "<p id='signedInMessage';>";
                         // echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                         // echo "</p>";
-                        echo $successMessage;
+                        
                         echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>";
 
                         
@@ -122,6 +122,7 @@ include('database_connection.php');
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
+        <?php echo $successMessage; ?>
        
     </div>
 
