@@ -60,7 +60,9 @@ include('database_connection.php');
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                         echo "</p>";
 
-                        echo "<p> Check out your jars </p>";
+                        echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success btn-block' aria-hidden='true'></span> </button>";
+
+                        
 
                     }
                 }
