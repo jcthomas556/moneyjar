@@ -55,12 +55,14 @@ include('database_connection.php');
                         $userID = $holder['user_id'];
                         $_SESSION['username'] = $userName;
                         $_SESSION['user_id'] = $userID;
-                                            
-                        echo "<p id='signedInMessage';>";
-                        echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                        echo "</p>";
 
-                        echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success btn-block' aria-hidden='true'></span> </button>";
+                        $successMessage = "Successfully logged in, welcome, " . $holder['user_name'];
+                                            
+                        // echo "<p id='signedInMessage';>";
+                        // echo 'Successfully logged in, welcome, ' . $holder['user_name'];
+                        // echo "</p>";
+                        echo $successMessage;
+                        echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>";
 
                         
 
