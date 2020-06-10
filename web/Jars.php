@@ -70,6 +70,14 @@ $userID = $_SESSION['user_id'];
                 </form>
             </td>
         </tr>
+<br><br>
+
+        <?php
+            if($_SERVER['REQUEST_METHOD'] == 'GET'){
+            $jarTotal = $_GET["jarSelector"];
+            echo "<p>" . $jarTotal "</p>";
+            }
+        ?>
 
             
  
@@ -82,12 +90,7 @@ $userID = $_SESSION['user_id'];
         <div class="text-center">            
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
               
-            <?php
-                if($_SERVER['REQUEST_METHOD'] == 'GET'){
-                $jarTotal = $_GET["jarSelector"];
-                echo $jarTotal;
-                }
-            ?>
+            
                             </div>
                         </div>
                     </form>
