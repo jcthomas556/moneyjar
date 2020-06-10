@@ -49,22 +49,24 @@ $userID = $_SESSION['user_id'];
             <td>Jars</td>
 
             <td>
-                <select name="jars">
-                    <?php 
-                    echo "made it to 1";
+                <form action="Jars.php" method="GET">
+                    <select onchange="this.form.submit()" id="jarSelector" name="jarSelector">
+                        <?php 
+                        echo "made it to 1";
 
-                    // $sql = mysqli_query($connection, "SELECT username FROM users");
-                    foreach($db->query(
-                        "SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
-                        {
-                            if($holder['jar_active'] == 't'){
-                                
-                            }
-                    ?>
-                    <option value="jar1"><?php echo $holder['jar_name']; ?></option>
-                        
-                    <?php } ?> </select>
-                    <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
+                        // $sql = mysqli_query($connection, "SELECT username FROM users");
+                        foreach($db->query(
+                            "SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
+                            {
+                                if($holder['jar_active'] == 't'){
+                                    
+                                }
+                        ?>
+                        <option value="jar1"><?php echo $holder['jar_name']; ?></option>
+                            
+                        <?php } ?> </select>
+                        <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
+                </form>
             </td>
         </tr>
 
@@ -72,6 +74,14 @@ $userID = $_SESSION['user_id'];
  
     </div>
 
+    <?php
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+            $jarName = $_GET["jarSelector"];
+            echo $jarName;
+        }
+    ?>
+    
+    
     <div class="container">
         <div class="text-center">            
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
