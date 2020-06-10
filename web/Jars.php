@@ -75,7 +75,9 @@ $userID = $_SESSION['user_id'];
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $jarTotal = $_GET["jarSelector"];
-            echo "<p>" . $jarTotal "</p>";
+            echo "<p>";
+            echo $jarTotal;
+            echo "</p>";
             }
         ?>
 
