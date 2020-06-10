@@ -56,12 +56,12 @@ $userID = $_SESSION['user_id'];
             foreach($db->query(
                 "SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
                 {
-                    if($holder['jar_active'] === 't'){
-                        echo ("got a jar");
+                    //if($holder['jar_active'] == 't'){
+                        
                                                         
 
-                    }
-                }
+                    //}
+                
 
             
 
@@ -69,7 +69,7 @@ $userID = $_SESSION['user_id'];
 
             ?>
             <option value="jar1"><?php echo $holder['jar_name']; ?></option>
-
+                    <?php } ?>
            
             </td>
             </tr>
