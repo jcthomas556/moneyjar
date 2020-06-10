@@ -51,8 +51,9 @@ $userID = $_SESSION['user_id'];
             <td>
                 <form action="Jars.php" method="GET">
                     <select onchange="this.form.submit()" id="jarSelector" name="jarSelector">
+                        <option selected="selected"></option>
                         <?php 
-                        echo "made it to 1";
+                        
 
                         // $sql = mysqli_query($connection, "SELECT username FROM users");
                         foreach($db->query(
