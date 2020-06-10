@@ -74,7 +74,7 @@ $userID = $_SESSION['user_id'];
 
     <div class="container">
         <div class="text-center">            
-            <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="333">
+            <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
               
                             </div>
                         </div>
