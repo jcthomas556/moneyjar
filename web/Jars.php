@@ -43,7 +43,7 @@ $userID = $_SESSION['user_id'];
 
 
     <div class="text-center">
-        <h1>Your Jar</h1>
+        <h1>Your Jars</h1>
 
         <tr>
             <td>Jars</td>
@@ -56,23 +56,20 @@ $userID = $_SESSION['user_id'];
             foreach($db->query(
                 "SELECT jar_total, jar_active, user_id, jar_name FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
                 {
-                    //if($holder['jar_active'] == 't'){
+                    if($holder['jar_active'] == 't'){
                         
-                                                        
-
-                    //}
-                
-
-            
-
-             
-
+                    }
             ?>
             <option value="jar1"><?php echo $holder['jar_name']; ?></option>
-                    <?php } ?>
+                    
+            <?php } ?>
+            <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
            
             </td>
             </tr>
+
+            <img src = "https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="jar">
+
         
        
     </div>
