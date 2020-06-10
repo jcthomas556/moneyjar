@@ -60,6 +60,8 @@ include('database_connection.php');
                         echo 'Successfully logged in, welcome, ' . $holder['user_name'];
                         echo "</p>";
 
+                        echo "<p> Check out your jars </p>";
+
                     }
                 }
         }

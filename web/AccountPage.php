@@ -54,7 +54,7 @@ $userID = $_SESSION['user_id'];
             echo $username;
             echo "'s Account </h3>";
 
-            echo "<br> ID = " .$userID;
+            
         // $email = $_POST["email"];
         // $passwords = $_POST["password"];
 
