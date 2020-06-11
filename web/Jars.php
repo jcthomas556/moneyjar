@@ -54,10 +54,10 @@ $userID = $_SESSION['user_id'];
                         <option selected="selected">Select Jar</option>
                         <?php 
                         
-
+//"SELECT jar_total, jar_active, user_id, jar_name, jar_id, jar_owner_id FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
                         // $sql = mysqli_query($connection, "SELECT username FROM users");
                         foreach($db->query(
-                            "SELECT jar_total, jar_active, user_id, jar_name, jar_id, jar_owner_id FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
+                            "SELECT UJ.user_id, J.jar_id, J.jar_total, J.jar_name, J.jar_active FROM users_jars AS UJ LEFT JOIN jars AS J ON (UJ.jar_id = J.jar_id) WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
                             {
                                 if($holder['jar_active'] == 't'){
                                     

@@ -19,8 +19,8 @@ CREATE TABLE jars(
 
 CREATE TABLE users_jars(
     entry_id serial PRIMARY KEY,
-    user_id int references accounts(user_id),
-    jar_id int references jars(jar_id)
+    user_id int references accounts(user_id) NOT NULL,
+    jar_id int references jars(jar_id) NOT NULL
 );
 
 INSERT INTO users_jars(
@@ -47,6 +47,17 @@ VALUES(
     )
 );
 
+INSERT INTO users_jars(
+    user_id,
+    jar_id
+)
+VALUES(
+    (SELECT user_id FROM accounts WHERE passwords = crypt('somethingrandom', passwords) AND email = crypt('klthomas931@gmail.com', email) ),
+    1
+    
+);
+
+
 
 INSERT into jars(
     jar_owner_id,
@@ -61,18 +72,7 @@ VALUES(
     'Jacobs jar'
 );
 
-INSERT into jars(
-    jar_owner_id,
-    jar_total,
-    jar_active,
-    jar_name
-)
-VALUES(
-    (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
-    '34.43',
-    true,
-    'Jacobs better jar'
-);
+
 
 INSERT into jars(
     jar_owner_id,
@@ -136,3 +136,7 @@ AND email = crypt('admin@admin.com', email);
 SELECT user_id
 FROM accounts
 WHERE email = crypt('ken@gmail.com', email);
+
+
+
+SELECT UJ.user_id, J.jar_id, J.jar_total, J.jar_name, J.jar_active FROM users_jars AS UJ LEFT JOIN jars AS J ON (UJ.jar_id = J.jar_id) ;
