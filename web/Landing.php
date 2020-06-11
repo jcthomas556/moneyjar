@@ -56,7 +56,7 @@ include('database_connection.php');
                         $_SESSION['username'] = $userName;
                         $_SESSION['user_id'] = $userID;
 
-                        $successMessage = "Successfully logged in, welcome, " . $holder['user_name'];
+                        $successMessage = "<p id='successMessage'> Successfully logged in, welcome, " . $holder['user_name'] "</p";
                                             
                         // echo "<p id='signedInMessage';>";
                         // echo 'Successfully logged in, welcome, ' . $holder['user_name'];
