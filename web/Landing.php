@@ -63,7 +63,7 @@ include('database_connection.php');
                         // echo "</p>";
                         
                         echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>";
-
+                        echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-block' aria-hidden='true'></span> </button>";
                         
 
                     }
