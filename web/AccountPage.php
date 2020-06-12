@@ -97,7 +97,7 @@ $userID = $_SESSION['user_id'];
                             <div class="container">
                             <br>
 
-
+                            <button type="submit" onclick=joinJar();>Join A Jar</button>
                                 <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
                                     <!-- The Modal -->
                                     <div id="createJar" class="modal">
@@ -122,7 +122,7 @@ $userID = $_SESSION['user_id'];
                                         </div>
                                     </form>
 
-                                    <button type="submit" onclick=joinJar();>Join A Jar</button>
+                                
                                     </div>
                                     
                                     
