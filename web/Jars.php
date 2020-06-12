@@ -91,7 +91,7 @@ $userID = $_SESSION['user_id'];
     <div class="container">
         <div class="text-center">   
 
-            <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-plus btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
+            <button onclick='signOut()' class='btn btn-success' > <span class='glyphicon glyphicon-plus btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
 
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
               
