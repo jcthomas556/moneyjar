@@ -122,10 +122,11 @@ $userID = $_SESSION['user_id'];
                                         </div>
                                     </form>
 
+                                    <button type="submit" onclick=joinJar();>Join A Jar</button>
                                     </div>
                                     
                                     
-                                    <button type="submit" onclick=joinJar();>Join A Jar</button>
+                                    
 
                             </div>
                         </div>
