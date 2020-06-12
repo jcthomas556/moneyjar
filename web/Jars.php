@@ -55,8 +55,7 @@ $userID = $_SESSION['user_id'];
                         <option selected="selected">Select Jar</option>
                         <?php 
                         
-//"SELECT jar_total, jar_active, user_id, jar_name, jar_id, jar_owner_id FROM jars WHERE user_id = '1'", PDO::FETCH_ASSOC) as $holder)
-                        // $sql = mysqli_query($connection, "SELECT username FROM users");
+
                         foreach($db->query(
                             "SELECT UJ.user_id, J.jar_id, J.jar_total, J.jar_name, J.jar_active FROM users_jars AS UJ LEFT JOIN jars AS J ON (UJ.jar_id = J.jar_id) WHERE user_id = '$userID'", PDO::FETCH_ASSOC) as $holder)
                             {
@@ -90,7 +89,10 @@ $userID = $_SESSION['user_id'];
     
     
     <div class="container">
-        <div class="text-center">            
+        <div class="text-center">   
+
+            <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-plus btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
+
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
               
             
