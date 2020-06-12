@@ -54,6 +54,6 @@ function signOut(){
    window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
 }
 
-function createNewJar(){
-  
+function createJar(){
+
 }

@@ -97,21 +97,14 @@ $userID = $_SESSION['user_id'];
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
-                    <form class="modal-content animate" method="POST" action="Landing.php">
+                    <form class="modal-content animate" method="GET" action="AccountPage.php">
 
                         <div class="sign-in-background">
                             <div class="container">
-                                <br>
-                                <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
-                                <br>
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="password" required>
-                                <br>
-                                <button type="submit" onclick=checkCredentials();>Login</button>
-                                <label>
-                                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                                </label>
+                             
+                                <button type="submit" onclick=createJar();>Create New Jar</button>
+                                <button type="submit" onclick=joinJar();>Join A Jar</button>
+                               
                             </div>
                             <div class="container">
                                 <span class="psw">Forgot <a href="#">password?</a></span>
