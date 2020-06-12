@@ -34,7 +34,7 @@ function checkCredentials(){
 
 function checkUserAccount(){
     var checker = document.getElementById('signedInMessage');
-    
+    //TODO fix this bad system. Checking for something on the page is not a good way to tell if I'm signed in. look at the session variables.
     if(checker === null){
       alert("Please sign in or sign up");
     }
@@ -52,4 +52,8 @@ function goPlaces(){
 function signOut(){
    sessionStorage.clear();
    window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
+}
+
+function createNewJar(){
+  
 }
