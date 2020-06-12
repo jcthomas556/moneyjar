@@ -1,5 +1,6 @@
 var login = document.getElementById('id01');
 var signup = document.getElementById('id02');
+var newJar = document.getElementById('newJar');
 
 
 // When the user clicks anywhere outside of the modal, close it
@@ -9,6 +10,9 @@ window.onclick = function(event) {
   }
   else if (event.target == signup){
     signup.style.display = "none";
+  }
+  else if (event.target == newJar){
+    newJar.style.display = "none";
   }
 }
 
