@@ -87,7 +87,6 @@ $userID = $_SESSION['user_id'];
        <button onclick="document.getElementById('newJar').style.display='block'" type="button" class="btn btn-success " aria-label="right Align">
             <span class="glyphicon glyphicon-plus btn-success btn-lg " aria-hidden="true"></span>
         </button> 
-
                 <!-- The Modal -->
                 <div id="newJar" class="modal">
                     <span onclick="document.getElementById('newJar').style.display='none'" class="close"
@@ -97,18 +96,21 @@ $userID = $_SESSION['user_id'];
                         <div class="sign-in-background">
                             <div class="container">
                             <br>
-                                <button type="submit" id="createJar" onclick=createJar();>Create New Jar</button>
-                                
+
+
+                                <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
                                     <!-- The Modal -->
                                     <div id="createJar" class="modal">
                                     <span onclick="document.getElementById('createJar').style.display='none'" class="close"
                                         title="Close Modal">&times;</span>
-
                                     </div>
+                                    
+                                    <button type="submit" onclick=joinJar();>Join A Jar</button>
+
                             </div>
                         </div>
                     
-                    <button type="submit" onclick=joinJar();>Join A Jar</button>
+                   
                     
                 </div>
 
