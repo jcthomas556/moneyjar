@@ -93,13 +93,20 @@ $userID = $_SESSION['user_id'];
                     <span onclick="document.getElementById('newJar').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
 
-                    <!-- Modal Content -->
-                    <form class="modal-content animate" method="GET" action="AccountPage.php">
-
+                  
                         <div class="sign-in-background">
                             <div class="container">
                             <br>
-                                <button type="submit" onclick=createJar();>Create New Jar</button>
+                                <button type="submit" id="createJar" onclick=createJar();>Create New Jar</button>
+                                
+                                    <!-- The Modal -->
+                                    <div id="createJar" class="modal">
+                                    <span onclick="document.getElementById('createJar').style.display='none'" class="close"
+                                        title="Close Modal">&times;</span>
+
+                                    <!-- Modal Content -->
+                                    <form class="modal-content animate" method="GET" action="AccountPage.php">  
+
 
                                 <button type="submit" onclick=joinJar();>Join A Jar</button>
                                
