@@ -1,6 +1,7 @@
 var login = document.getElementById('id01');
 var signup = document.getElementById('id02');
 var newJar = document.getElementById('newJar');
+var createJar = document.getElementById('createJar');
 
 
 // When the user clicks anywhere outside of the modal, close it
@@ -13,6 +14,9 @@ window.onclick = function(event) {
   }
   else if (event.target == newJar){
     newJar.style.display = "none";
+  }
+  else if (event.target == createJar){
+    createJar.style.display = "none";
   }
 }
 
@@ -56,8 +60,4 @@ function goPlaces(){
 function signOut(){
    sessionStorage.clear();
    window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
-}
-
-function createJar(){
-
 }
