@@ -84,16 +84,16 @@ $userID = $_SESSION['user_id'];
     <div class="container text-center" id="cupboard">
         <p >Looks like you don't have any jars yet. Click below to make one!</p>
         <br>
-        <!-- <button onclick = "createNewJar()" type="button" class="btn btn-success " aria-label="right Align">
+       <button onclick="document.getElementById('newJar').style.display='block'" type="button" class="btn btn-success " aria-label="right Align">
             <span class="glyphicon glyphicon-plus btn-success btn-lg " aria-hidden="true"></span>
-        </button> -->
+        </button> 
 
 
-        <button onclick="document.getElementById('newJar').style.display='block'" type="button" class="btn btn-success " aria-label="right Align" ></button>
+        <!-- <button onclick="document.getElementById('newJar').style.display='block'" type="button" class="btn btn-success " aria-label="right Align" ></button> -->
 
                 <!-- The Modal -->
                 <div id="newJar" class="modal">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    <span onclick="document.getElementById('newJar').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
