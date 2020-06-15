@@ -76,7 +76,7 @@ $userID = $_SESSION['user_id'];
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $newJarName = $_GET["jarName"];
             
-            insertNewJar();
+            insertNewJar($newJarName);
                 
             $jarTotal = $_GET["jarSelector"];
             echo "<p>";
@@ -84,8 +84,8 @@ $userID = $_SESSION['user_id'];
             echo "</p>";
             }
 
-            function insertNewJar(){
-                echo "test success?";
+            function insertNewJar($newJarName){
+                echo $newJarName;
             }   
         ?>
 
