@@ -75,13 +75,18 @@ $userID = $_SESSION['user_id'];
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $newJarName = $_GET["jarName"];
-               echo $newJarName;
+            
+            insertNewJar();
                 
             $jarTotal = $_GET["jarSelector"];
             echo "<p>";
             echo $jarTotal;
             echo "</p>";
             }
+
+            function insertNewJar(){
+                echo $newJarName;
+            }   
         ?>
 
             
