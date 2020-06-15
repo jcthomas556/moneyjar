@@ -85,7 +85,7 @@ $userID = $_SESSION['user_id'];
             }
 
             function insertNewJar(){
-                echo $newJarName;
+                echo "test success?";
             }   
         ?>
 
