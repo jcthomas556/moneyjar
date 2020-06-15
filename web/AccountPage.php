@@ -105,19 +105,17 @@ $userID = $_SESSION['user_id'];
                                         title="Close Modal">&times;</span>
 
                                     <!-- Modal Content -->
-                                    <form class="modal-content animate" method="GET" action="AccountPage.php">
+                                    <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
 
 <!-- TODO change this form data to match the new jar form data -->
                                         <div class="sign-in-background">
                                             <div class="container">
                                                 <br>
-                                                <label for="uname"><b>Username</b></label>
-                                                <input type="text" placeholder="Enter Email" name="email" required>
+                                                <label for="jarName"><b>Jar Name</b></label>
+                                                <input type="text" placeholder="Enter Name" name="jarName" required>
                                                 <br>
-                                                <label for="psw"><b>Password</b></label>
-                                                <input type="password" placeholder="Enter Password" name="password" required>
-                                                <br>
-                                                <button type="submit" onclick=checkCredentials();>Login</button>
+                                                
+                                                <button type="submit">Create Jar</button>
                                              
                                         </div>
                                     </form>
