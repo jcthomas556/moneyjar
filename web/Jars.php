@@ -100,6 +100,11 @@ $userID = $_SESSION['user_id'];
                         );
 
                     //linkJar($newJarName, $userID, $db);
+                    echo "LOOK HERE";
+                    echo $userID;
+                    echo "And here";
+                    echo $newJarName;
+                    
                     $db->query(
                         "INSERT INTO users_jars (user_id, jar_id)
                         VALUES(
