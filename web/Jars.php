@@ -91,11 +91,11 @@ $userID = $_SESSION['user_id'];
                 $db->query(
                     "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                     VALUES (
-                            '$userID',
+                            '1',
                             0,
                             true,
-                            '$newJarName'
-                    )");
+                            'jarTest')"
+                        );
                 
                     // INSERT INTO users_jars(user_id, jar_id)
                     // VALUES(
