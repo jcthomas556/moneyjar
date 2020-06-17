@@ -77,7 +77,7 @@ $userID = $_SESSION['user_id'];
             $newJarName = $_GET["jarName"];
 
                 if($newJarName !== ""){
-                    insertNewJar($newJarName, $userID, $db);
+                   // insertNewJar($newJarName, $userID, $db);
                     linkJar($newJarName, $userID, $db);
                 }
                 
