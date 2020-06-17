@@ -105,9 +105,7 @@ $userID = $_SESSION['user_id'];
                         '$userID',
                         (SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')
                     )"
-                );
-                unset($newJarName);
-                echo $newJarName;
+                );               
                 
             }
         ?>
