@@ -140,3 +140,18 @@ WHERE email = crypt('ken@gmail.com', email);
 
 
 SELECT UJ.user_id, J.jar_id, J.jar_total, J.jar_name, J.jar_active FROM users_jars AS UJ LEFT JOIN jars AS J ON (UJ.jar_id = J.jar_id) ;
+
+select * from users_Jars;
+
+INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
+VALUES (
+        1,
+        0,
+        true,
+        'name'
+);
+INSERT INTO users_jars(user_id, jar_id)
+VALUES(
+    1,
+    (SELECT jar_id FROM jars WHERE jar_owner_id = 1 AND jar_name = 'name')
+)

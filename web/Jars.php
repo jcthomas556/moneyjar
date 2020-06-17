@@ -76,7 +76,7 @@ $userID = $_SESSION['user_id'];
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $newJarName = $_GET["jarName"];
             
-            insertNewJar($newJarName);
+            insertNewJar($newJarName, $userID);
                 
             $jarTotal = $_GET["jarSelector"];
             echo "<p>";
@@ -84,8 +84,24 @@ $userID = $_SESSION['user_id'];
             echo "</p>";
             }
 
-            function insertNewJar($newJarName){
-                echo $newJarName;
+            function insertNewJar($newJarName, $userID){
+                echo "made it into the function";
+                $db->query(
+                    "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
+                    VALUES (
+                            '$userID,
+                            0,
+                            true,
+                            '$newJarName'
+                    );
+                    INSERT INTO users_jars(user_id, jar_id)
+                    VALUES(
+                        '$userID,
+                        (SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName)
+                    )");
+                    echo "finished the queries";
+               //insert statement for jar
+               //might need to pass the session variables into this function for proper user
             }   
         ?>
 
