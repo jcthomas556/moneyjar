@@ -73,7 +73,6 @@ $userID = $_SESSION['user_id'];
 <br><br>
 
         <?php
-        include('database_connection.php');
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $newJarName = $_GET["jarName"];
             
@@ -93,6 +92,7 @@ $userID = $_SESSION['user_id'];
                 echo "<br>";
                 echo $userID;
                 echo "<br>";
+
                 $db->query(
                     "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                     VALUES (
