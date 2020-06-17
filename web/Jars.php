@@ -104,8 +104,7 @@ $userID = $_SESSION['user_id'];
                         "INSERT INTO users_jars (user_id, jar_id)
                         VALUES(
                             '$userID',
-                            1
-                            -- SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName'
+                            SELECT jar_id FROM jars WHERE jar_owner_id = '1' AND jar_name = 'name'
                         )"
                     );  
                              
