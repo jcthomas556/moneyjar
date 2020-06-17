@@ -75,8 +75,12 @@ $userID = $_SESSION['user_id'];
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $newJarName = $_GET["jarName"];
+
+                if($newJarName !== ""){
+                    insertNewJar($newJarName, $userID, $db);
+                }
+                
             
-            insertNewJar($newJarName, $userID, $db);
 
                 
             $jarTotal = $_GET["jarSelector"];
@@ -102,7 +106,9 @@ $userID = $_SESSION['user_id'];
                         (SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')
                     )"
                 );
-                unset();
+                unset($newJarName);
+                echo $newJarName;
+                
             }
         ?>
 
