@@ -105,11 +105,14 @@ $userID = $_SESSION['user_id'];
                 
             }
             function linkJar($newJarName, $userID, $db){
+                // echo $userID;
+                // echo $newJarName;
+
                 $db->query(
                     "INSERT INTO users_jars (user_id, jar_id)
                     VALUES(
                         '$userID',
-                        (SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')
+                        '(SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')'
                     )"
                 );  
             }
