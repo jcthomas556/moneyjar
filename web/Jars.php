@@ -99,8 +99,14 @@ $userID = $_SESSION['user_id'];
                             '$newJarName')"
                         );
 
-                    linkJar($newJarName, $userID, $db);
-                    
+                    //linkJar($newJarName, $userID, $db);
+                    $db->query(
+                        "INSERT INTO users_jars (user_id, jar_id)
+                        VALUES(
+                            '$userID',
+                            "'SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName'"
+                        )"
+                    );  
                              
                 
             }
@@ -108,13 +114,7 @@ $userID = $_SESSION['user_id'];
                 // echo $userID;
                 // echo $newJarName;
 
-                $db->query(
-                    "INSERT INTO users_jars (user_id, jar_id)
-                    VALUES(
-                        '$userID',
-                        '(SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')'
-                    )"
-                );  
+                
             }
             
         ?>
