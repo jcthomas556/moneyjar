@@ -106,7 +106,7 @@ $userID = $_SESSION['user_id'];
                         VALUES(
                             '$userID',
                             '(SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')'
-                        )"
+                        )";
 
                     $db->query(   $sql         );  
                              
