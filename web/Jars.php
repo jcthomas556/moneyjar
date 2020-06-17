@@ -77,6 +77,15 @@ $userID = $_SESSION['user_id'];
             $newJarName = $_GET["jarName"];
             
             insertNewJar($newJarName, $userID);
+
+            $db->query(
+                "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
+                VALUES (
+                        '1',
+                        0,
+                        true,
+                        'jarTest')"
+                    );
                 
             $jarTotal = $_GET["jarSelector"];
             echo "<p>";
