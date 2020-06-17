@@ -78,6 +78,7 @@ $userID = $_SESSION['user_id'];
 
                 if($newJarName !== ""){
                     insertNewJar($newJarName, $userID, $db);
+                    linkJar($newJarName, $userID, $db);
                 }
                 
             
@@ -99,7 +100,7 @@ $userID = $_SESSION['user_id'];
                             '$newJarName')"
                         );
 
-                    //linkJar($newJarName, $userID, $db);
+                    
                     
                              
                 
