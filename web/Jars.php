@@ -78,14 +78,6 @@ $userID = $_SESSION['user_id'];
             
             insertNewJar($newJarName, $userID);
 
-            $db->query(
-                "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
-                VALUES (
-                        '1',
-                        0,
-                        true,
-                        'jarTest')"
-                    );
                 
             $jarTotal = $_GET["jarSelector"];
             echo "<p>";
@@ -105,16 +97,16 @@ $userID = $_SESSION['user_id'];
                             true,
                             'jarTest')"
                         );
-                
+                    }
                     // INSERT INTO users_jars(user_id, jar_id)
                     // VALUES(
                     //     '$userID,
                     //     (SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName)
                     // )");
-                    echo "finished the query";
+                
                //insert statement for jar
                //might need to pass the session variables into this function for proper user
-            }   
+            
         ?>
 
             
