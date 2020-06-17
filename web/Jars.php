@@ -85,13 +85,6 @@ $userID = $_SESSION['user_id'];
             echo "</p>";
             }
 
-            // echo "made it into the function";
-            // echo "<br>";
-            // echo $newJarName;
-            // echo "<br>";
-            // echo $userID;
-            // echo "<br>";
-
             function insertNewJar($newJarName, $userID, $db){
                 $db->query(
                     "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
@@ -109,13 +102,8 @@ $userID = $_SESSION['user_id'];
                         (SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')
                     )"
                 );
+                unset();
             }
-                
-                    
-                
-               //insert statement for jar
-               //might need to pass the session variables into this function for proper user
-            
         ?>
 
             
