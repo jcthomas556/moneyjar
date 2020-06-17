@@ -95,7 +95,7 @@ $userID = $_SESSION['user_id'];
                 $db->query(
                     "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                     VALUES (
-                            '1',
+                            1,
                             0,
                             true,
                             'jarTest')"
