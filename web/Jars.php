@@ -85,14 +85,14 @@ $userID = $_SESSION['user_id'];
             echo "</p>";
             }
 
-            function insertNewJar($newJarName, $userID){
-                echo "made it into the function";
-                echo "<br>";
-                echo $newJarName;
-                echo "<br>";
-                echo $userID;
-                echo "<br>";
+            // echo "made it into the function";
+            // echo "<br>";
+            // echo $newJarName;
+            // echo "<br>";
+            // echo $userID;
+            // echo "<br>";
 
+            function insertNewJar($newJarName, $userID){
                 $db->query(
                     "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                     VALUES (
