@@ -98,7 +98,7 @@ $userID = $_SESSION['user_id'];
                             1,
                             0,
                             true,
-                            'jarTest')"
+                            'jarTest');"
                         );
                     }
                     // INSERT INTO users_jars(user_id, jar_id)
