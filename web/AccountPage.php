@@ -110,7 +110,7 @@ $userID = $_SESSION['user_id'];
                                         <div class="container">
                                             <br>
                                             <label for="jarCode"><b>Jar Code</b></label>
-                                            <input type="text" placeholder="Enter Name" name="jarCode" required>
+                                            <input type="text" placeholder="Enter Code" name="jarCode" required>
                                             <br>
                                             
                                             <button type="submit">Join Jar</button>
