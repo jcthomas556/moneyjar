@@ -181,11 +181,6 @@ $userID = $_SESSION['user_id'];
                                     </div>
                                 </div>
                              <!-- The Modal END--> 
-            
-                            </div>
-                        </div>
-                    </form>
-                </div>
         </div>
     </div>
             
