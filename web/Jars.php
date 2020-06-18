@@ -102,15 +102,16 @@ $userID = $_SESSION['user_id'];
                     //linkJar($newJarName, $userID, $db);
                     //$select = "(SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')";
             
-                   
+                    $testQuery = pg_prepare($db, "my_query", 'INSERT INTO users_jars (user_id, jar_id) VALUES $userID, (SELECT jar_id FROM jars WHERE  jar_owner_id = $userID AND jar_name = '$1')');
 
-                    $db->query(
-                        "INSERT INTO users_jars (user_id, jar_id)
-                        VALUES(
-                            '$userID',
-                            (SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName')
-                        )"
-                    );  
+                    $result = pg_execute($dbconn, "my_query", array("jarTest5"));
+                    // $db->query(
+                    //     "INSERT INTO users_jars (user_id, jar_id)
+                    //     VALUES(
+                    //         '$userID',
+                    //         (SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName')
+                    //     )"
+                    // );  
                              
                 
             }
