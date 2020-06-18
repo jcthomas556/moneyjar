@@ -79,11 +79,12 @@ $userID = $_SESSION['user_id'];
 
                 echo $newJarName;
 
-                    if($newJarName == ""){
+                    if($newJarName != ""){
                         echo "entered";
                         echo "entered";
                         echo "entered";
                         echo "entered";
+                        
                         
                         //insertNewJar($newJarName, $userID, $db);
                     }
