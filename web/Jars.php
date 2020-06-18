@@ -105,8 +105,15 @@ $userID = $_SESSION['user_id'];
                     $db->query(
                         "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder
                         {
-                            echo $holder[jar_id];
+                            echo $holder['jar_id'];
                         }
+
+                    // foreach($db->query(
+                    //     "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
+                    //     {
+                    //         echo $holder['jar_id']; 
+                                
+                    //     }   
 
 
                     // $db->query(
