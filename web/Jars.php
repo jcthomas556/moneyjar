@@ -85,7 +85,7 @@ $userID = $_SESSION['user_id'];
 
                 if($newJarName != ""){
 
-                   
+                   echo "here we are :(";
          
                     function insertNewJar($newJarName, $userID, $db){
                         $db->query(
