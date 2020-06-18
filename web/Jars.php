@@ -102,10 +102,10 @@ $userID = $_SESSION['user_id'];
                     //linkJar($newJarName, $userID, $db);
                     //$select = "(SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')";
             
-                    foreach($db->query(
-                        "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
+                    $db->query(
+                        "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder
                         {
-                            echo "success?";
+                            echo $holder[jar_id];
                         }
 
 
@@ -117,7 +117,13 @@ $userID = $_SESSION['user_id'];
                     //     )"
                     // );  
                              
-                
+                    // $db->query(
+                    //     "INSERT INTO users_jars (user_id, jar_id)
+                    //     VALUES(
+                    //         '$userID',
+                    //         (SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName')
+                    //     )"
+                    // );  
             }
             function linkJar($newJarName, $userID, $db){
                 // echo $userID;
