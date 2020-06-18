@@ -21,6 +21,9 @@ window.onclick = function(event) {
   else if (event.target == joinJar){
     joinJar.style.display = "none";
   }
+  else if (event.target == shareJar){
+    shareJar.style.display = "none";
+  }
 }
 
 
