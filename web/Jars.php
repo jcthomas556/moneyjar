@@ -175,40 +175,13 @@ $userID = $_SESSION['user_id'];
                                 <br>
                                 <label for="jarCode"><b>______________</b></label>
                                 <p> Copy that number, and send it to your friend! </p>
-
-
-                            
-
-                                
+          
                             </div>
                     </form>
                         </div>
                 </div>
             <!-- The Modal END--> 
 
-            
-            <button onclick="document.getElementById('shareJar').style.display='block'">Create New Jar</button>    
-                                <!-- The Modal -->
-                                <div id="shareJar" class="modal">
-                                <span onclick="document.getElementById('shareJar').style.display='none'" class="close"
-                                    title="Close Modal">&times;</span>
-
-                                <!-- Modal Content -->
-                                <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
-                                    <div class="sign-in-background">
-                                        <div class="container">
-                                            <br>
-                                            <label for="jarName"><b>Jar Name</b></label>
-                                            <input type="text" placeholder="Enter Name" name="jarName" required>
-                                            <br>
-                                            
-                                            <button type="submit">Create Jar</button>
-                                            
-                                        </div>
-                                </form>
-                                    </div>
-                                </div>
-                        <!-- The Modal END-->
         </div>
     </div>
             
