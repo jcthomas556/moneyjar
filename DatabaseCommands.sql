@@ -71,9 +71,11 @@ VALUES(
     (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
     '34.43',
     true,
-    'Jacobs jar',
+    'Jacobs 2nd jar',
     (SELECT ROUND ( (SELECT random() * (SELECT random() * 2345247 +1) )))
 );
+
+select jar_id from jars where jar_invite_code = 441512;
 
 -- insert into users_jars(
 --     user_id,
