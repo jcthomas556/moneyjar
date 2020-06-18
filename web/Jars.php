@@ -102,10 +102,6 @@ $userID = $_SESSION['user_id'];
                     //linkJar($newJarName, $userID, $db);
                     //$select = "(SELECT jar_id FROM jars WHERE jar_owner_id = '$userID' AND jar_name = '$newJarName')";
             
-                    $db->query(
-                        "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'";
-                    )
-
                     foreach($db->query(
                         "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
                         {
