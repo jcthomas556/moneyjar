@@ -129,14 +129,21 @@ $userID = $_SESSION['user_id'];
         ?>
         <?php
             function joinNewJar($userID, $db, $newJarCode){
-                echo $newJarCode;
+                // echo $newJarCode;
                 foreach($db->query(
-                    "SELECT jar_id FROM jars WHERE jar_invite_code = 441512", PDO::FETCH_ASSOC) as $holder)
+                    "SELECT jar_id FROM jars WHERE jar_invite_code = $newJarCode", PDO::FETCH_ASSOC) as $holder)
                     {
                         $jarID = $holder['jar_id']; 
                     }   
-                echo "----> Jar ID = ";
-                echo $jarID;
+                // echo "----> Jar ID = ";
+                // echo $jarID;
+                $db->query(
+                    "INSERT INTO users_jars (user_id, jar_id)
+                    VALUES(
+                        '$userID',
+                        '$jarID'
+                    )"
+                );  
             }
         ?>
 
