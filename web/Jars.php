@@ -111,6 +111,7 @@ $userID = $_SESSION['user_id'];
                                     '$jarID'
                                 )"
                             );  
+                    }
                 }
                     
                 
