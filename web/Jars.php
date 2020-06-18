@@ -81,6 +81,7 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
                 $newJarName = $_GET["jarName"];
+                echo $newJarName;
 
                 if($newJarName != ""){
 
