@@ -162,10 +162,10 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <button onclick="document.getElementById('shareJar').style.display='block'">Share your Jar with others</button>
+            <button onclick="document.getElementById('sharedJar').style.display='block'">Share your Jar with others</button>
             <!-- The Modal -->
-                <div id="shareJar" class="modal">
-                    <span onclick="document.getElementById('shareJar').style.display='none'" class="close"
+                <div id="sharedJar" class="modal">
+                    <span onclick="document.getElementById('sharedJar').style.display='none'" class="close"
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
