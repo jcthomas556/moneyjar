@@ -74,52 +74,50 @@ $userID = $_SESSION['user_id'];
 
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
-         
+
+                $newJarName = $_GET["jarName"];
+
+                echo $newJarName;
+
+                    if($newJarName != ""){
+
+                        insertNewJar($newJarName, $userID, $db);
+                    }
+                    
+                
+
+                    
                 $jarTotal = $_GET["jarSelector"];
                 echo "<p>";
                 echo $jarTotal;
                 echo "</p>";
-
-                $newJarName = $_GET["jarName"];
-                echo $newJarName;
-
-                if($newJarName != ""){
-
-                   echo "here we are :(";
-         
-                    function insertNewJar($newJarName, $userID, $db){
-                        $db->query(
-                            "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
-                            VALUES (
-                                    '$userID',
-                                    0,
-                                    true,
-                                    '$newJarName')"
-                                );
-    
-                            foreach($db->query(
-                                "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
-                                {
-                                    $jarID = $holder['jar_id']; 
-                                        
-                                }   
-    
-    
-                            $db->query(
-                                "INSERT INTO users_jars (user_id, jar_id)
-                                VALUES(
-                                    '$userID',
-                                    '$jarID'
-                                )"
-                            );  
-                    }
                 }
-                    
-                
+?><?php
+                function insertNewJar($newJarName, $userID, $db){
+                    $db->query(
+                        "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
+                        VALUES (
+                                '$userID',
+                                0,
+                                true,
+                                '$newJarName')"
+                            );
 
-           
+                        foreach($db->query(
+                            "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
+                            {
+                                $jarID = $holder['jar_id']; 
+                                    
+                            }   
 
-              
+
+                        $db->query(
+                            "INSERT INTO users_jars (user_id, jar_id)
+                            VALUES(
+                                '$userID',
+                                '$jarID'
+                            )"
+                        );  
 
             }
 
