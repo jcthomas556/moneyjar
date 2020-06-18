@@ -100,7 +100,7 @@ $userID = $_SESSION['user_id'];
 
                             <button onclick="document.getElementById('joinJar').style.display='block'">Join A Jar</button>
                             <!-- The Modal -->
-                            <div id="createJar" class="modal">
+                            <div id="joinJar" class="modal">
                                 <span onclick="document.getElementById('joinJar').style.display='none'" class="close"
                                     title="Close Modal">&times;</span>
 
