@@ -187,10 +187,10 @@ $userID = $_SESSION['user_id'];
             <!-- The Modal END--> 
 
             
-            <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
+            <button onclick="document.getElementById('shareJar').style.display='block'">Create New Jar</button>    
                                 <!-- The Modal -->
-                                <div id="createJar" class="modal">
-                                <span onclick="document.getElementById('createJar').style.display='none'" class="close"
+                                <div id="shareJar" class="modal">
+                                <span onclick="document.getElementById('shareJar').style.display='none'" class="close"
                                     title="Close Modal">&times;</span>
 
                                 <!-- Modal Content -->
