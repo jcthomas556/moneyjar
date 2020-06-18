@@ -175,6 +175,14 @@ $userID = $_SESSION['user_id'];
                                 <br>
                                 <label for="jarCode"><b>______________</b></label>
                                 <p> Copy that number, and send it to your friend! </p>
+
+
+                                <input type="text" placeholder="Enter Name" name="jarName" required>
+                                            <br>
+                                            
+                                            <button type="submit">Create Jar</button>
+
+                                            
                                 
                             </div>
                     </form>
