@@ -163,24 +163,24 @@ $userID = $_SESSION['user_id'];
 
             <br>
             <button onclick="document.getElementById('shareJar').style.display='block'">Share your Jar with others</button>
-                            <!-- The Modal -->
-                            <div id="shareJar" class="modal">
-                                <span onclick="document.getElementById('shareJar').style.display='none'" class="close"
-                                    title="Close Modal">&times;</span>
+            <!-- The Modal -->
+                <div id="shareJar" class="modal">
+                    <span onclick="document.getElementById('shareJar').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
 
-                                <!-- Modal Content -->
-                                <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
-                                    <div class="sign-in-background">
-                                        <div class="container">
-                                            <br>
-                                            <label for="jarCode"><b>______________</b></label>
-                                            <p> Copy that number, and send it to your friend! </p>
-                                            
-                                        </div>
-                                    </form>
-                                    </div>
-                                </div>
-                             <!-- The Modal END--> 
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
+                        <div class="sign-in-background">
+                            <div class="container">
+                                <br>
+                                <label for="jarCode"><b>______________</b></label>
+                                <p> Copy that number, and send it to your friend! </p>
+                                
+                            </div>
+                    </form>
+                        </div>
+                </div>
+            <!-- The Modal END--> 
         </div>
     </div>
             
