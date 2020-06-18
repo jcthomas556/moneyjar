@@ -18,6 +18,9 @@ window.onclick = function(event) {
   else if (event.target == createJar){
     createJar.style.display = "none";
   }
+  else if (event.target == joinJar){
+    joinJar.style.display = "none";
+  }
 }
 
 

@@ -97,37 +97,55 @@ $userID = $_SESSION['user_id'];
                             <div class="container">
                             <br>
 
-                            <button type="submit" onclick=joinJar();>Join A Jar</button>
-                                <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
-                                    <!-- The Modal -->
-                                    <div id="createJar" class="modal">
-                                    <span onclick="document.getElementById('createJar').style.display='none'" class="close"
-                                        title="Close Modal">&times;</span>
 
-                                    <!-- Modal Content -->
-                                    <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
+                            <button onclick="document.getElementById('joinJar').style.display='block'">Join A Jar</button>
+                            <!-- The Modal -->
+                            <div id="createJar" class="modal">
+                                <span onclick="document.getElementById('joinJar').style.display='none'" class="close"
+                                    title="Close Modal">&times;</span>
 
-<!-- TODO change this form data to match the new jar form data -->
-                                        <div class="sign-in-background">
-                                            <div class="container">
-                                                <br>
-                                                <label for="jarName"><b>Jar Name</b></label>
-                                                <input type="text" placeholder="Enter Name" name="jarName" required>
-                                                <br>
-                                                
-                                                <button type="submit">Create Jar</button>
-                                             
+                                <!-- Modal Content -->
+                                <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
+                                    <div class="sign-in-background">
+                                        <div class="container">
+                                            <br>
+                                            <label for="jarCode"><b>Jar Code</b></label>
+                                            <input type="text" placeholder="Enter Name" name="jarCode" required>
+                                            <br>
+                                            
+                                            <button type="submit">Join Jar</button>
+                                            
                                         </div>
-                                    </form>
-
-                                
+                                </form>
                                     </div>
-                                    
-                                    
-                                    
+                                </div>
+                             <!-- The Modal END-->
+
+
+                            <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
+                                <!-- The Modal -->
+                                <div id="createJar" class="modal">
+                                <span onclick="document.getElementById('createJar').style.display='none'" class="close"
+                                    title="Close Modal">&times;</span>
+
+                                <!-- Modal Content -->
+                                <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
+                                    <div class="sign-in-background">
+                                        <div class="container">
+                                            <br>
+                                            <label for="jarName"><b>Jar Name</b></label>
+                                            <input type="text" placeholder="Enter Name" name="jarName" required>
+                                            <br>
+                                            
+                                            <button type="submit">Create Jar</button>
+                                            
+                                        </div>
+                                </form>
+                                    </div>
+                                </div>
+                        <!-- The Modal END-->
 
                             </div>
-                        </div>
                     
                    
                     

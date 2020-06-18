@@ -13,7 +13,8 @@ CREATE TABLE jars(
     jar_owner_id int NOT NULL,
     jar_total MONEY NOT NULL,
     jar_active BOOLEAN NOT NULL,
-    jar_name TEXT NOT NULL
+    jar_name TEXT NOT NULL,
+    jar_invite_code int UNIQUE NOT NULL
 );
 
 
@@ -63,15 +64,25 @@ INSERT into jars(
     jar_owner_id,
     jar_total,
     jar_active,
-    jar_name
+    jar_name,
+    jar_invite_code
 )
 VALUES(
     (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
     '34.43',
     true,
-    'Jacobs jar'
+    'Jacobs jar',
+    (SELECT ROUND ( (SELECT random() * (SELECT random() * 2345247 +1) )))
 );
 
+-- insert into users_jars(
+--     user_id,
+--     jar_id
+-- )
+-- VALUES(
+--     $userID,
+--     (SELECT jar_id )
+-- )
 
 
 INSERT into jars(

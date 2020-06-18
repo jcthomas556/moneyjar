@@ -80,7 +80,6 @@ $userID = $_SESSION['user_id'];
                 echo $newJarName;
 
                     if($newJarName != ""){
-
                         insertNewJar($newJarName, $userID, $db);
                     }
                     
@@ -92,7 +91,9 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
                 }
-?><?php
+        ?>
+
+        <?php   
                 function insertNewJar($newJarName, $userID, $db){
                     $db->query(
                         "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
