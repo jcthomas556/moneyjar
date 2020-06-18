@@ -169,6 +169,7 @@ $userID = $_SESSION['user_id'];
                                     title="Close Modal">&times;</span>
 
                                 <!-- Modal Content -->
+                                <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
                                     <div class="sign-in-background">
                                         <div class="container">
                                             <br>
@@ -176,6 +177,7 @@ $userID = $_SESSION['user_id'];
                                             <p> Copy that number, and send it to your friend! </p>
                                             
                                         </div>
+                                    </form>
                                     </div>
                                 </div>
                              <!-- The Modal END--> 
