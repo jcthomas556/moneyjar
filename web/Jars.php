@@ -135,6 +135,8 @@ $userID = $_SESSION['user_id'];
                     {
                         $jarID = $holder['jar_id']; 
                     }   
+                echo "----> Jar ID = ";
+                echo $jarID;
             }
         ?>
 
