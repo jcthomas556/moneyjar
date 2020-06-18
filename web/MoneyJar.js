@@ -2,7 +2,8 @@ var login = document.getElementById('id01');
 var signup = document.getElementById('id02');
 var newJar = document.getElementById('newJar');
 var createJar = document.getElementById('createJar');
-
+var sharedJar = document.getElementById('sharedJar');
+var joinJar = document.getElementById('joinJar');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
