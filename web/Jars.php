@@ -76,6 +76,8 @@ $userID = $_SESSION['user_id'];
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $newJarName = $_GET["jarName"];
 
+            echo $newJarName;
+
                 if($newJarName !== ""){
                     insertNewJar($newJarName, $userID, $db);
                 }

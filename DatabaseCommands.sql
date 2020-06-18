@@ -155,3 +155,18 @@ VALUES(
     1,
     (SELECT jar_id FROM jars WHERE jar_owner_id = 1 AND jar_name = 'name')
 )
+
+
+INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
+                    VALUES (
+                            1,
+                            0,
+                            true,
+                            'jareo'
+                    )
+
+                    INSERT INTO users_jars (user_id, jar_id)
+                    VALUES(
+                        '1',
+                        (SELECT jar_id FROM jars WHERE jar_owner_id = '1' AND jar_name = 'name')
+                    )
