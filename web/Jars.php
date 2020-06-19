@@ -100,8 +100,15 @@ $userID = $_SESSION['user_id'];
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
                     echo "starting the rando";
-                   
-                    $randomNumber = getRandomNumber();
+
+
+                    function genRandomNumber($length = 7) {
+                        $nums = '0123456789';
+                        for ($p = 0; $p < $length-1; $p++)
+                            $randomNumber .= $nums[mt_rand( 0, strlen($nums)-1 )];
+                        
+                    }
+  
                     echo $randomNumber;
 
 
