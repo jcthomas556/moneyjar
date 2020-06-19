@@ -82,7 +82,6 @@ $userID = $_SESSION['user_id'];
 
              
                 if($newJarName != ""){
-                    echo "Entered the area";
                     insertNewJar($newJarName, $userID, $db);
                 }
                 if($newJarCode != ""){
@@ -100,24 +99,29 @@ $userID = $_SESSION['user_id'];
 
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
-                    echo "entered the function";
+                    echo "starting the rando";
+                    foreach($db->query(
+                        "(SELECT ROUND ( (SELECT random() * (SELECT random() * 2345247 +1) )))", PDO::FETCH_ASSOC) as $holder)
+                        {
+                            $randomNumber = $holder['ROUND'];           
+                        }   
+                        echo $randomNumber;
                     $db->query(
-                        "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
+                        "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name, jar_invite_code)
                         VALUES (
                                 '$userID',
                                 0,
                                 true,
                                 '$newJarName')"
                             );
-                            echo "finished the first query";
+
+
                     foreach($db->query(
                         "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
                         {
                             $jarID = $holder['jar_id']; 
                                 
                         }   
-
-
                     $db->query(
                         "INSERT INTO users_jars (user_id, jar_id)
                         VALUES(
