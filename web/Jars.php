@@ -64,7 +64,7 @@ $userID = $_SESSION['user_id'];
                             }
                             
                         ?>
-                        <option value="<?php echo $holder['jar_total']; echo $holder['jar_invite_code']; ?>"><?php echo $holder['jar_name']; ?></option>
+                        <option value="<?php echo $holder['jar_total']; $inviteCode=$holder['jar_invite_code']; ?>"><?php echo $holder['jar_name']; ?></option>
                         
                             
                         <?php } ?> </select>
@@ -188,7 +188,7 @@ $userID = $_SESSION['user_id'];
                         <div class="sign-in-background">
                             <div class="container">
                                 <br>
-                                <label for="jarCode"><b>______________</b></label>
+                                <label for="jarCode"><b><?php echo $inviteCode?></b></label>
                                 <p> Copy that number, and send it to your friend! </p>
                             </div>
                     
