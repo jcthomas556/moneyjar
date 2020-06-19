@@ -90,7 +90,11 @@ $userID = $_SESSION['user_id'];
                 
 
                 if(isset($_GET['addMoney'])){
-                    echo "add that money";
+                    $db->query(
+                        "UPDATE jars
+                        SET '$jarTotal' = '$jar_total' + '$1'
+                        WHERE jar_id = '$jarID';"
+                    )
                 }
 
                     

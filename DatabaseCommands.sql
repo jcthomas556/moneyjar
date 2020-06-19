@@ -183,3 +183,7 @@ INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                         '1',
                         (SELECT jar_id FROM jars WHERE jar_owner_id = '1' AND jar_name = 'name')
                     )
+
+UPDATE jars
+SET jar_total = jar_total + '$1'
+WHERE jar_id = 1;
