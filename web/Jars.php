@@ -103,7 +103,8 @@ $userID = $_SESSION['user_id'];
                     foreach($db->query(
                         "SELECT ROUND ( (SELECT random() * (SELECT random() * 2345247 +1) ))", PDO::FETCH_ASSOC) as $holder)
                         {
-                            $randomNumber = $holder['ROUND'];           
+                            $randomNumber = $holder['ROUND'];     
+                            echo $randomNumber;      
                         }   
                         echo $randomNumber;
                     $db->query(
