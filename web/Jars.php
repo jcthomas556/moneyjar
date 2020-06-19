@@ -62,7 +62,7 @@ $userID = $_SESSION['user_id'];
                                 if($holder['jar_active'] == 't'){
                                     
                             }
-                            $jarCode = $holder['jar_invite_code'];
+                            
                         ?>
                         <option value="<?php echo $holder['jar_total']; ?>"><?php echo $holder['jar_name']; ?></option>
                         
@@ -94,7 +94,6 @@ $userID = $_SESSION['user_id'];
                 echo "<p>";
                 echo $jarTotal;
                 echo "</p>";
-                echo $jarCode;
                 }
         ?>
 
@@ -171,7 +170,7 @@ $userID = $_SESSION['user_id'];
                         title="Close Modal">&times;</span>
 
                     <!-- Modal Content -->
-                    <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
+                    
                         <div class="sign-in-background">
                             <div class="container">
                                 <br>
@@ -179,7 +178,7 @@ $userID = $_SESSION['user_id'];
                                 <p> Copy that number, and send it to your friend! </p>
           
                             </div>
-                    </form>
+                    
                         </div>
                 </div>
             <!-- The Modal END--> 
