@@ -89,6 +89,10 @@ $userID = $_SESSION['user_id'];
                 }                    
                 
 
+                if(isset($_GET['addMoney'])){
+                    echo "add that money";
+                }
+
                     
                 $jarTotal = $_GET["jarSelector"];
                 echo "<p>";
@@ -162,6 +166,7 @@ $userID = $_SESSION['user_id'];
             }
         ?>
 
+
             
  
     </div>
@@ -176,6 +181,10 @@ $userID = $_SESSION['user_id'];
 
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
+            <br>
+            <form action="Jars.php" method="GET">
+                <button type="submit" name="addMoney" class="btn btn-success">Put $1 in the Jar</button>
+            </form>
             <br>
             <button onclick="document.getElementById('sharedJar').style.display='block'">Share your Jar with others</button>
             <!-- The Modal -->
