@@ -82,6 +82,7 @@ $userID = $_SESSION['user_id'];
 
              
                 if($newJarName != ""){
+                    echo "Entered the area";
                     insertNewJar($newJarName, $userID, $db);
                 }
                 if($newJarCode != ""){
