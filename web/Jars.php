@@ -100,13 +100,11 @@ $userID = $_SESSION['user_id'];
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
                     echo "starting the rando";
-                    foreach($db->query(
-                        "SELECT ROUND (15.5)", PDO::FETCH_ASSOC) as $holder)
-                        {
-                            $randomNumber = $holder['ROUND'];     
-                            echo $randomNumber;      
-                        }   
-                        echo $randomNumber;
+                   
+                    $randomNumber = getRandomNumber();
+                    echo $randomNumber;
+
+
                     $db->query(
                         "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name, jar_invite_code)
                         VALUES (
@@ -134,6 +132,14 @@ $userID = $_SESSION['user_id'];
             }
 
             
+        ?>
+        <?php
+            function genRandomNumber($length = 7) {
+                $nums = '0123456789';
+                for ($p = 0; $p < $length-1; $p++)
+                    $out .= $nums[mt_rand( 0, strlen($nums)-1 )];
+                return $out;
+            }
         ?>
         <?php
             function joinNewJar($userID, $db, $newJarCode){
