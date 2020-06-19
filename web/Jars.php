@@ -103,11 +103,14 @@ $userID = $_SESSION['user_id'];
                     echo $jar_total;
 
                     echo "new jar total =";
-                     $newjar_total = $jar_total + 1;
+                     $newjar_total = $jar_total + '1.00';
                      echo $newjar_total;
+                     $testNum = $jar_total;
+                     $testNum = $testNum + 1;
+                     echo $testNum;
                     $db->query(
                         "UPDATE jars
-                        SET 'jarTotal' = '$jar_total' + '$1'
+                        SET 'jarTotal' = '$testNum' + '$1'
                         WHERE jar_id = 1"
                     );
                 }
