@@ -102,12 +102,12 @@ $userID = $_SESSION['user_id'];
                     echo "starting the rando";
 
 
-                    function genRandomNumber($length = 7) {
-                        $nums = '0123456789';
-                        for ($p = 0; $p < $length-1; $p++)
+                    $length = 7
+                    $nums = '0123456789';
+                    for ($p = 0; $p < $length-1; $p++){
                             $randomNumber .= $nums[mt_rand( 0, strlen($nums)-1 )];
-                        
                     }
+                    
   
                     echo $randomNumber;
 
