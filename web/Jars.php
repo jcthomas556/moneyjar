@@ -99,26 +99,20 @@ $userID = $_SESSION['user_id'];
 
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
-                    echo "starting the rando";
-
-
                     $length = 7;
                     $nums = '0123456789';
                     for ($p = 0; $p < $length-1; $p++){
                             $randomNumber .= $nums[mt_rand( 0, strlen($nums)-1 )];
                     }
-                    
-  
-                    echo $randomNumber;
-
-
+            
                     $db->query(
                         "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name, jar_invite_code)
                         VALUES (
                                 '$userID',
                                 0,
                                 true,
-                                '$newJarName')"
+                                '$newJarName',
+                                '$randomNumber')"
                             );
 
 
