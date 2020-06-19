@@ -101,7 +101,7 @@ $userID = $_SESSION['user_id'];
                 function insertNewJar($newJarName, $userID, $db){
                     echo "starting the rando";
                     foreach($db->query(
-                        "SELECT ROUND ( (SELECT random() * (SELECT random() * 2345247 +1) ))", PDO::FETCH_ASSOC) as $holder)
+                        "SELECT ROUND (15.5)", PDO::FETCH_ASSOC) as $holder)
                         {
                             $randomNumber = $holder['ROUND'];     
                             echo $randomNumber;      
