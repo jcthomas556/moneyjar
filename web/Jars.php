@@ -100,6 +100,7 @@ $userID = $_SESSION['user_id'];
 
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
+                    echo "entered the function";
                     $db->query(
                         "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                         VALUES (
@@ -108,22 +109,22 @@ $userID = $_SESSION['user_id'];
                                 true,
                                 '$newJarName')"
                             );
+                            echo "finished the first query";
+                    foreach($db->query(
+                        "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
+                        {
+                            $jarID = $holder['jar_id']; 
+                                
+                        }   
 
-                        foreach($db->query(
-                            "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
-                            {
-                                $jarID = $holder['jar_id']; 
-                                    
-                            }   
 
-
-                        $db->query(
-                            "INSERT INTO users_jars (user_id, jar_id)
-                            VALUES(
-                                '$userID',
-                                '$jarID'
-                            )"
-                        );  
+                    $db->query(
+                        "INSERT INTO users_jars (user_id, jar_id)
+                        VALUES(
+                            '$userID',
+                            '$jarID'
+                        )"
+                    );  
 
             }
 
