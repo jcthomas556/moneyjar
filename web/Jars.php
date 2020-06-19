@@ -89,6 +89,15 @@ $userID = $_SESSION['user_id'];
                 }                    
                 
 
+
+                    
+                $jarTotal = $_GET["jarSelector"];
+                echo "<p>";
+                echo $jarTotal;
+                echo "</p>";
+                }
+
+                
                 if(isset($_GET['addMoney'])){
                     echo "jar total =";
                     echo $jar_total;
@@ -103,13 +112,6 @@ $userID = $_SESSION['user_id'];
                     );
                 }
 
-
-                    
-                $jarTotal = $_GET["jarSelector"];
-                echo "<p>";
-                echo $jarTotal;
-                echo "</p>";
-                }
         ?>
 
         <?php   
