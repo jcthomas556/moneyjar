@@ -90,10 +90,10 @@ $userID = $_SESSION['user_id'];
                 
 
                 if(isset($_GET['addMoney'])){
-                    echo "jar total ="
+                    echo "jar total =";
                     echo $jar_total;
 
-                    echo "new jar total ="
+                    echo "new jar total =";
                      $newjar_total = $jar_total + 1;
                      echo $newjar_total;
                     $db->query(
