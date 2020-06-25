@@ -100,16 +100,18 @@ $userID = $_SESSION['user_id'];
                 
                 if(isset($_GET['addMoney'])){
                     echo "jar total =";
-                    setlocale(LC_MONETARY, 'en_US');
-                    echo money_format('%(#10n', $jar_total) . "\n";
-                    $addNum = money_format('%(#10n', $jar_total);
+                   
+
+                    
+                    $int = ereg_replace("[^0-9]", "", $jar_total); 
+                    echo $int;
 
 
                    
                     // echo $jar_total;
 
                      echo "new jar total =";
-                     echo $addNum + 1;
+                     echo $int + 1;
                     //  $newjar_total = $jar_total + '1.00';
                     //  echo $newjar_total;
                     //  $testNum = $jar_total;
