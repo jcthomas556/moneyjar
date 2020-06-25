@@ -103,7 +103,7 @@ $userID = $_SESSION['user_id'];
                     echo $jar_total;
                     echo "in Int form=";
 
-                    $newJarTotal = (int)$jar_total;
+                    $newjar_total = preg_replace('/[^0-9]/', '', $jar_total);
 
                     echo $newjar_total;
 
