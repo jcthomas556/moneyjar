@@ -99,30 +99,14 @@ $userID = $_SESSION['user_id'];
 
                 
                 if(isset($_GET['addMoney'])){
-                    echo "jar total =";
-                    echo $jar_total;
+                    echo "jar total = $";
+                    $newJarTotal = $jar_total +1;
+                    echo $newJarTotal;
 
-                   setlocale(LC_MONETARY, "en_US");
-                   $newjar_total = money_format("%i", $jar_total + 1);
-                   echo "now add $1 =";
-                    echo $newjar_total;
-
-                    
-                    
-
-
-                   
-                    // echo $jar_total;
-
-                   
-                    //  $newjar_total = $jar_total + '1.00';
-                    //  echo $newjar_total;
-                    //  $testNum = $jar_total;
-                    //  $testNum = $testNum + 1;
-                    //  echo $testNum;
+                  
                     $db->query(
                         "UPDATE jars
-                        SET 'jarTotal' = '$testNum' + '$1'
+                        SET 'jarTotal' = '$newJarTotal'
                         WHERE jar_id = 1"
                     );
                 }

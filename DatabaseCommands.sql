@@ -11,7 +11,7 @@ CREATE TABLE accounts(
 CREATE TABLE jars(
     jar_id serial PRIMARY KEY,
     jar_owner_id int NOT NULL,
-    jar_total MONEY NOT NULL,
+    jar_total int NOT NULL,
     jar_active BOOLEAN NOT NULL,
     jar_name TEXT NOT NULL,
     jar_invite_code int UNIQUE NOT NULL
