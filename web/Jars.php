@@ -104,6 +104,7 @@ $userID = $_SESSION['user_id'];
                     $value = number_format((float) $jar_total, $precision, '.', '');
                     $newJar_total = $jar_total + 1;
                     echo $newJar_total;
+                    gettype($newJar_total);
                         $db->query(
                         "UPDATE jars
                         SET 'jarTotal' = '$newJarTotal'
