@@ -101,8 +101,10 @@ $userID = $_SESSION['user_id'];
                 if(isset($_GET['addMoney'])){
                     echo "jar total =";
                     echo $jar_total;
-                    echo "now equals";
+                    echo "now equals=";
 
+                    $newVar = $jar_total;
+                    echo $newVar;
                     
                     $int = ereg_replace("[^0-9]", "", $jar_total); 
                     echo $int;
