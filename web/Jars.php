@@ -99,8 +99,10 @@ $userID = $_SESSION['user_id'];
 
                 
                 if(isset($_GET['addMoney'])){
-                    echo gettype($jar_total);
-                    $newJarTotal = $jarTotal + 1;
+                    $precision = 2;
+                    $number = intval($number * ($p = pow(10, $precision))) / $p;
+                    $value = number_format((float) $jar_total, $precision, '.', '');
+                    $newJar_total = $jar_total + 1;
                     echo $newJar_total;
                         $db->query(
                         "UPDATE jars
