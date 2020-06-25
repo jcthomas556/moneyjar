@@ -99,6 +99,7 @@ $userID = $_SESSION['user_id'];
 
                 
                 if(isset($_GET['addMoney'])){
+                    echo gettype($jar_total);
                     $newJarTotal = $jarTotal + 1;
                     echo $newJar_total;
                         $db->query(
