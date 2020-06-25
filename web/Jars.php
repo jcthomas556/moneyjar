@@ -101,7 +101,7 @@ $userID = $_SESSION['user_id'];
                 if(isset($_GET['addMoney'])){
                         $db->query(
                         "UPDATE jars
-                        SET 'jarTotal' = '$newJarTotal' + 1
+                        SET 'jarTotal' = '$jarTotal' + 1
                         WHERE jar_id = 1"
                     );
                 }
