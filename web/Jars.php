@@ -101,14 +101,14 @@ $userID = $_SESSION['user_id'];
                 if(isset($_GET['addMoney'])){
                     echo "jar total =";
                     echo $jar_total;
-                    echo "in Int form=";
 
-                    $newjar_total = preg_replace('/[^0-9]/', '', $jar_total);
-
+                   setlocale(LC_MONETARY, "en_US");
+                   $newjar_total = money_format("%i", $jar_total + 1);
+                   echo "now add $1 =";
                     echo $newjar_total;
 
-                    echo "now add $1 =";
-                    echo $newjar_total + 1;
+                    
+                    
 
 
                    
