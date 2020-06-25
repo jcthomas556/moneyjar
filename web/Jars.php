@@ -106,7 +106,7 @@ $userID = $_SESSION['user_id'];
                     $newVar = $jar_total;
                     echo $newVar;
 
-                    $type1 = string gettype($jar_total);
+                    $type1 = gettype($jar_total);
                     echo $type1;
                     
                     $int = ereg_replace("[^0-9]", "", $jar_total); 
