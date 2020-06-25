@@ -101,23 +101,20 @@ $userID = $_SESSION['user_id'];
                 if(isset($_GET['addMoney'])){
                     echo "jar total =";
                     echo $jar_total;
-                    echo "now equals=";
+                    echo "in Int form=";
 
-                    $newVar = $jar_total;
-                    echo $newVar;
+                    $newJarTotal = (int)$jar_total;
 
-                    $type1 = gettype($jar_total);
-                    echo $type1;
-                    
-                    $int = ereg_replace("[^0-9]", "", $jar_total); 
-                    echo $int;
+                    echo $newjar_total;
+
+                    echo "now add $1 =";
+                    echo $newjar_total + 1;
 
 
                    
                     // echo $jar_total;
 
-                     echo "new jar total =";
-                     echo $int + 1;
+                   
                     //  $newjar_total = $jar_total + '1.00';
                     //  echo $newjar_total;
                     //  $testNum = $jar_total;
