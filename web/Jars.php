@@ -103,6 +103,8 @@ $userID = $_SESSION['user_id'];
                     $precision = 2;
                     $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
                     $value = number_format((float) $jarTotal, $precision, '.', '');
+                    echo "jar total = " . $jarTotal;
+                    echo "value = " . $value;
                     $newJar_total = $jarTotal + 1;
                     echo "$";
                     echo $newJar_total;
