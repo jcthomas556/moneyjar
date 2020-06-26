@@ -79,7 +79,7 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-
+                $addMoneyReq = $_GET["addMoney"];
                 
              
                 if($newJarName != ""){
@@ -88,6 +88,9 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }                    
+                if($addMoneyReq != ""){
+                    addMoney();
+                }
                     
                 $jarID = $_GET["jarSelector"];
 
@@ -105,9 +108,9 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
 
-                if(isset($_GET['addMoney'])){
-                    echo "test";
-                    // echo $jar_total;
+                // if(isset($_GET['addMoney'])){
+                //     echo "test";
+                //     // echo $jar_total;
                     // echo gettype($jar_total);
                 
                     // $precision = 2;
@@ -198,7 +201,11 @@ $userID = $_SESSION['user_id'];
                 );  
             }
         ?>
-
+        <?php
+            function addMoney(){
+                echo "TEST PASS";
+            }
+        ?>
 
             
  
