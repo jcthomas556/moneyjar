@@ -106,6 +106,7 @@ $userID = $_SESSION['user_id'];
 
 
                 if(isset($_GET['addMoney'])){
+                    echo "test";
                     echo $jar_total;
                     echo gettype($jar_total);
                 
