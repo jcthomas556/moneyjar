@@ -199,11 +199,7 @@ $userID = $_SESSION['user_id'];
                 );  
             }
         ?>
-        <?php
-            function addMoney(){
-                echo "TEST PASS";
-            }
-        ?>
+      
 
             
  
