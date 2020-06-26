@@ -92,9 +92,9 @@ $userID = $_SESSION['user_id'];
 
 
                     
-                $jarTotal = $_GET["jarSelector"];
+                $jarID = $_GET["jarSelector"];
                 echo "<p>";
-                echo $jarTotal;
+                echo $jarID;
                 echo "</p>";
                 }
 
