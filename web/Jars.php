@@ -64,7 +64,7 @@ $userID = $_SESSION['user_id'];
                             }
                             
                         ?>
-                        <option value="<?php echo "$" . $holder['jar_total']; ?>"><?php echo $holder['jar_name']; $currJarID=$holder['jar_id']; ?></option>
+                        <option value="<?php echo "$" . $holder['jar_total']; ?>"><?php echo $holder['jar_name']; ?></option>
                         
                             
                         <?php 
@@ -72,6 +72,7 @@ $userID = $_SESSION['user_id'];
 
                             $inviteCode=$holder['jar_invite_code']; 
                             $jarTotal = $holder['jar_total']; 
+                            echo "example here: " . $jarTotal;
                             
                         ?> </select>
                         <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
@@ -96,10 +97,7 @@ $userID = $_SESSION['user_id'];
                 }    
             
                     
-                $jarTotal = $_GET["jarSelector"];
-                echo "<p>";
-                echo $jarTotal;
-                echo "</p>";
+                
 
                                             //echo "Look here" . $jarTotal;
                                                             
