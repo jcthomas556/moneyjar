@@ -80,6 +80,8 @@ $userID = $_SESSION['user_id'];
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
 
+                echo "What the flip:";
+                echo $currJarID;
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
