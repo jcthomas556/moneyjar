@@ -103,7 +103,7 @@ $userID = $_SESSION['user_id'];
 
 
 
-                if(isset($_GET['addMoney'])){
+                if(isset($_GET['addMoney'], $jarTotal)){
     
                     echo "Look here" . $jarTotal;
                    
