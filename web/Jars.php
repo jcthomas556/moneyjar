@@ -117,6 +117,7 @@ $userID = $_SESSION['user_id'];
                 $test = 55;
                 if(isset($_GET['addMoney'])){
                     echo $test;
+                    echo $jarTotal;
                     // $precision = 2;
                     // $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
                     // $value = number_format((float) $jarTotal, $precision, '.', '');
