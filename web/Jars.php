@@ -101,36 +101,36 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
 
-   //echo "Look here" . $jarTotal;
-                   
+                                            //echo "Look here" . $jarTotal;
+                                                            
 
-   //echo $jarTotal;
-   $precision = 2;
-   $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
-   $value = number_format((float) $jarTotal, $precision, '.', '');
-//    echo "jar total = " . $jarTotal;
-//    echo "value = " . $value;
-   $newJar_total = $value + 1;
-//    echo "$";
-//    echo $newJar_total;
+                                            //echo $jarTotal;
+                                            $precision = 2;
+                                            $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
+                                            $value = number_format((float) $jarTotal, $precision, '.', '');
+                                            //    echo "jar total = " . $jarTotal;
+                                            //    echo "value = " . $value;
+                                            $newJar_total = $value + 1;
+                                            //    echo "$";
+                                            //    echo $newJar_total;
 
-   
+                                            
 
-   $db->query(
-       "UPDATE jars
-       SET jar_Total = $newJar_total
-       WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-   );
+                                            // $db->query(
+                                            //     "UPDATE jars
+                                            //     SET jar_Total = $newJar_total
+                                            //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+                                            // );
 
 
-            }
+                                                        }
 
-            
-            // if(isset($_GET['addMoney'])){
-    
-          
+                                                        
+                                                        // if(isset($_GET['addMoney'])){
+                                                
+                                                    
 
-        ?>
+                                                    ?>
 
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
