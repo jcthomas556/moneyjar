@@ -106,6 +106,8 @@ $userID = $_SESSION['user_id'];
                     echo "$";
                     echo $newJar_total;
 
+                    echo "jar ID =";
+                    echo $jarID;
 
                     $db->query(
                         "UPDATE jars
