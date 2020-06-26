@@ -103,7 +103,10 @@ $userID = $_SESSION['user_id'];
                     $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
                     $value = number_format((float) $jar_total, $precision, '.', '');
                     $newJar_total = $jar_total + 1;
-      
+                    echo "$";
+                    echo $newJar_total;
+
+
                     $db->query(
                         "UPDATE jars
                         SET jar_Total = $newJar_total
