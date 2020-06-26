@@ -64,17 +64,10 @@ $userID = $_SESSION['user_id'];
                             }
                             
                         ?>
-                        <option value="<?php echo "$" . $holder['jar_total']; ?>"><?php echo $holder['jar_name']; ?></option>
+                        <option value="<?php echo $holder['jar_total']; ?>"><?php echo $holder['jar_name']; $currJarID=$holder['jar_id']; ?></option>
                         
                             
-                        <?php 
-                            } 
-
-                            $inviteCode=$holder['jar_invite_code']; 
-                            $jarTotal = $holder['jar_total']; 
-                            echo "example here: " . $jarTotal;
-                            
-                        ?> </select>
+                        <?php } $inviteCode=$holder['jar_invite_code']; $jar_total = $holder['jar_total']; ?> </select>
                         <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
                 </form>
             </td>
@@ -94,43 +87,36 @@ $userID = $_SESSION['user_id'];
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
-                }    
-            
-                    
+                }                    
                 
 
-                                            //echo "Look here" . $jarTotal;
-                                                            
 
-                                            //echo $jarTotal;
-                                            $precision = 2;
-                                            $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
-                                            $value = number_format((float) $jarTotal, $precision, '.', '');
-                                            //    echo "jar total = " . $jarTotal;
-                                            //    echo "value = " . $value;
-                                            $newJar_total = $value + 1;
-                                            //    echo "$";
-                                            //    echo $newJar_total;
+                    
+                $jarTotal = $_GET["jarSelector"];
+                echo "<p>";
+                echo $jarTotal;
+                echo "</p>";
+                }
 
-                                            echo "jar total = " . $jarTotal;
-                                            echo "new jar total = " . $newJar_total;
-                                            updateJar();
+                
+                // if(isset($_GET['addMoney'])){
+                //     $precision = 2;
+                //     $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+                //     $value = number_format((float) $jar_total, $precision, '.', '');
+                //     $newJar_total = $jar_total + 1;
+                //     echo "$";
+                //     echo $newJar_total;
 
-                                            // $db->query(
-                                            //     "UPDATE jars
-                                            //     SET jar_Total = $newJar_total
-                                            //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-                                            // );
+                   
 
+                //     $db->query(
+                //         "UPDATE jars
+                //         SET jar_Total = $newJar_total
+                //         WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+                //     );
+                // }
 
-                                                        }
-
-                                                        
-                                                        // if(isset($_GET['addMoney'])){
-                                                
-                                                    
-
-                                                    ?>
+        ?>
 
         <?php   
                 function insertNewJar($newJarName, $userID, $db){
@@ -194,11 +180,6 @@ $userID = $_SESSION['user_id'];
                         '$jarID'
                     )"
                 );  
-            }
-        ?>
-        <?php
-            function updateJar(){
-                echo "hello you suck";
             }
         ?>
 
