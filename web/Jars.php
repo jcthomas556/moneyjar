@@ -115,7 +115,7 @@ $userID = $_SESSION['user_id'];
                 }
 
                 $test = 55;
-                if(isset($_GET['addMoney'])){
+                if(isset($_GET['addMoney'], $jarTotal)){
                     echo $test;
                     echo $jarTotal;
                     // $precision = 2;
