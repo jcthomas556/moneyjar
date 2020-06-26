@@ -106,10 +106,20 @@ $userID = $_SESSION['user_id'];
                     echo $newJar_total;
                     echo gettype($newJar_total);
 
+                    // $sql = "UPDATE jars SET 'jar
+                    // VALUES ('John', 'Doe', 'john@example.com')";
+
+                    // if ($conn->query($sql) === TRUE) {
+                    // echo "New record created successfully";
+                    // } else {
+                    // echo "Error: " . $sql . "<br>" . $conn->error;
+                    // }
+
+
 
                     $db->query(
                         "UPDATE jars
-                        SET 'jar_Total' = $newJar_total
+                        SET jar_Total = $newJar_total
                         WHERE jar_id = 1"
                     );
                 }
