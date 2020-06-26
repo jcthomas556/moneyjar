@@ -10,6 +10,8 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
 $username = $_SESSION['username'];
 $userID = $_SESSION['user_id'];
 
+
+//SELECT jar_total, jar_active, user_id FROM jars WHERE user_id = '1';
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +79,7 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                //$addMoneyReq = $_GET["addMoney"];
+
                 
              
                 if($newJarName != ""){
@@ -86,9 +88,6 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }                    
-                // if($addMoneyReq != ""){
-                //     addMoney();
-                // }
                     
                 $jarID = $_GET["jarSelector"];
 
@@ -199,7 +198,7 @@ $userID = $_SESSION['user_id'];
                 );  
             }
         ?>
-      
+
 
             
  
