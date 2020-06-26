@@ -112,7 +112,7 @@ $userID = $_SESSION['user_id'];
                     $db->query(
                         "UPDATE jars
                         SET jar_Total = $newJar_total
-                        WHERE jar_invite_code = 100700"
+                        WHERE jar_invite_code = $newJarCode"
                     );
                 }
 
