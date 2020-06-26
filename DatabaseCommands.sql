@@ -187,3 +187,7 @@ INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
 UPDATE jars
 SET jar_total = jar_total + 1
 WHERE jar_id = 1;
+
+     UPDATE jars
+                        SET jar_Total = 35.43
+                        WHERE jar_id = 1;
