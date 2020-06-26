@@ -93,9 +93,9 @@ $userID = $_SESSION['user_id'];
 
                     
                 $jarID = $_GET["jarSelector"];
-                echo "<p>";
-                echo $jarID;
-                echo "</p>";
+                // echo "<p>";
+                // echo $jarID;
+                // echo "</p>";
 
                 foreach($db->query(
                     "SELECT jar_invite_code, jar_total, jar_name FROM jars WHERE jar_id = '$jarID'", PDO::FETCH_ASSOC) as $holder)
