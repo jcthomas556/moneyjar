@@ -88,7 +88,10 @@ $userID = $_SESSION['user_id'];
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
-                }                    
+                }       
+                if($addMoneyReq != ""){
+                    addMoney();
+                }             
                     
                 $jarID = $_GET["jarSelector"];
 
@@ -199,7 +202,11 @@ $userID = $_SESSION['user_id'];
                 );  
             }
         ?>
-
+        <?php  
+            function addMoney(){
+                echo "TEST";
+            }
+        ?>
 
             
  
