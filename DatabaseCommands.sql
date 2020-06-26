@@ -11,7 +11,7 @@ CREATE TABLE accounts(
 CREATE TABLE jars(
     jar_id serial PRIMARY KEY,
     jar_owner_id int NOT NULL,
-    jar_total int NOT NULL,
+    jar_total double precision NOT NULL,
     jar_active BOOLEAN NOT NULL,
     jar_name TEXT NOT NULL,
     jar_invite_code int UNIQUE NOT NULL
@@ -32,7 +32,7 @@ VALUES(
     (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
     (SELECT jar_id FROM jars WHERE jar_owner_id = 
             (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) 
-        AND jar_name = 'Jacobs jar')
+        AND jar_name = 'Jacobs 2nd jar')
     )
 );
             
@@ -69,7 +69,7 @@ INSERT into jars(
 )
 VALUES(
     (SELECT user_id FROM accounts WHERE passwords = crypt('skeleton0', passwords) AND email = crypt('admin@admin.com', email) ),
-    '34.43',
+    34.43,
     true,
     'Jacobs 2nd jar',
     (SELECT ROUND ( (SELECT random() * (SELECT random() * 2345247 +1) )))
@@ -185,5 +185,5 @@ INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name)
                     )
 
 UPDATE jars
-SET jar_total = jar_total + '$1'
+SET jar_total = jar_total + 1
 WHERE jar_id = 1;
