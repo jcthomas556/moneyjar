@@ -64,7 +64,7 @@ $userID = $_SESSION['user_id'];
                             }
                             
                         ?>
-                        <option value="<?php echo $holder['jar_total']; ?>"><?php echo $holder['jar_name']; $currJarID=$holder['jar_id']; $inviteCode=$holder['jar_invite_code'];?></option>
+                        <option value="<?php echo $holder['jar_total']; ?>"><?php echo $holder['jar_name']; $currJarID=$holder['jar_id']; echo $holder['jar_invite_code'];?></option>
                         
                             
                         <?php }  $jar_total = $holder['jar_total']; ?> </select>
