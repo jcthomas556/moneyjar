@@ -114,7 +114,7 @@ $userID = $_SESSION['user_id'];
                                             //    echo "$";
                                             //    echo $newJar_total;
 
-                                            
+                                            updateJar();
 
                                             // $db->query(
                                             //     "UPDATE jars
@@ -194,6 +194,11 @@ $userID = $_SESSION['user_id'];
                         '$jarID'
                     )"
                 );  
+            }
+        ?>
+        <?php
+            function updateJar(){
+                echo "hello you suck";
             }
         ?>
 
