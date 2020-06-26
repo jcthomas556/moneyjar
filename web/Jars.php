@@ -100,11 +100,15 @@ $userID = $_SESSION['user_id'];
                 foreach($db->query(
                     "SELECT jar_invite_code, jar_total, jar_name FROM jars WHERE jar_id = '$jarID'", PDO::FETCH_ASSOC) as $holder)
                     {
-                        echo $holder[jar_invite_code];
-                        echo $holder[jar_total];
-                        echo $holder[jar_name];
+                        $inviteCode = $holder[jar_invite_code];
+                        $jarTotal = $holder[jar_total];
+                        $jarName = $holder[jar_name];
                             
                     }
+
+                echo "<p>";
+                echo $jarTotal;
+                echo "</p>";
 
 
             }
