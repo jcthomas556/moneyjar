@@ -94,7 +94,7 @@ $userID = $_SESSION['user_id'];
                     
                 $jarTotal = $_GET["jarSelector"];
                 echo "<p>";
-                echo "potatos" . $jarTotal;
+                echo $jarTotal;
                 echo "</p>";
                 }
 
