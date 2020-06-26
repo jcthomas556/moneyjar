@@ -67,7 +67,35 @@ $userID = $_SESSION['user_id'];
                         <option value="<?php echo "$" . $holder['jar_total']; ?>"><?php echo $holder['jar_name']; $currJarID=$holder['jar_id']; ?></option>
                         
                             
-                        <?php } $inviteCode=$holder['jar_invite_code']; $jarTotal = $holder['jar_total']; ?> </select>
+                        <?php 
+                            } 
+
+                            $inviteCode=$holder['jar_invite_code']; 
+                            $jarTotal = $holder['jar_total']; 
+
+                            if(isset($_GET['addMoney'])){
+                                echo "HERE";
+                                echo $jarTotal;
+                                // $precision = 2;
+                                // $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
+                                // $value = number_format((float) $jarTotal, $precision, '.', '');
+                                // echo "jar total = " . $jarTotal;
+                                // echo "value = " . $value;
+                                // $newJar_total = $jarTotal + 1;
+                                // echo "$";
+                                // echo $newJar_total;
+            
+                               
+            
+                                // $db->query(
+                                //     "UPDATE jars
+                                //     SET jar_Total = $newJar_total
+                                //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+                                // );
+                            }
+            
+                            
+                        ?> </select>
                         <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
                 </form>
             </td>
@@ -114,28 +142,8 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
                 }
 
-                $test = 55;
-                if(isset($_GET['addMoney'], $jarTotal)){
-                    echo $test;
-                    echo $jarTotal;
-                    // $precision = 2;
-                    // $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
-                    // $value = number_format((float) $jarTotal, $precision, '.', '');
-                    // echo "jar total = " . $jarTotal;
-                    // echo "value = " . $value;
-                    // $newJar_total = $jarTotal + 1;
-                    // echo "$";
-                    // echo $newJar_total;
-
-                   
-
-                    // $db->query(
-                    //     "UPDATE jars
-                    //     SET jar_Total = $newJar_total
-                    //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-                    // );
-                }
-
+         
+               
         ?>
 
         <?php   
