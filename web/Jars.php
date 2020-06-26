@@ -114,6 +114,8 @@ $userID = $_SESSION['user_id'];
                                             //    echo "$";
                                             //    echo $newJar_total;
 
+                                            echo "jar total = " . $jarTotal;
+                                            echo "new jar total = " . $newJar_total;
                                             updateJar();
 
                                             // $db->query(
