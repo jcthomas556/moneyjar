@@ -104,13 +104,13 @@ $userID = $_SESSION['user_id'];
    //echo "Look here" . $jarTotal;
                    
 
-   echo $jarTotal;
+   //echo $jarTotal;
    $precision = 2;
    $jarTotal = intval($jarTotal * ($p = pow(10, $precision))) / $p;
    $value = number_format((float) $jarTotal, $precision, '.', '');
 //    echo "jar total = " . $jarTotal;
 //    echo "value = " . $value;
-   $newJar_total = $jarTotal + 1;
+   $newJar_total = $value + 1;
 //    echo "$";
 //    echo $newJar_total;
 
