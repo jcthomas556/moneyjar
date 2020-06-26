@@ -80,8 +80,7 @@ $userID = $_SESSION['user_id'];
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
 
-                echo "What the flip:";
-                echo $currJarID;
+                
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
@@ -108,13 +107,12 @@ $userID = $_SESSION['user_id'];
                     echo "$";
                     echo $newJar_total;
 
-                    echo "jar ID =";
-                    echo $currJarID;
+                   
 
                     $db->query(
                         "UPDATE jars
                         SET jar_Total = $newJar_total
-                        WHERE jar_id = $currJarID"
+                        WHERE jar_invite_code = 100700"
                     );
                 }
 
