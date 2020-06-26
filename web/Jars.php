@@ -105,25 +105,31 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
 
-            }
-
+                if(isset($_GET['addMoney'])){
+                    echo $jar_total;
+                    echo gettype($jar_total);
                 
-                // if(isset($_GET['addMoney'])){
-                //     $precision = 2;
-                //     $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-                //     $value = number_format((float) $jar_total, $precision, '.', '');
-                //     $newJar_total = $jar_total + 1;
-                //     echo "$";
-                //     echo $newJar_total;
+                    // $precision = 2;
+                    // $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+                    // $value = number_format((float) $jar_total, $precision, '.', '');
+                    // $newJar_total = $jar_total + 1;
+                    // echo "$";
+                    // echo $newJar_total;
 
                    
 
-                //     $db->query(
-                //         "UPDATE jars
-                //         SET jar_Total = $newJar_total
-                //         WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-                //     );
-                // }
+                    // $db->query(
+                    //     "UPDATE jars
+                    //     SET jar_Total = $newJar_total
+                    //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+                    // );
+                }
+
+
+            }
+
+                
+             
 
         ?>
 
