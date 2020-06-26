@@ -80,7 +80,8 @@ $userID = $_SESSION['user_id'];
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
 
-                
+                $jarID = $_GET["jarSelector"];
+                echo $jarId;
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
@@ -92,10 +93,8 @@ $userID = $_SESSION['user_id'];
 
 
                     
-                $jarTotal = $_GET["jarSelector"];
-                echo "<p>";
-                echo $jarTotal;
-                echo "</p>";
+                
+              
                 }
 
                 
