@@ -77,7 +77,7 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                $addMoneyReq = $_GET["addMoney"];
+                //$addMoneyReq = $_GET["addMoney"];
                 
              
                 if($newJarName != ""){
