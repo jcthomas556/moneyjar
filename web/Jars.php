@@ -107,8 +107,8 @@ $userID = $_SESSION['user_id'];
 
                 if(isset($_GET['addMoney'])){
                     echo "test";
-                    echo $jar_total;
-                    echo gettype($jar_total);
+                    // echo $jar_total;
+                    // echo gettype($jar_total);
                 
                     // $precision = 2;
                     // $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
