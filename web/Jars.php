@@ -185,7 +185,7 @@ $userID = $_SESSION['user_id'];
             }
         ?>
         <?php  
-            function addMoney(){                
+            function addMoney($inviteCode, $db, $jar_total){                
                 $precision = 2;
                 //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
                 //$value = number_format((float) $jar_total, $precision, '.', '');
