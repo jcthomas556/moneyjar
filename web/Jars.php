@@ -191,7 +191,7 @@ $userID = $_SESSION['user_id'];
                 //$value = number_format((float) $jar_total, $precision, '.', '');
                 //$newJar_total = $jar_total + 1;
                 echo "$$$";
-                echo $newJar_total;
+                echo $jar_total;
                 echo $inviteCode;
 
                 // $db->query(
