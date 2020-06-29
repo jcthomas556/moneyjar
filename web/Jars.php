@@ -81,7 +81,7 @@ $userID = $_SESSION['user_id'];
                 $newJarCode = $_GET["jarCode"];
                 
            
-                                                
+                $valid = false;
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
