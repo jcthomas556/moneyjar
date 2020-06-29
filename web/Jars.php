@@ -90,7 +90,7 @@ $userID = $_SESSION['user_id'];
                     joinNewJar($userID, $db, $newJarCode);
                 }  
                 if(array_key_exists('addMoney', $_GET)) { 
-                    echo "test sucess";
+                    addMoney();
                 }    
                             
                     
