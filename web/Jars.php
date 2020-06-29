@@ -89,20 +89,6 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }  
-                
-                            
-                    
-                $jarID = $_GET["jarSelector"];
-
-                foreach($db->query(
-                    "SELECT jar_invite_code, jar_total, jar_name FROM jars WHERE jar_id = '$jarID'", PDO::FETCH_ASSOC) as $holder)
-                    {
-                        $inviteCode = $holder[jar_invite_code];
-                        $jarTotal = $holder[jar_total];
-                        $jarName = $holder[jar_name];
-                            
-                    }
-
                 if(array_key_exists('addMoney', $_GET)) { 
                     echo "success 1";
                     // $valid = true;
@@ -117,6 +103,20 @@ $userID = $_SESSION['user_id'];
                     // echo "valid stop = ";
                     // echo $inviteCode;
                 }
+                            
+                    
+                $jarID = $_GET["jarSelector"];
+
+                foreach($db->query(
+                    "SELECT jar_invite_code, jar_total, jar_name FROM jars WHERE jar_id = '$jarID'", PDO::FETCH_ASSOC) as $holder)
+                    {
+                        $inviteCode = $holder[jar_invite_code];
+                        $jarTotal = $holder[jar_total];
+                        $jarName = $holder[jar_name];
+                            
+                    }
+
+              
 
                 echo "<p> $";
                 echo $jarTotal;
