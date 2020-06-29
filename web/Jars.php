@@ -105,14 +105,17 @@ $userID = $_SESSION['user_id'];
 
                 if(array_key_exists('addMoney', $_GET)) { 
                     $valid = true;
-                    echo "array key stop = " . $inviteCode;
+                    echo "array key stop = ";
+                    echo $inviteCode;
                     // echo $inviteCode;
                     // echo $jar_total;
                     // addMoney($inviteCode, $db, $jar_total);
                 }    
                 if ($valid == TRUE){
-                    echo "valid stop = " . $inviteCode;
+                    echo "valid stop = ";
+                    echo $inviteCode;
                 }
+
                 echo "<p> $";
                 echo $jarTotal;
                 echo "</p>";
