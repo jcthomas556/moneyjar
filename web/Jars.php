@@ -80,7 +80,7 @@ $userID = $_SESSION['user_id'];
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
                 
-                $moneyURL = "https://intense-fjord-38137.herokuapp.com/web/Jars.php?addMoney=";
+                $moneyURL = "http://intense-fjord-38137.herokuapp.com/web/Jars.php?addMoney=";
 
 
                 $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] 
@@ -88,7 +88,7 @@ $userID = $_SESSION['user_id'];
                 $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']; 
         
                 // Display the complete URL 
-                echo $link; 
+                //echo $link; 
                                                 
              
                 if($newJarName != ""){
@@ -97,9 +97,10 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }       
-                // if($moneyURL == ){
-                //     addMoney();
-                // }             
+                if($moneyURL == $link){
+                    echo "test success";
+                    //addMoney();
+                }             
                     
                 $jarID = $_GET["jarSelector"];
 
