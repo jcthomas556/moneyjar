@@ -79,11 +79,17 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                $addMoneyReq = $_GET["addMoney"];
-
-                echo "Look -> " . $addMoneyReq;
-
                 
+                $moneyURL = "https://intense-fjord-38137.herokuapp.com/web/Jars.php?addMoney=";
+
+
+                $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] 
+                === 'on' ? "https" : "http") . "://" . 
+                $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']; 
+        
+                // Display the complete URL 
+                echo $link; 
+                                                
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
@@ -91,9 +97,9 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }       
-                if($addMoneyReq != ""){
-                    addMoney();
-                }             
+                // if($moneyURL == ){
+                //     addMoney();
+                // }             
                     
                 $jarID = $_GET["jarSelector"];
 
