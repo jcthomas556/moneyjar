@@ -90,7 +90,7 @@ $userID = $_SESSION['user_id'];
                     joinNewJar($userID, $db, $newJarCode);
                 }  
                 if(array_key_exists('addMoney', $_GET)) { 
-                    addMoney();
+                    addMoney($inviteCode, $db, $jar_total);
                 }    
                             
                     
@@ -111,26 +111,7 @@ $userID = $_SESSION['user_id'];
 
 
                     
-                // if(isset($_GET['addMoney'])){
-                //     echo "test";
-                //     // // echo $jar_total;
-                //     // echo gettype($jar_total);
-                
-                //     // $precision = 2;
-                //     // $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-                //     // $value = number_format((float) $jar_total, $precision, '.', '');
-                //     // $newJar_total = $jar_total + 1;
-                //     // echo "$";
-                //     // echo $newJar_total;
-
-                   
-
-                //     // $db->query(
-                //     //     "UPDATE jars
-                //     //     SET jar_Total = $newJar_total
-                //     //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-                //     // );
-                // }
+             
 
 
             }
@@ -204,8 +185,21 @@ $userID = $_SESSION['user_id'];
             }
         ?>
         <?php  
-            function addMoney(){
-                echo "TEST";
+            function addMoney(){                
+                $precision = 2;
+                //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+                //$value = number_format((float) $jar_total, $precision, '.', '');
+                //$newJar_total = $jar_total + 1;
+                echo "$$$";
+                echo $newJar_total;
+                echo $inviteCode;
+
+                // $db->query(
+                //     "UPDATE jars
+                //     SET jar_Total = $newJar_total
+                //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+                // );
+                }
             }
         ?>
 
