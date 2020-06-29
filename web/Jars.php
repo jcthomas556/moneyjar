@@ -109,9 +109,9 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
 
-                // if(isset($_GET['addMoney'])){
-                //     echo "test";
-                //     // echo $jar_total;
+                if(isset($_GET['addMoney'])){
+                    echo "test";
+                    // // echo $jar_total;
                     // echo gettype($jar_total);
                 
                     // $precision = 2;
@@ -128,7 +128,7 @@ $userID = $_SESSION['user_id'];
                     //     SET jar_Total = $newJar_total
                     //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
                     // );
-                //}
+                }
 
 
             }
