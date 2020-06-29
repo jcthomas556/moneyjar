@@ -97,7 +97,7 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }       
-                if($moneyURL == $link){
+                if($moneyURL === $link){
                     echo "test success";
                     //addMoney();
                 }             
