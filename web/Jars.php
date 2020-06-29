@@ -81,6 +81,8 @@ $userID = $_SESSION['user_id'];
                 $newJarCode = $_GET["jarCode"];
                 $addMoneyReq = $_GET["addMoney"];
 
+                echo "Look -> " . $addMoneyReq;
+
                 
              
                 if($newJarName != ""){
@@ -109,26 +111,27 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
 
-                if(isset($_GET['addMoney'])){
-                    echo "test";
-                    // // echo $jar_total;
-                    // echo gettype($jar_total);
+                    
+                // if(isset($_GET['addMoney'])){
+                //     echo "test";
+                //     // // echo $jar_total;
+                //     // echo gettype($jar_total);
                 
-                    // $precision = 2;
-                    // $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-                    // $value = number_format((float) $jar_total, $precision, '.', '');
-                    // $newJar_total = $jar_total + 1;
-                    // echo "$";
-                    // echo $newJar_total;
+                //     // $precision = 2;
+                //     // $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+                //     // $value = number_format((float) $jar_total, $precision, '.', '');
+                //     // $newJar_total = $jar_total + 1;
+                //     // echo "$";
+                //     // echo $newJar_total;
 
                    
 
-                    // $db->query(
-                    //     "UPDATE jars
-                    //     SET jar_Total = $newJar_total
-                    //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-                    // );
-                }
+                //     // $db->query(
+                //     //     "UPDATE jars
+                //     //     SET jar_Total = $newJar_total
+                //     //     WHERE jar_invite_code = $newJarCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+                //     // );
+                // }
 
 
             }
@@ -191,8 +194,7 @@ $userID = $_SESSION['user_id'];
                     {
                         $jarID = $holder['jar_id']; 
                     }   
-                // echo "----> Jar ID = ";
-                // echo $jarID;
+            
                 $db->query(
                     "INSERT INTO users_jars (user_id, jar_id)
                     VALUES(
@@ -226,6 +228,7 @@ $userID = $_SESSION['user_id'];
             <form action="Jars.php" method="GET">
                 <button type="submit" name="addMoney" class="btn btn-success">Put $1 in the Jar</button>
             </form>
+
             <br>
             <button onclick="document.getElementById('sharedJar').style.display='block'">Share your Jar with others</button>
             <!-- The Modal -->
