@@ -225,7 +225,7 @@ $userID = $_SESSION['user_id'];
 
             <br>
             <form method="POST">
-                <input type="submit" name="addMoney" class="btn btn-success">Put $1 in the Jar</button>
+                <input type="submit" name="addMoney" value="Put $1 in the Jar" class="btn btn-success"></button>
             </form>
 
             <br>
