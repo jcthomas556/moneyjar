@@ -75,7 +75,6 @@ function foo () {
     url:"Jars.php", //the page containing php script
     type: "POST", //request type
     success:function(result){
-      ending();
      alert(result);
    }
  });
