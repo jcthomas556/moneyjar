@@ -74,8 +74,7 @@ function foo () {
   $.ajax({
     url:"Jars.php", //the page containing php script
     type: "POST", //request type
-    success:function(result){
-     alert(result);
-   }
+    success:thing()   
+  
  });
 }

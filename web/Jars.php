@@ -7,10 +7,11 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+function thing(){
+// if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     echo "anything?";
-}
 
+}
 $username = $_SESSION['username'];
 $userID = $_SESSION['user_id'];
 
