@@ -237,7 +237,9 @@ $userID = $_SESSION['user_id'];
         <?php
 
             function test(){
-                echo "weird new method";
+                echo "weird new method--";
+                echo "invite code = " . $inviteCode;
+                echo "jar total = " . $jarTotal;
             }
 
         ?>
