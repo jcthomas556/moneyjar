@@ -123,6 +123,7 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
 
+                echo "valid currently = " . $valid;
                 if ($valid = "1"){
                     addMoney($inviteCode, $jarTotal);
                     
