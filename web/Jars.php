@@ -123,16 +123,14 @@ $userID = $_SESSION['user_id'];
                         $jarName = $holder[jar_name];
                             
                     }
-
+                    
               
 
                 echo "<p> $";
                 echo $jarTotal;
                 echo "</p>";
 
-                function addMoney(){
-                    echo "test result";
-                }
+                
                     
              
             }
@@ -236,6 +234,7 @@ $userID = $_SESSION['user_id'];
 
             function test(){
               echo "resulting value";
+              echo $GLOBALS['inviteCode'];
             }
 
         ?>
