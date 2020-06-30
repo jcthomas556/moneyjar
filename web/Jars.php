@@ -10,7 +10,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     switch($action) {
-        case 'test' : test();break;
+        case 'test' : addMoney();break;
         case 'blah' : blah();break;
         // ...etc...
     }
@@ -130,10 +130,8 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
 
-                function callAddMoney(){
-                
-                    addMoney($inviteCode, $jarTotal, $db);
-                    
+                function addMoney(){
+                    echo "test result";
                 }
                     
              
@@ -209,29 +207,29 @@ $userID = $_SESSION['user_id'];
             }
         ?>
         <?php  
-            function addMoney($inviteCode, $jarTotal, $db){                
-                echo "weird new method--";
-                echo "invite code = " . $inviteCode;
-                echo "jar total = " . $jarTotal;
-                // echo "success 2";
-                //     echo $inviteCode;
-                //     echo $jarTotal;
-                //$newTotal = 45;
+            // function addMoney($inviteCode, $jarTotal, $db){                
+            //     echo "weird new method--";
+            //     echo "invite code = " . $inviteCode;
+            //     echo "jar total = " . $jarTotal;
+            //     // echo "success 2";
+            //     //     echo $inviteCode;
+            //     //     echo $jarTotal;
+            //     //$newTotal = 45;
                 
-                //$precision = 2;
-                //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-                //$value = number_format((float) $jar_total, $precision, '.', '');
-                //$newJar_total = $jar_total + 1;
-                // echo "$$$";
-                // echo $jar_total;
-                // echo $inviteCode;
+            //     //$precision = 2;
+            //     //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+            //     //$value = number_format((float) $jar_total, $precision, '.', '');
+            //     //$newJar_total = $jar_total + 1;
+            //     // echo "$$$";
+            //     // echo $jar_total;
+            //     // echo $inviteCode;
 
-                // $db->query(
-                //     "UPDATE jars
-                //     SET jar_Total = $newTotal
-                //     WHERE jar_invite_code = $inviteCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-                // );
-            }
+            //     // $db->query(
+            //     //     "UPDATE jars
+            //     //     SET jar_Total = $newTotal
+            //     //     WHERE jar_invite_code = $inviteCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+            //     // );
+            // }
             
         ?>
         <?php
