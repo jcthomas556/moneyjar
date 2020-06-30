@@ -211,7 +211,7 @@ $userID = $_SESSION['user_id'];
         <?php  
              function addMoney(){                
                  //echo "success 2";
-                 echo $GLOBALS['inviteCode'];
+                 echo $GLOBALS['jarTotal'];
              }
             //     echo "weird new method--";
             //     echo "invite code = " . $inviteCode;
