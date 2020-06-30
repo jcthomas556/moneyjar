@@ -11,8 +11,6 @@ $testResult = "pass";
 
 
 if(isset($_POST['action']) && !empty($_POST['action'])) {
-    echo "Jar selector next: ";
-    var_dump($_POST);
     $action = $_POST['action'];
     switch($action) {
         case 'test' : test();break;
@@ -133,7 +131,7 @@ $userID = $_SESSION['user_id'];
               
 
                 echo "<p> $--=";
-                echo $jarTotal;
+                echo $jarTotal . $inviteCode . $jarName;
                 echo "</p>";
 
                 
@@ -269,8 +267,9 @@ $userID = $_SESSION['user_id'];
             </form>
 
 
-
-            <button type="button" onclick="foo()">AJAX button</button>
+            <from id="sendMoney">
+                <button type="button" onclick="foo()">AJAX button</button>
+            </from>
 
 
 
