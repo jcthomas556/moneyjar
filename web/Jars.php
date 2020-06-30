@@ -124,7 +124,7 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
                 echo "valid currently = " . $valid;
-                if ($valid = "1"){
+                if ($valid == 1){
                     addMoney($inviteCode, $jarTotal);
                     
                     // echo "valid stop = ";
