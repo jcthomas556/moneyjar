@@ -119,7 +119,7 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
 
-                if ($valid == 1){
+                if ($valid = "1"){
                     echo "success 2";
                     echo $inviteCode;
                     echo $jarTotal;
