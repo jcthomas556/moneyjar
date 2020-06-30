@@ -104,8 +104,8 @@ $userID = $_SESSION['user_id'];
                     joinNewJar($userID, $db, $newJarCode);
                 }  
                 if(array_key_exists('addMoney', $_GET)) { 
-                    //echo "success 1";
-                     $valid = 1;
+                    echo "success 1";
+                     //$valid = 1;
                      //echo $valid;
                     // echo "array key stop = ";
                     // echo $inviteCode;
@@ -258,13 +258,13 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <!-- <form method="GET">
+            <form method="GET">
                 <input type="submit" name="addMoney" value="Put $1 in the Jar" class="btn btn-success" />
-            </form> -->
+            </form>
 
 
 
-            <button type="button" onclick="foo()">Click Me</button>
+            <!-- <button type="button" onclick="foo()">Click Me</button> -->
 
 
 
