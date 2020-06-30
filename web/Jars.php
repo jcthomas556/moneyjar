@@ -129,9 +129,10 @@ $userID = $_SESSION['user_id'];
                 }
                     
              
-
-
             }
+        elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            echo "a is equal to b";
+        } 
 
                 
              
