@@ -11,6 +11,8 @@ $testResult = "pass";
 
 
 if(isset($_POST['action']) && !empty($_POST['action'])) {
+    echo "Jar selector next: ";
+    echo $_POST['jarSelector'];
     $action = $_POST['action'];
     switch($action) {
         case 'test' : test();break;
@@ -263,12 +265,12 @@ $userID = $_SESSION['user_id'];
 
             <br>
             <form method="GET">
-                <input type="submit" name="addMoney" value="Put $1 in the Jar" class="btn btn-success" />
+                <input type="submit" name="addMoney" value="non ajax button - Put $1 in the Jar" class="btn btn-success" />
             </form>
 
 
 
-            <!-- <button type="button" onclick="foo()">Click Me</button> -->
+            <button type="button" onclick="foo()">AJAX button</button>
 
 
 
