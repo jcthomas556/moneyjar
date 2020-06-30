@@ -79,7 +79,8 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                $valid = false;
+                $valid = 0;
+                
            
                 
              
@@ -100,7 +101,7 @@ $userID = $_SESSION['user_id'];
                     // addMoney($inviteCode, $db, $jar_total);
                 }    
                 else{
-                    $valid = false;
+                    $valid = 0;
                 }
                 
                             
@@ -122,7 +123,7 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
 
-                if ($valid = "1"){
+                if ($valid == "1"){
                     echo "success 2";
                     echo $inviteCode;
                     echo $jarTotal;
