@@ -223,7 +223,7 @@ $userID = $_SESSION['user_id'];
                     WHERE jar_invite_code = $inviteCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
                 );
                 }
-            }
+            
         ?>
 
             
