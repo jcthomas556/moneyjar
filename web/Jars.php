@@ -7,6 +7,9 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
 }
 
+$testResult = "pass";
+
+
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     switch($action) {
@@ -235,6 +238,7 @@ $userID = $_SESSION['user_id'];
 
             function test(){
               echo "resulting value";
+              echo $GLOBALS['testResult'];
               echo $GLOBALS['jarTotal'];
               echo "<-";
             }
