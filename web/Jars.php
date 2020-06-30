@@ -12,7 +12,7 @@ $testResult = "pass";
 
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     echo "Jar selector next: ";
-    echo $_POST['jarSelector'];
+    var_dump($_POST);
     $action = $_POST['action'];
     switch($action) {
         case 'test' : test();break;
