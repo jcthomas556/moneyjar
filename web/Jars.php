@@ -130,12 +130,10 @@ $userID = $_SESSION['user_id'];
                 echo $jarTotal;
                 echo "</p>";
 
-                //echo "valid currently = " . $valid;
-                if ($valid == 1){
+                function callAddMoney(){
+                
                     addMoney($inviteCode, $jarTotal, $db);
                     
-                    // echo "valid stop = ";
-                    // echo $inviteCode;
                 }
                     
              
@@ -212,11 +210,13 @@ $userID = $_SESSION['user_id'];
         ?>
         <?php  
             function addMoney($inviteCode, $jarTotal, $db){                
-                
+                echo "weird new method--";
+                echo "invite code = " . $inviteCode;
+                echo "jar total = " . $jarTotal;
                 // echo "success 2";
                 //     echo $inviteCode;
                 //     echo $jarTotal;
-                $newTotal = 45;
+                //$newTotal = 45;
                 
                 //$precision = 2;
                 //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
@@ -237,9 +237,7 @@ $userID = $_SESSION['user_id'];
         <?php
 
             function test(){
-                echo "weird new method--";
-                echo "invite code = " . $inviteCode;
-                echo "jar total = " . $jarTotal;
+              callAddMoney();
             }
 
         ?>
