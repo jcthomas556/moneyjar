@@ -108,7 +108,7 @@ $userID = $_SESSION['user_id'];
                      //$valid = 1;
                      //echo $valid;
                     // echo "array key stop = ";
-                     echo $GLOBAL['inviteCode'];
+                     echo $GLOBALS['inviteCode'];
                     // echo $inviteCode;
                     // echo $jar_total;
                     // addMoney($inviteCode, $db, $jar_total);
