@@ -10,8 +10,8 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
 $testResult = "pass";
 
 
-if(isset($_POST['action']) && !empty($_POST['action'])) {
-    $action = $_POST['action'];
+if(isset($_GET['action']) && !empty($_GET['action'])) {
+    $action = $_GET['action'];
     switch($action) {
         case 'test' : test();break;
         case 'blah' : blah();break;
