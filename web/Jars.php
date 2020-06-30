@@ -7,11 +7,16 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
 }
 
-function thing(){
-// if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    echo "anything?";
-
+if(isset($_POST['action']) && !empty($_POST['action'])) {
+    $action = $_POST['action'];
+    switch($action) {
+        case 'test' : test();break;
+        case 'blah' : blah();break;
+        // ...etc...
+    }
 }
+
+
 $username = $_SESSION['username'];
 $userID = $_SESSION['user_id'];
 
@@ -231,7 +236,7 @@ $userID = $_SESSION['user_id'];
         ?>
         <?php
 
-            function ending(){
+            function test(){
                 echo "weird new method";
             }
 

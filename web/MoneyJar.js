@@ -73,8 +73,14 @@ function signOut(){
 function foo () {
   $.ajax({
     url:"Jars.php", //the page containing php script
+    data: {action: 'test'},
     type: "POST", //request type
-    success:thing()   
+    success:function(output){
+      alert(output);
+    } 
   
  });
+
+
+
 }
