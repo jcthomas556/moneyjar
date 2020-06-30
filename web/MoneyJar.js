@@ -70,3 +70,13 @@ function signOut(){
    window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
 }
 //////////////////////////////////
+function foo () {
+  $.ajax({
+    url:"Jars.php", //the page containing php script
+    type: "POST", //request type
+    success:function(result){
+      ending();
+     alert(result);
+   }
+ });
+}

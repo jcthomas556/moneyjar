@@ -225,8 +225,13 @@ $userID = $_SESSION['user_id'];
             }
             
         ?>
+        <?php
 
-            
+            function ending(){
+                echo "weird new method";
+            }
+
+        ?>
  
     </div>
 
@@ -241,9 +246,20 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <form method="GET">
+            <!-- <form method="GET">
                 <input type="submit" name="addMoney" value="Put $1 in the Jar" class="btn btn-success" />
-            </form>
+            </form> -->
+
+
+
+            <button type="button" onclick="foo()">Click Me</button>
+
+
+
+
+
+
+
 
             <br>
             <button onclick="document.getElementById('sharedJar').style.display='block'">Share your Jar with others</button>
