@@ -10,7 +10,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     switch($action) {
-        case 'test' : addMoney();break;
+        case 'test' : test();break;
         case 'blah' : blah();break;
         // ...etc...
     }
@@ -235,7 +235,7 @@ $userID = $_SESSION['user_id'];
         <?php
 
             function test(){
-              callAddMoney();
+              echo "resulting value";
             }
 
         ?>
