@@ -210,7 +210,8 @@ $userID = $_SESSION['user_id'];
         ?>
         <?php  
              function addMoney(){                
-                 echo "success 2";
+                 //echo "success 2";
+                 echo $GLOBALS['inviteCode'];
              }
             //     echo "weird new method--";
             //     echo "invite code = " . $inviteCode;
