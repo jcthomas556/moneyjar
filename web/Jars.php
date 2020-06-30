@@ -100,10 +100,7 @@ $userID = $_SESSION['user_id'];
                     // echo $jar_total;
                     // addMoney($inviteCode, $db, $jar_total);
                 }    
-                else{
-                    $valid = 0;
-                }
-                
+               
                             
                     
                 $jarID = $_GET["jarSelector"];
