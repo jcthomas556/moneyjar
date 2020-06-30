@@ -7,7 +7,14 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
 }
 
-
+if(isset($_POST['action']) && !empty($_POST['action'])) {
+    $action = $_POST['action'];
+    switch($action) {
+        case 'test' : test();break;
+        case 'blah' : blah();break;
+        // ...etc...
+    }
+}
 
 
 $username = $_SESSION['username'];
@@ -224,14 +231,7 @@ $userID = $_SESSION['user_id'];
             
         ?>
         <?php
-        if(isset($_POST['action']) && !empty($_POST['action'])) {
-            $action = $_POST['action'];
-            switch($action) {
-                case 'test' : test();break;
-                case 'blah' : blah();break;
-                // ...etc...
-            }
-        }
+       
 
             function test(){
               echo "resulting value";
