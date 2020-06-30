@@ -71,7 +71,6 @@ function signOut(){
 }
 //////////////////////////////////
 function foo () {
-  alert("made it");
   $.ajax({
     url:"Jars.php", //the page containing php script
     type: "POST", //request type
