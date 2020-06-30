@@ -234,7 +234,8 @@ $userID = $_SESSION['user_id'];
 
             function test(){
               echo "resulting value";
-              echo $GLOBALS['inviteCode'];
+              echo $GLOBALS['jarTotal'];
+              echo "<-";
             }
 
         ?>
