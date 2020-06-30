@@ -92,7 +92,7 @@ $userID = $_SESSION['user_id'];
                 }  
                 if(array_key_exists('addMoney', $_GET)) { 
                     echo "success 1";
-                     $valid = true;
+                     $valid = 1;
                      echo $valid;
                     // echo "array key stop = ";
                     // echo $inviteCode;
