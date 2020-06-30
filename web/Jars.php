@@ -124,9 +124,8 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
                 if ($valid = "1"){
-                    echo "success 2";
-                    echo $inviteCode;
-                    echo $jarTotal;
+                    addMoney($inviteCode, $jarTotal);
+                    
                     // echo "valid stop = ";
                     // echo $inviteCode;
                 }
@@ -205,14 +204,20 @@ $userID = $_SESSION['user_id'];
             }
         ?>
         <?php  
-            function addMoney($inviteCode, $db, $jar_total){                
-                $precision = 2;
-                //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-                //$value = number_format((float) $jar_total, $precision, '.', '');
-                //$newJar_total = $jar_total + 1;
-                echo "$$$";
-                echo $jar_total;
-                echo $inviteCode;
+            function addMoney($inviteCode, $jar_total){                
+                
+                echo "success 2";
+                    echo $inviteCode;
+                    echo $jarTotal;
+                
+                
+                // $precision = 2;
+                // //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+                // //$value = number_format((float) $jar_total, $precision, '.', '');
+                // //$newJar_total = $jar_total + 1;
+                // echo "$$$";
+                // echo $jar_total;
+                // echo $inviteCode;
 
                 // $db->query(
                 //     "UPDATE jars
