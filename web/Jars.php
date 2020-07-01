@@ -145,10 +145,10 @@ $userID = $_SESSION['user_id'];
                             
                     }
  
-                echo "<p> $--=";
-                //echo $jarTotal . $inviteCode . $jarName;
-                yell();
-                echo "</p>";
+               
+            
+                printTotal();
+                
 
                 if(array_key_exists('addMoney', $_GET)) { 
                    echo $jarID;
@@ -172,9 +172,10 @@ $userID = $_SESSION['user_id'];
         
         ?>
         <?php
-            function yell(){
+            function printTotal(){
+                echo "<p> $";
                 echo $GLOBALS['jarTotal']; 
-                echo $GLOBALS['inviteCode']; 
+                echo "</p>";
             }
         ?>
 
