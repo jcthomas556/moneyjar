@@ -1,12 +1,7 @@
 <?php
 include('database_connection.php');
 
-session_start();
 
-if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
-    // redirect to your login page
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
