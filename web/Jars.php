@@ -278,7 +278,7 @@ $userID = $_SESSION['user_id'];
 
             <br>
             <form  method="GET">
-                <input type="submit" name="addMoney" value="non ajax button - Put $1 in the Jar" class="btn btn-success" />
+                <button type="submit" name="addMoney" value="non ajax button - Put $1 in the Jar" class="btn btn-success"> non ajax button</button>
             </form>
 
 
