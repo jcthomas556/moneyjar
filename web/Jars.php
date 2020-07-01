@@ -125,11 +125,11 @@ $userID = $_SESSION['user_id'];
                     
                 $jarID = $_GET["jarSelector"];
                 $_SESSION['jarID'] = $jarID;
-                echo "look the jar ID = " . $_SESSION["jarID"];
+                //echo "look the jar ID = " . $_SESSION["jarID"];
 
                 if($addMoney != ""){
                     echo "test";
-                    echo $jarID;
+                    echo $_SESSION["jarID"];
                 }  
 
                 foreach($db->query(
