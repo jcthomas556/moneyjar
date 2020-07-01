@@ -124,7 +124,8 @@ $userID = $_SESSION['user_id'];
                             
                     
                 $jarID = $_GET["jarSelector"];
-                echo "look the jar ID = " . $jarID;
+                $_SESSION["jarID"] = $jarID;
+                echo "look the jar ID = " . $_SESSION["jarID"];
 
                 if($addMoney != ""){
                     echo "test";
@@ -282,9 +283,9 @@ $userID = $_SESSION['user_id'];
             </form>
 
 
-            <from id="sendMoney">
+            <form id="sendMoney">
                 <button type="button" onclick="foo()">AJAX button</button>
-            </from>
+            </form>
 
 
 
