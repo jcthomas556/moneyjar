@@ -106,6 +106,7 @@ $userID = $_SESSION['user_id'];
                 }  
                 if($addMoney != ""){
                     echo "test1";
+                    echo $jarID;
                 }  
                 // if(array_key_exists('addMoney', $_GET)) { 
                 //     //addMoney();
