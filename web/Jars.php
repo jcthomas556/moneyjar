@@ -84,11 +84,12 @@ $userID = $_SESSION['user_id'];
 <br><br>
 
         <?php
+        $count = 0;
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                $count = 0;
+                
              
                 echo $count;
                 if($newJarName != "" && $count == 0){
