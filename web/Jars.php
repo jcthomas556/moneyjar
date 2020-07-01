@@ -92,6 +92,7 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
+                $addMoney = $_GET["addMoney"];
                 $valid = 0;
                 
            
@@ -102,6 +103,9 @@ $userID = $_SESSION['user_id'];
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
+                }  
+                if($addMoney != ""){
+                    echo "test1";
                 }  
                 // if(array_key_exists('addMoney', $_GET)) { 
                 //     //addMoney();
