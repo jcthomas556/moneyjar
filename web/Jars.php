@@ -242,46 +242,8 @@ $userID = $_SESSION['user_id'];
                 );  
             }
         ?>
-        <?php  
-             function addMoney(){                
-                 //echo "success 2";
-                 echo $GLOBALS['jarTotal'];
-             }
-            //     echo "weird new method--";
-            //     echo "invite code = " . $inviteCode;
-            //     echo "jar total = " . $jarTotal;
-            //     // echo "success 2";
-            //     //     echo $inviteCode;
-            //     //     echo $jarTotal;
-            //     //$newTotal = 45;
-                
-            //     $precision = 2;
-            //     $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-            //     $value = number_format((float) $jar_total, $precision, '.', '');
-            //     $newJar_total = $jar_total + 1;
-            //     echo "$$$";
-            //     echo $jar_total;
-            //     echo $inviteCode;
-
-            //     $db->query(
-            //         "UPDATE jars
-            //         SET jar_Total = $newTotal
-            //         WHERE jar_invite_code = $inviteCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-            //     );
-            // }
-            
-        ?>
-        <?php
-       
-
-            function test(){
-              echo "resulting value";
-              echo $GLOBALS['testResult'];
-              echo $GLOBALS['jarTotal'];
-              echo "<-";
-            }
-
-        ?>
+      
+      
  
     </div>
 
@@ -298,14 +260,11 @@ $userID = $_SESSION['user_id'];
             <br>
             <form method="POST">
                 <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
-                <button type="submit" class="btn btn-success"> non ajax button</button>
+                <button type="submit" class="btn btn-success"> Add a Dollar!</button>
             </form>
 
 
-            <from id="sendMoney">
-                <button type="button" onclick="foo()">AJAX button</button>
-            </from>
-
+            
 
 
 
