@@ -130,7 +130,7 @@ $userID = $_SESSION['user_id'];
  
                 echo "<p> $--=";
                 //echo $jarTotal . $inviteCode . $jarName;
-                yell($jarTotal, $inviteCode, $jarName);
+                yell();
                 echo "</p>";
                 
 
@@ -138,8 +138,8 @@ $userID = $_SESSION['user_id'];
         
         ?>
         <?php
-            function yell($jarTotal, $inviteCode, $jarName){
-                echo $jarTotal . $inviteCode . $jarName; 
+            function yell(){
+                echo $GLOBALS['jarTotal']; 
             }
         ?>
 
