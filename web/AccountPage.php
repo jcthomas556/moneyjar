@@ -68,7 +68,7 @@ $userID = $_SESSION['user_id'];
                             if($holder['user_id'] > 0){
                                 echo "test";
                                 echo 'Account created! Successfully logged in, welcome, ' . $holder['user_name'];
-                                header('Location: https://intense-fjord-38137.herokuapp.com/web/Jars.php');
+                                header('Location: /Jars.php');
                             }
                         }
 
