@@ -124,6 +124,7 @@ $userID = $_SESSION['user_id'];
                             
                     
                 $jarID = $_GET["jarSelector"];
+                echo "look the jar ID = " . $jarID;
 
                 if($addMoney != ""){
                     echo "test1";
