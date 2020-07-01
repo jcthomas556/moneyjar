@@ -167,8 +167,6 @@ $userID = $_SESSION['user_id'];
                             '$jarID'
                         )"
                     );  
-                    
-                    header("Refresh:0");
 
             }
 
