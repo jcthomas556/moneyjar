@@ -137,6 +137,12 @@ $userID = $_SESSION['user_id'];
                 yell();
                 echo "</p>";
                 
+                if(array_key_exists('addMoney', $_GET)) { 
+                    echo "<p> $--=";
+                    yell();
+                    echo "</p>";
+                }    
+                
 
             }
         
