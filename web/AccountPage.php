@@ -45,7 +45,7 @@ $userID = $_SESSION['user_id'];
 
             echo '<h3 class="text-center"> Welcome to your account page, ';
             echo $username;
-            echo "</h3>";
+            echo "<!/h3>";
 
             foreach($db->query(
                         "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
