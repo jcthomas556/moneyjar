@@ -59,14 +59,9 @@ include('database_connection.php');
                         $_SESSION['user_id'] = $userID;
 
                         $successMessage = "<p id='signedInMessage'> Successfully logged in, welcome, " . $holder['user_name'];
-                                            
-                        // echo "<p id='signedInMessage';>";
-                        // echo 'Successfully logged in, welcome, ' . $holder['user_name'];
-                        
-                        
-                        echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>";
+          
                         echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-block' aria-hidden='true'></span> </button>";
-                        
+                        echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>";
 
                     }
                 }
