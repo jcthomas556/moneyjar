@@ -22,7 +22,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
 
 $username = $_SESSION['username'];
 $userID = $_SESSION['user_id'];
-
+$count = 0;
 
 //SELECT jar_total, jar_active, user_id FROM jars WHERE user_id = '1';
 ?>
@@ -84,16 +84,13 @@ $userID = $_SESSION['user_id'];
 <br><br>
 
         <?php
-        $count = 0;
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                
              
-                echo $count;
-                if($newJarName != "" && $count == 0){
-                    insertNewJar($newJarName, $userID, $db, $count);
+                if($newJarName != ""){
+                    insertNewJar($newJarName, $userID, $db);
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
@@ -140,8 +137,7 @@ $userID = $_SESSION['user_id'];
 
         <?php   
 
-            function insertNewJar($newJarName, $userID, $db, $count){
-                $count++;
+            function insertNewJar($newJarName, $userID, $db){
                 $length = 7;
                 $nums = '0123456789';
                 for ($p = 0; $p < $length-1; $p++){
@@ -176,7 +172,7 @@ $userID = $_SESSION['user_id'];
             }
                 
             
-
+            $newJarName = "";
             
         ?>
         <?php
