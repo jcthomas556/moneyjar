@@ -104,7 +104,7 @@ $userID = $_SESSION['user_id'];
                     joinNewJar($userID, $db, $newJarCode);
                 }  
                 if(array_key_exists('addMoney', $_GET)) { 
-                    addMoney();
+                    //addMoney();
                     //echo "success 1";
                     //$valid = 1;
                      //echo $valid;
@@ -113,6 +113,10 @@ $userID = $_SESSION['user_id'];
                     // echo $inviteCode;
                     // echo $jar_total;
                     // addMoney($inviteCode, $db, $jar_total);
+                    echo "<p> $--=";
+                //echo $jarTotal . $inviteCode . $jarName;
+                yell();
+                echo "</p>";
                 }    
                
                             
