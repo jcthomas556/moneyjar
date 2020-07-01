@@ -91,6 +91,7 @@ $count = 0;
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
+                    $newJarName = "";
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
@@ -172,7 +173,7 @@ $count = 0;
             }
                 
             
-            $newJarName = "";
+           // $newJarName = "";//TODO fix the 2 jar bug. related to the refresh required bug
             
         ?>
         <?php
