@@ -138,9 +138,7 @@ $userID = $_SESSION['user_id'];
                 echo "</p>";
 
                 if(array_key_exists('addMoney', $_GET)) { 
-                    echo "<p> $--=";
-                    yell();
-                    echo "</p>";
+                   echo $jarID;
                 }    
                 
 
