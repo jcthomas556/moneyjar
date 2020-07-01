@@ -140,6 +140,7 @@ $userID = $_SESSION['user_id'];
         <?php
             function yell(){
                 echo $GLOBALS['jarTotal']; 
+                echo $GLOBALS['inviteCode']; 
             }
         ?>
 
