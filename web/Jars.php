@@ -163,7 +163,7 @@ $userID = $_SESSION['user_id'];
                 $db->query(
                 "UPDATE jars
                 SET jar_Total = jar_Total + 1
-                WHERE jar_id = '$temp'"
+                WHERE jar_id = $temp"
                 );
 
                 header("Refresh:0; url=jarSelector=$_POST['jarID']");
