@@ -155,7 +155,8 @@ $userID = $_SESSION['user_id'];
                 }    
                 
 
-            }elseif(isset($_POST['jarID'])){
+            }
+            if(isset($_POST['jarID'])){
               
                 $db->query(
                 "UPDATE jars
