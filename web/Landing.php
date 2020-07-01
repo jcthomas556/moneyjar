@@ -89,6 +89,8 @@ include('database_connection.php');
                             echo 'Account created! Successfully logged in, welcome, ' . $holder['user_name'];
                         }
                     }
+
+                
             }
                     
                 
