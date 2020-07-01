@@ -22,7 +22,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
 
 $username = $_SESSION['username'];
 $userID = $_SESSION['user_id'];
-$count = 0;
+
 
 //SELECT jar_total, jar_active, user_id FROM jars WHERE user_id = '1';
 ?>
@@ -85,12 +85,13 @@ $count = 0;
 
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
-
+                
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
+                $count = 0;
              
-                if($newJarName != ""){
-                    insertNewJar($newJarName, $userID, $db);
+                if($newJarName != "" && $count = 0){
+                    insertNewJar($newJarName, $userID, $db, $count);
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
@@ -137,43 +138,42 @@ $count = 0;
 
         <?php   
 
-            
-            if($GLOBALS['count'] == 0){
-                function insertNewJar($newJarName, $userID, $db){
-                    $length = 7;
-                    $nums = '0123456789';
-                    for ($p = 0; $p < $length-1; $p++){
-                            $randomNumber .= $nums[mt_rand( 0, strlen($nums)-1 )];
-                    }
-            
-                    $db->query(
-                        "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name, jar_invite_code)
-                        VALUES (
-                                '$userID',
-                                0,
-                                true,
-                                '$newJarName',
-                                '$randomNumber')"
-                            );
-
-
-                    foreach($db->query(
-                        "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
-                        {
-                            $jarID = $holder['jar_id']; 
-                                
-                        }   
-                    $db->query(
-                        "INSERT INTO users_jars (user_id, jar_id)
-                        VALUES(
-                            '$userID',
-                            '$jarID'
-                        )"
-                    );  
-
+            function insertNewJar($newJarName, $userID, $db, $count){
+                $count++;
+                $length = 7;
+                $nums = '0123456789';
+                for ($p = 0; $p < $length-1; $p++){
+                        $randomNumber .= $nums[mt_rand( 0, strlen($nums)-1 )];
                 }
-                $GLOBALS['count'] = 1;
+        
+                $db->query(
+                    "INSERT into jars (jar_owner_id, jar_total, jar_active, jar_name, jar_invite_code)
+                    VALUES (
+                            '$userID',
+                            0,
+                            true,
+                            '$newJarName',
+                            '$randomNumber')"
+                        );
+
+
+                foreach($db->query(
+                    "SELECT jar_id FROM jars WHERE jar_owner_id = $userID AND jar_name = '$newJarName'", PDO::FETCH_ASSOC) as $holder)
+                    {
+                        $jarID = $holder['jar_id']; 
+                            
+                    }   
+                $db->query(
+                    "INSERT INTO users_jars (user_id, jar_id)
+                    VALUES(
+                        '$userID',
+                        '$jarID'
+                    )"
+                );  
+
             }
+                
+            
 
             
         ?>
