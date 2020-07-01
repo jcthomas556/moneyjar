@@ -88,10 +88,11 @@ $count = 0;
                 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-             
+
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
-                    $newJarName = "";
+                    
+                    //$newJarName = "";//TODO fix the 2 jar bug. related to the refresh required bug
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
@@ -172,8 +173,7 @@ $count = 0;
 
             }
                 
-            
-           // $newJarName = "";//TODO fix the 2 jar bug. related to the refresh required bug
+        
             
         ?>
         <?php
