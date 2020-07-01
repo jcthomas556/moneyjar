@@ -129,7 +129,8 @@ $userID = $_SESSION['user_id'];
 
                 if($addMoney != ""){
                     echo "test";
-                    echo "look the jar ID = " . $_SESSION["jarID"];
+                    echo "look the jar ID = " ;
+                    //. $_SESSION["jarID"];
                 }  
 
                 foreach($db->query(
