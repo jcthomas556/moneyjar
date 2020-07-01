@@ -127,22 +127,20 @@ $userID = $_SESSION['user_id'];
                         $jarName = $holder[jar_name];
                             
                     }
-                    
-              
-
+ 
                 echo "<p> $--=";
-                echo $jarTotal . $inviteCode . $jarName;
+                //echo $jarTotal . $inviteCode . $jarName;
+                yell($jarTotal, $inviteCode, $jarName);
                 echo "</p>";
-
                 
-                    
-             
+
             }
         
-
-                
-             
-
+        ?>
+        <?php
+            function yell(){
+                echo $jarTotal . $inviteCode . $jarName; 
+            }
         ?>
 
         <?php   
