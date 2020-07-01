@@ -130,10 +130,10 @@ $userID = $_SESSION['user_id'];
                 echo "look the jar ID = " . $_SESSION["jarID"];
 
                 if($addMoney != ""){
-                    session_start();
+                   
 
                     echo "test";
-                    echo "look the jar ID = " . $_SESSION["jarID"];
+                    echo "look the jar ID = " . $_SESSION["jarID"];//despite this being a horible solution, it should work. and yet it doesn't
                 }  
 
                 foreach($db->query(
@@ -154,6 +154,16 @@ $userID = $_SESSION['user_id'];
                    echo $jarID;
                 }    
                 
+
+            }elseif($_SERVER['REQUEST_METHOD'] == 'POST'){
+              
+                $db->query(
+                "UPDATE jars
+                SET jar_Total = jar_Total + 1
+                WHERE jar_id = $_POST['jarID']"
+                );
+
+                header("Refresh:0; url=jarSelector=$_POST['jarID']");
 
             }
         
@@ -282,8 +292,9 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <form method="GET">
-                <button type="submit" name="addMoney"  class="btn btn-success"> non ajax button</button>
+            <form method="POST">
+                <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
+                <button type="submit" class="btn btn-success"> non ajax button</button>
             </form>
 
 
