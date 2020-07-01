@@ -138,7 +138,7 @@ $count = 0;
         <?php   
 
             
-            if($count = 0;){
+            if($count == 0){
                 function insertNewJar($newJarName, $userID, $db){
                     $length = 7;
                     $nums = '0123456789';
