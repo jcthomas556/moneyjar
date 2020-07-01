@@ -138,7 +138,7 @@ $userID = $_SESSION['user_id'];
         
         ?>
         <?php
-            function yell(){
+            function yell($jarTotal, $inviteCode, $jarName){
                 echo $jarTotal . $inviteCode . $jarName; 
             }
         ?>
