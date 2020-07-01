@@ -279,7 +279,7 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <form action="<?=$_SERVER['PHP_SELF'];?>" method="GET">
+            <form action="" method="GET">
                 <button type="submit" name="addMoney"  class="btn btn-success"> non ajax button</button>
             </form>
 
