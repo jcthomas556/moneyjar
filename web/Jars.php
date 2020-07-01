@@ -103,21 +103,21 @@ $userID = $_SESSION['user_id'];
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                 }  
-                if(array_key_exists('addMoney', $_GET)) { 
-                    //addMoney();
-                    //echo "success 1";
-                    //$valid = 1;
-                     //echo $valid;
-                    // echo "array key stop = ";
+                // if(array_key_exists('addMoney', $_GET)) { 
+                //     //addMoney();
+                //     //echo "success 1";
+                //     //$valid = 1;
+                //      //echo $valid;
+                //     // echo "array key stop = ";
                      
-                    // echo $inviteCode;
-                    // echo $jar_total;
-                    // addMoney($inviteCode, $db, $jar_total);
-                    echo "<p> $--=";
-                //echo $jarTotal . $inviteCode . $jarName;
-                yell();
-                echo "</p>";
-                }    
+                //     // echo $inviteCode;
+                //     // echo $jar_total;
+                //     // addMoney($inviteCode, $db, $jar_total);
+                //     echo "<p> $--=";
+                // //echo $jarTotal . $inviteCode . $jarName;
+                // yell();
+                // echo "</p>";
+                // }    
                
                             
                     
@@ -136,7 +136,7 @@ $userID = $_SESSION['user_id'];
                 //echo $jarTotal . $inviteCode . $jarName;
                 yell();
                 echo "</p>";
-                
+
                 if(array_key_exists('addMoney', $_GET)) { 
                     echo "<p> $--=";
                     yell();
