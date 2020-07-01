@@ -166,7 +166,7 @@ $userID = $_SESSION['user_id'];
                 WHERE jar_id = $temp"
                 );
 
-                header("Refresh:0; url=jarSelector=$_POST['jarID']");
+                header("Refresh:0");
 
             }
         
