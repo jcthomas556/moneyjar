@@ -157,11 +157,13 @@ $userID = $_SESSION['user_id'];
 
             }
             if(isset($_POST['jarID'])){
+
+                $temp = $_POST['jarID'];
               
                 $db->query(
                 "UPDATE jars
                 SET jar_Total = jar_Total + 1
-                WHERE jar_id = $_POST['jarID']"
+                WHERE jar_id = '$temp'"
                 );
 
                 header("Refresh:0; url=jarSelector=$_POST['jarID']");
@@ -252,19 +254,19 @@ $userID = $_SESSION['user_id'];
             //     //     echo $jarTotal;
             //     //$newTotal = 45;
                 
-            //     //$precision = 2;
-            //     //$jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
-            //     //$value = number_format((float) $jar_total, $precision, '.', '');
-            //     //$newJar_total = $jar_total + 1;
-            //     // echo "$$$";
-            //     // echo $jar_total;
-            //     // echo $inviteCode;
+            //     $precision = 2;
+            //     $jar_total = intval($jar_total * ($p = pow(10, $precision))) / $p;
+            //     $value = number_format((float) $jar_total, $precision, '.', '');
+            //     $newJar_total = $jar_total + 1;
+            //     echo "$$$";
+            //     echo $jar_total;
+            //     echo $inviteCode;
 
-            //     // $db->query(
-            //     //     "UPDATE jars
-            //     //     SET jar_Total = $newTotal
-            //     //     WHERE jar_invite_code = $inviteCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
-            //     // );
+            //     $db->query(
+            //         "UPDATE jars
+            //         SET jar_Total = $newTotal
+            //         WHERE jar_invite_code = $inviteCode"//this is not working. also, it's not getting the current total, its just adding a lot to whichever one. I think the if(isset is different scope?)
+            //     );
             // }
             
         ?>
