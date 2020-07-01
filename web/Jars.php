@@ -269,7 +269,7 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <form method="GET">
+            <form action="Jars.php" method="GET">
                 <input type="submit" name="addMoney" value="non ajax button - Put $1 in the Jar" class="btn btn-success" />
             </form>
 
