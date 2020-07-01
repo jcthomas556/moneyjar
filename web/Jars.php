@@ -130,6 +130,8 @@ $userID = $_SESSION['user_id'];
                 echo "look the jar ID = " . $_SESSION["jarID"];
 
                 if($addMoney != ""){
+                    session_start();
+
                     echo "test";
                     echo "look the jar ID = " . $_SESSION["jarID"];
                 }  
