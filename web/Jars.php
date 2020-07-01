@@ -121,16 +121,14 @@ $userID = $_SESSION['user_id'];
                 // echo "</p>";
                 // }    
                
-                
+                            
                     
                 $jarID = $_GET["jarSelector"];
-                // $_SESSION['jarID'] = $jarID;
-                //echo "look the jar ID = " . $_SESSION["jarID"];
+                echo "look the jar ID = " . $jarID;
 
                 if($addMoney != ""){
                     echo "test";
-                    echo "look the jar ID = ";
-                    //. $_SESSION["jarID"];
+                    echo $jarID;
                 }  
 
                 foreach($db->query(
@@ -279,14 +277,14 @@ $userID = $_SESSION['user_id'];
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
-            <form action="" method="GET">
+            <form method="GET">
                 <button type="submit" name="addMoney"  class="btn btn-success"> non ajax button</button>
             </form>
 
 
-            <form id="sendMoney">
+            <from id="sendMoney">
                 <button type="button" onclick="foo()">AJAX button</button>
-            </form>
+            </from>
 
 
 
