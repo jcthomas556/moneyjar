@@ -92,50 +92,15 @@ $userID = $_SESSION['user_id'];
 
                 $newJarName = $_GET["jarName"];
                 $newJarCode = $_GET["jarCode"];
-                $addMoney = $_GET["addMoney"];
-                $valid = 0;
-                
-           
-                
              
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
-                }  
-                
-                // if(array_key_exists('addMoney', $_GET)) { 
-                //     //addMoney();
-                //     //echo "success 1";
-                //     //$valid = 1;
-                //      //echo $valid;
-                //     // echo "array key stop = ";
-                     
-                //     // echo $inviteCode;
-                //     // echo $jar_total;
-                //     // addMoney($inviteCode, $db, $jar_total);
-                //     echo "<p> $--=";
-                // //echo $jarTotal . $inviteCode . $jarName;
-                // yell();
-                // echo "</p>";
-                // }    
-               
-      
-
-                            
+                }                          
                     
-                $jarID = $_GET["jarSelector"];
-                $_SESSION['jarID'] = $jarID;
-                echo "look the jar ID = " . $_SESSION["jarID"];
-
-                if($addMoney != ""){
-                   
-
-                    echo "test";
-                    echo "look the jar ID = " . $_SESSION["jarID"];//despite this being a horible solution, it should work. and yet it doesn't
-                }  
-
+                $jarID = $_GET["jarSelector"];              
                 foreach($db->query(
                     "SELECT jar_invite_code, jar_total, jar_name FROM jars WHERE jar_id = '$jarID'", PDO::FETCH_ASSOC) as $holder)
                     {
@@ -144,9 +109,7 @@ $userID = $_SESSION['user_id'];
                         $jarName = $holder[jar_name];
                             
                     }
- 
-               
-            
+   
                 printTotal();
                 
 
@@ -253,8 +216,6 @@ $userID = $_SESSION['user_id'];
     <div class="container">
         <div class="text-center">   
 
-          
-
             <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
@@ -263,17 +224,8 @@ $userID = $_SESSION['user_id'];
                 <button type="submit" class="btn btn-success"> Add a Dollar!</button>
             </form>
 
-
-            
-
-
-
-
-
-
-
             <br>
-            <button onclick="document.getElementById('sharedJar').style.display='block'">Share your Jar with others</button>
+            <button onclick="document.getElementById('sharedJar').style.display='block'" class="btn btn-success">Share your Jar with others</button>
             <!-- The Modal -->
                 <div id="sharedJar" class="modal">
                     <span onclick="document.getElementById('sharedJar').style.display='none'" class="close"
