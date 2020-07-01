@@ -31,33 +31,21 @@ $userID = $_SESSION['user_id'];
 <body class="background">
 
     <div >
+        <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
         <button type="button" class="btn btn-success pull-right" aria-label="right Align">
             <span class="glyphicon glyphicon-cog btn-success btn-lg btn-block" aria-hidden="true"></span>
         </button>
-        <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
         <br><br><br>
         
     </div>
 
     <!-- DB query for user details -->
     <?php
-        //$value = $_POST['accountPageButton']
+         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-        //echo $value;
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-           
-
-            echo '<h3 class="text-center"> This is ';
+            echo '<h3 class="text-center"> Welcome to your account page, ';
             echo $username;
-            echo "'s Account </h3>";
-
-            
-        // $email = $_POST["email"];
-        // $passwords = $_POST["password"];
-
-        // echo 'this is my email' . $email;
-        // echo $email;
+            echo "</h3>";
 
             foreach($db->query(
                         "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
@@ -68,8 +56,6 @@ $userID = $_SESSION['user_id'];
                                 header('Location: web/Jars.php');
                             }
                         }
-
-         
         }
 
         
@@ -82,7 +68,7 @@ $userID = $_SESSION['user_id'];
     </div>
 
     <div class="container text-center" id="cupboard">
-        <p >Looks like you don't have any jars yet. Click below to make one!</p>
+        <p >Create or join a Jar!</p>
         <br>
        <button onclick="document.getElementById('newJar').style.display='block'" type="button" class="btn btn-success " aria-label="right Align">
             <span class="glyphicon glyphicon-plus btn-success btn-lg " aria-hidden="true"></span>
