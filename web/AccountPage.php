@@ -74,7 +74,7 @@ $userID = $_SESSION['user_id'];
 
         }
 
-        header('Location: https://intense-fjord-38137.herokuapp.com/web/Jars.php');
+        header('Location: Jars.php');
     ?>
     
     
