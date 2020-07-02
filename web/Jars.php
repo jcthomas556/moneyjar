@@ -57,20 +57,24 @@ $userID = $_SESSION['user_id'];
                             {
                                 if($holder['jar_active'] == 't'){
                                     //$tester="true!";
-                                    ?>
-                            <option value="
+
+                        ?>
+                                <option value="
                         <?php 
-                            echo $holder['jar_id']; 
+                                echo $holder['jar_id']; 
                         ?>
-                            ">
+                               ">
                         <?php
-                            echo $holder['jar_name'];
+                                echo $holder['jar_name'];
                         ?>
-                            </option>                            
-                        <?php } ?> </select>
-                            }
+                                </option>                            
+                        <?php 
+                                } }
+                        ?> 
+                                </select>
                             
-                        
+                            
+                       
                         <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
                 </form>
             </td>
