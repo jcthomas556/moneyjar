@@ -70,6 +70,11 @@ function signOut(){
    sessionStorage.clear();
    window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
 }
+function signOut2(){
+  alert("test");
+   sessionStorage.clear();
+   window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
+}
 //////////////////////////////////
 function goToAccountPage(){
   window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php';
