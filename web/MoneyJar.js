@@ -77,10 +77,14 @@ function goToAccountPage(){
 
 function markClicked(){
   var clicked = true;
+  alert("mark clicked value")
+  alert(clicked);
   return clicked;
 }
 
 function checkClicked(){
+  alert("checkClicked function =");
+  alert(markClicked());
   markClicked();
 }
 
