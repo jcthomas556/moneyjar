@@ -103,18 +103,18 @@ $userID = $_SESSION['user_id'];
             if(isset($_POST['jarID'], $_POST['deleteRequest'])){
                 echo "testSuccess";
             }
-            // if(isset($_POST['jarID'])){
+            if(isset($_POST['jarID'], $_POST['incrementRequest'])){
 
-            //     $temp = $_POST['jarID'];
+                $temp = $_POST['jarID'];
               
-            //     $db->query(
-            //     "UPDATE jars
-            //     SET jar_Total = jar_Total + 1
-            //     WHERE jar_id = $temp"
-            //     );
+                $db->query(
+                "UPDATE jars
+                SET jar_Total = jar_Total + 1
+                WHERE jar_id = $temp"
+                );
 
-            //     header("Refresh:0");
-            // }
+                header("Refresh:0");
+            }
         ?>
 
         <?php
@@ -203,6 +203,7 @@ $userID = $_SESSION['user_id'];
             <br>
             <form method="POST">
                 <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
+                <input type="hidden" name="incrementRequest" value="true">
                 <button type="submit" class="btn btn-success"> Add a Dollar!</button>
             </form>
 
