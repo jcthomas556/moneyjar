@@ -81,13 +81,13 @@ function markClicked(){
 }
 
 function checkClicked(){
-  alert("only one that matters is next");
-  alert(markClicked());
+  // alert("only one that matters is next");
+  // alert(markClicked());//this does = true
   markClicked();
 }
 
 function checkToRun(){
-  if(checkClicked()){
+  if(checkClicked() == 'true'){
     alert("WINNER");
     signOut();
   }
