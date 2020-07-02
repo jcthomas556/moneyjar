@@ -143,22 +143,11 @@ $userID = $_SESSION['user_id'];
 
                             </div>
                     
-                   
-                    
                 </div>
 
-    </div>
-
-    
+    </div>    
 
     <br><br>
-
-
-
-
-
-
-
 
     <script src="MoneyJar.js"></script>
 

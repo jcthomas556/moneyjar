@@ -48,16 +48,17 @@ function checkCredentials(){
 
 //////////////////////////////// Check user account Class
 
-// function checkUserAccount(){
-//     var checker = document.getElementById('signedInMessage');
-//     //TODO fix this bad system. Checking for something on the page is not a good way to tell if I'm signed in. look at the session variables.
-//     if(checker === null){
-//       alert("Please sign in or sign up");
-//     }
-//     else{
-//       window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php';
-//     }
-// }
+function checkUserAccount(){
+  alert("test");
+    var checker = document.getElementById('signedInMessage');
+    //TODO fix this bad system. Checking for something on the page is not a good way to tell if I'm signed in. look at the session variables.
+    if(checker === null){
+      alert("Please sign in or sign up");
+    }
+    else{
+      window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php';
+    }
+}
 
 ////////////////////////////////
 

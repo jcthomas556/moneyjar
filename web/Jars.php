@@ -66,7 +66,7 @@ $userID = $_SESSION['user_id'];
                 </form>
             </td>
         </tr>
-<br><br>
+    <br><br>
 
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
