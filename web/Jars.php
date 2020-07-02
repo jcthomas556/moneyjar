@@ -112,7 +112,15 @@ $userID = $_SESSION['user_id'];
                 header("Refresh:0");
             }
             if(isset($_POST['jarID'], $_POST['deleteRequest'])){
-                echo "testSuccess";
+                $temp = $_POST['jarID'];
+              
+                $db->query(
+                "UPDATE jars
+                SET jar_active = false
+                WHERE jar_id = $temp"
+                );
+
+                header("Refresh:0");
             }
             if(isset($_POST['jarID'], $_POST['incrementRequest'])){
 
