@@ -58,7 +58,7 @@ include('database_connection.php');
                         $_SESSION['username'] = $userName;
                         $_SESSION['user_id'] = $userID;
 
-                        //$successMessage = "<p id='signedInMessage'> Successfully logged in, welcome, " . $holder['user_name'];
+                        $successMessage = "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
           
                         
                         echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success  btn-lg' aria-hidden='true'></span> </button>";
@@ -105,7 +105,7 @@ include('database_connection.php');
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
         <?php 
-            echo "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
+            echo $successMessage;
             echo "</p>";
         ?>
        
