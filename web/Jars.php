@@ -103,6 +103,9 @@ $userID = $_SESSION['user_id'];
             if(isset($_POST['jarID'], $_POST['deleteRequest'])){
                 echo "testSuccess";
             }
+            if(isset($_POST['jarID'], $_POST['emptyRequest'])){
+                echo "emptyRequest";
+            }
             if(isset($_POST['jarID'], $_POST['incrementRequest'])){
 
                 $temp = $_POST['jarID'];
@@ -227,12 +230,20 @@ $userID = $_SESSION['user_id'];
                 </div>
             <!-- The Modal END--> 
 
-            <br>
+            <br><br>
+            <form method="POST">
+                <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
+                <input type="hidden" name="emptyRequest" value="true">
+                <button type="submit" class="btn btn-warning">Empty Jar</button>
+            </form>
+
+            <br><br>
             <form method="POST">
                 <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
                 <input type="hidden" name="deleteRequest" value="true">
                 <button type="submit" class="btn btn-danger">Delete Jar</button>
             </form>
+            
             
 
         </div>
