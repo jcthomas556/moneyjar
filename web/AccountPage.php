@@ -45,7 +45,7 @@ $userID = $_SESSION['user_id'];
 
             echo '<h3 class="text-center"> Welcome to your account page, ';
             echo $username;
-            echo "<!/h3>";
+            echo "!</h3>";
 
             foreach($db->query(
                         "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
@@ -81,10 +81,11 @@ $userID = $_SESSION['user_id'];
                   
                         <div class="sign-in-background">
                             <div class="container">
-                            <br>
+                            <br><br>
 
 
                             <button onclick="document.getElementById('joinJar').style.display='block'">Join A Jar</button>
+                        
                             <!-- The Modal -->
                             <div id="joinJar" class="modal">
                                 <span onclick="document.getElementById('joinJar').style.display='none'" class="close"
@@ -97,8 +98,7 @@ $userID = $_SESSION['user_id'];
                                             <br>
                                             <label for="jarCode"><b>Jar Code</b></label>
                                             <input type="text" placeholder="Enter Code" name="jarCode" required>
-                                            <br>
-                                            
+                                            <br><br>                                            
                                             <button type="submit">Join Jar</button>
                                             
                                         </div>
@@ -109,6 +109,7 @@ $userID = $_SESSION['user_id'];
 
 
                             <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
+                            <br><br><br>
                                 <!-- The Modal -->
                                 <div id="createJar" class="modal">
                                 <span onclick="document.getElementById('createJar').style.display='none'" class="close"
@@ -121,7 +122,7 @@ $userID = $_SESSION['user_id'];
                                             <br>
                                             <label for="jarName"><b>Jar Name</b></label>
                                             <input type="text" placeholder="Enter Name" name="jarName" required>
-                                            <br>
+                                            <br><br>
                                             
                                             <button type="submit">Create Jar</button>
                                             
