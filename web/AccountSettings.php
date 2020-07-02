@@ -61,6 +61,7 @@ $userID = $_SESSION['user_id'];
          if(isset($_POST['userID'], $_POST['deleteAccountRequest'])){
 
             $userID = $_POST['userID'];
+            echo $userID;
 
             $db->query(
             "DELETE 
