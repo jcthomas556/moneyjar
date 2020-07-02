@@ -40,10 +40,15 @@ $userID = $_SESSION['user_id'];
                 <span class='glyphicon glyphicon-oil btn-success btn-lg' aria-hidden='true'></span> 
             </button>
             <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
-        
-        
+
     </div>
 
+    <div class="container text-center" id="cupboard">
+        <?php
+            echo "<h3> Hello " . $username . ", would you like to delete your account? </h3>";
+        ?>
+
+    </div>
 
     <script src="MoneyJar.js"></script>
 
