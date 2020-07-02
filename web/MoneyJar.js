@@ -73,3 +73,7 @@ function signOut(){
 function goToAccountPage(){
   window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php';
 }
+
+function alert(){
+  alert("test");
+}
