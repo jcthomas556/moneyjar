@@ -30,7 +30,7 @@ $userID = $_SESSION['user_id'];
 </head>
 
 <body class="background">
-
+<br>
     <button onclick='alert()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
     <!-- My account page button -->
     <form action = "AccountPage.php", method = 'post'>
