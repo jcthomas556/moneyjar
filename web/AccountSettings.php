@@ -75,7 +75,7 @@ $userID = $_SESSION['user_id'];
             WHERE user_id = $userID"
             );
 
-            header("Refresh:0");
+            
         }
 
     ?>
