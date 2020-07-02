@@ -46,11 +46,11 @@ $count = 0;
 <body class="background">
 
 
-    <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-block' aria-hidden='true'></span> </button>
+    <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg' aria-hidden='true'></span> </button>
     <!-- My account page button -->
     <form action = "AccountPage.php", method = 'post'>
         <button onclick="checkUserAccount()" type="submit" name="accountPageButton" class="btn btn-success pull-right" aria-label="right Align">
-            <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-user btn-success btn-lg" aria-hidden="true"></span>
         </button>
     </form>
     <br><br>
