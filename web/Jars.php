@@ -100,18 +100,21 @@ $userID = $_SESSION['user_id'];
                 }    
                 
             }
-            if(isset($_POST['jarID'])){
-
-                $temp = $_POST['jarID'];
-              
-                $db->query(
-                "UPDATE jars
-                SET jar_Total = jar_Total + 1
-                WHERE jar_id = $temp"
-                );
-
-                header("Refresh:0");
+            if(isset($_POST['jarID'], $_POST['deleteRequest'])){
+                echo "testSuccess";
             }
+            // if(isset($_POST['jarID'])){
+
+            //     $temp = $_POST['jarID'];
+              
+            //     $db->query(
+            //     "UPDATE jars
+            //     SET jar_Total = jar_Total + 1
+            //     WHERE jar_id = $temp"
+            //     );
+
+            //     header("Refresh:0");
+            // }
         ?>
 
         <?php
@@ -222,6 +225,13 @@ $userID = $_SESSION['user_id'];
                         </div>
                 </div>
             <!-- The Modal END--> 
+
+            <form method="POST">
+                <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
+                <input type="hidden" name="deleteRequest" value="true">
+                <button type="button" class="btn btn-danger">Delete Jar</button>
+            </form>
+            
 
         </div>
     </div>
