@@ -69,7 +69,7 @@ $userID = $_SESSION['user_id'];
 
 
     <div class="container text-center" id="cupboard">
-        <p >Go to Jars!</p>
+        <h1>Go to Jars!</h1>
         <br>
         <button onclick='goToJars()' class='btn btn-success' aria-label='right Align'> 
             <span class='glyphicon glyphicon-oil btn-success btn-lg' aria-hidden='true'></span> 
@@ -77,7 +77,7 @@ $userID = $_SESSION['user_id'];
     </div>
 
     <div class="container text-center" id="cupboard">
-        <p >Create or join a Jar!</p>
+        <h1>Create or join a Jar!</h1>
         <br>
        <button onclick="document.getElementById('newJar').style.display='block'" type="button" class="btn btn-success " aria-label="right Align">
             <span class="glyphicon glyphicon-plus btn-success btn-lg " aria-hidden="true"></span>
