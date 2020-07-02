@@ -45,10 +45,33 @@ $userID = $_SESSION['user_id'];
 
     <div class="container text-center" id="cupboard">
         <?php
-            echo "<h3> Hello " . $username . ", would you like to delete your account? </h3>";
+            echo "<h3> Hello " . $username . "! </h3> <br> <h3> We want you to feel safe, so we added this section here where you can delete your account completely, with 1 click. </h3>";
         ?>
 
+        <br><br><br>
+            <form method="POST">
+                <input type="hidden" name="userID" value="<?php echo $userID ?>">
+                <input type="hidden" name="deleteAccountRequest" value="true">
+                <button type="submit" class="btn btn-warning">Delete My Account</button>
+            </form>
+
     </div>
+
+    <?php
+         if(isset($_POST['userID'], $_POST['deleteAccountRequest'])){
+
+            //$temp = $_POST['jarID'];
+          echo "Yep";
+            // $db->query(
+            // "UPDATE jars
+            // SET jar_Total = jar_Total + 1.00
+            // WHERE jar_id = $temp"
+            // );
+
+            // header("Refresh:0");
+        }
+
+    ?>
 
     <script src="MoneyJar.js"></script>
 
