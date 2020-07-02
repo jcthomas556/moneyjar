@@ -85,6 +85,8 @@ function checkClicked(){
 }
 
 function checkToRun(){
+  alert("value of check clicked = ");
+  alert(checkClicked());
   if(checkClicked()){
     alert("check clicked game through");
     alert(checkClicked);
