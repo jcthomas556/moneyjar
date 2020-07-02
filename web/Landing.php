@@ -58,7 +58,7 @@ include('database_connection.php');
                         $_SESSION['username'] = $userName;
                         $_SESSION['user_id'] = $userID;
 
-                        $successMessage = "<p id='signedInMessage'> Successfully logged in, welcome, " . $holder['user_name'];
+                        //$successMessage = "<p id='signedInMessage'> Successfully logged in, welcome, " . $holder['user_name'];
           
                         
                         echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success  btn-lg' aria-hidden='true'></span> </button>";
@@ -81,7 +81,7 @@ include('database_connection.php');
                     {
                         if($holder['user_id'] > 0){
                             $userSignedIn = true;
-                            echo "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
+                            
                         }
                     }
 
@@ -99,30 +99,13 @@ include('database_connection.php');
     }   
     ?>
 
-
-
-
-
-
-    <!-- My account page button -->
-    <!-- <form action = "AccountPage.php", method = 'post'>
-        <button onclick="checkUserAccount()" type="submit" name="accountPageButton" class="btn btn-success pull-right" aria-label="right Align">
-            <span class="glyphicon glyphicon-user btn-success btn-block" aria-hidden="true"></span>
-        </button>
-    </form> -->
     <br><br> 
-
-
-
-
-
-
 
     <div class="text-center">
         <h1>Money Jar</h1>
         <p>Sign in or sign up below</p>
         <?php 
-            echo $successMessage;
+            echo "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
             echo "</p>";
         ?>
        
@@ -194,22 +177,7 @@ include('database_connection.php');
                 </div>
         </div>
     </div>
-            
-
-    <?php
-     
-
-
-// $statement = $db->query('SELECT * FROM accounts');
-//         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-//         {
-//             echo $row['email'] . ' password: ' . $row['password'] . '<br/>';
-//         }
-    ?>
-
- 
-
-
+    
     <script src="MoneyJar.js"></script>
     
     
