@@ -60,15 +60,15 @@ $userID = $_SESSION['user_id'];
     <?php
          if(isset($_POST['userID'], $_POST['deleteAccountRequest'])){
 
-            //$temp = $_POST['jarID'];
-          echo "Yep";
-            // $db->query(
-            // "UPDATE jars
-            // SET jar_Total = jar_Total + 1.00
-            // WHERE jar_id = $temp"
-            // );
+            $userID = $_POST['userID'];
 
-            // header("Refresh:0");
+            $db->query(
+            "DELETE 
+            FROM accounts
+            WHERE user_id = $userID"
+            );
+
+            header("Refresh:0");
         }
 
     ?>
