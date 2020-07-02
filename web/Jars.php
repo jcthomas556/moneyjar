@@ -100,11 +100,11 @@ $userID = $_SESSION['user_id'];
                 }    
                 
             }
-            if(isset($_POST['jarID'], $_POST['deleteRequest'])){
-                echo "testSuccess";
-            }
             if(isset($_POST['jarID'], $_POST['emptyRequest'])){
                 echo "emptyRequest";
+            }
+            if(isset($_POST['jarID'], $_POST['deleteRequest'])){
+                echo "testSuccess";
             }
             if(isset($_POST['jarID'], $_POST['incrementRequest'])){
 
@@ -112,7 +112,7 @@ $userID = $_SESSION['user_id'];
               
                 $db->query(
                 "UPDATE jars
-                SET jar_Total = jar_Total + 1
+                SET jar_Total = jar_Total + 1.00
                 WHERE jar_id = $temp"
                 );
 
@@ -230,14 +230,14 @@ $userID = $_SESSION['user_id'];
                 </div>
             <!-- The Modal END--> 
 
-            <br><br>
+            <br><br><br>
             <form method="POST">
                 <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
                 <input type="hidden" name="emptyRequest" value="true">
                 <button type="submit" class="btn btn-warning">Empty Jar</button>
             </form>
 
-            <br><br>
+            <br>
             <form method="POST">
                 <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
                 <input type="hidden" name="deleteRequest" value="true">
