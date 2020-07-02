@@ -64,6 +64,12 @@ $userID = $_SESSION['user_id'];
             echo $userID;
 
             $db->query(
+                "DELETE 
+                FROM users_jars
+                WHERE user_id = $userID"
+                );
+
+            $db->query(
             "DELETE 
             FROM accounts
             WHERE user_id = $userID"
