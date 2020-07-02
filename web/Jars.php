@@ -210,7 +210,7 @@ $count = 0;
     <div class="container">
         <div class="text-center">   
 
-            <img src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
+            <img class="img-responsive" src="https://images.collectivesupply.com/wp-content/uploads/2017/11/12140507/10-oz-glass-jar.png" alt="Trulli" width="500" height="433">
 
             <br>
             <form method="POST">
@@ -231,7 +231,7 @@ $count = 0;
                             <div class="container">
                                 <br>
                                 <label for="jarCode"><b><?php echo $inviteCode?></b></label>
-                                <p> Copy that number, and send it to your friend! </p>
+                                <h4> Copy that number, and send it to your friend! </h4>
                             </div>
                     
                         </div>
