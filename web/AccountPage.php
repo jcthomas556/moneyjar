@@ -67,6 +67,11 @@ $userID = $_SESSION['user_id'];
 
     </div>
 
+
+    <div class="container text-center" id="cupboard">
+        <button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>"
+    </div>
+
     <div class="container text-center" id="cupboard">
         <p >Create or join a Jar!</p>
         <br>
@@ -140,6 +145,7 @@ $userID = $_SESSION['user_id'];
 
     </div>
 
+    
 
     <br><br>
 
