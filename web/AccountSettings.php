@@ -28,7 +28,7 @@ $userID = $_SESSION['user_id'];
 
 </head>
 
-<body class="background">
+<body class="background" onload="checkToRun();">
 
     <div >
         <form action = "AccountPage.php", method = 'post'>
@@ -49,10 +49,10 @@ $userID = $_SESSION['user_id'];
         ?>
 
         <br><br><br>
-            <form method="POST" action="Landing.php">
+            <form method="POST" >
                 <input type="hidden" name="userID" value="<?php echo $userID ?>">
                 <input type="hidden" name="deleteAccountRequest" value="true">
-                <button type="submit" class="btn btn-warning">Delete My Account</button>
+                <button type="submit" onclick='markClicked()' class="btn btn-warning">Delete My Account</button>
             </form>
 
     </div>
@@ -75,11 +75,12 @@ $userID = $_SESSION['user_id'];
             WHERE user_id = $userID"
             );
 
-            
+            header("Refresh:0");
         }
 
     ?>
 
+    
     <script src="MoneyJar.js"></script>
 
 
