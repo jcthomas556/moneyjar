@@ -101,7 +101,15 @@ $userID = $_SESSION['user_id'];
                 
             }
             if(isset($_POST['jarID'], $_POST['emptyRequest'])){
-                echo "emptyRequest";
+                $temp = $_POST['jarID'];
+              
+                $db->query(
+                "UPDATE jars
+                SET jar_Total = 0
+                WHERE jar_id = $temp"
+                );
+
+                header("Refresh:0");
             }
             if(isset($_POST['jarID'], $_POST['deleteRequest'])){
                 echo "testSuccess";
