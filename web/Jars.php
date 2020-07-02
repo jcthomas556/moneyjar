@@ -7,24 +7,10 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
 }
 
-$testResult = "pass";
-
-
-if(isset($_POST['action']) && !empty($_POST['action'])) {
-    $action = $_POST['action'];
-    switch($action) {
-        case 'test' : test();break;
-        case 'blah' : blah();break;
-        // ...etc...
-    }
-}
-
 
 $username = $_SESSION['username'];
 $userID = $_SESSION['user_id'];
-$count = 0;
 
-//SELECT jar_total, jar_active, user_id FROM jars WHERE user_id = '1';
 ?>
 
 <!DOCTYPE html>
