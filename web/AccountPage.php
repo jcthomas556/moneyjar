@@ -71,7 +71,7 @@ $userID = $_SESSION['user_id'];
     <div class="container text-center" id="cupboard">
         <p >Go to Jars!</p>
         <br>
-        <button onclick='goPlaces()' class='btn btn-success' aria-label='right Align'> 
+        <button onclick='goToJars()' class='btn btn-success' aria-label='right Align'> 
             <span class='glyphicon glyphicon-oil btn-success btn-lg' aria-hidden='true'></span> 
         </button>
     </div>

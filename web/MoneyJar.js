@@ -61,7 +61,7 @@ function checkUserAccount(){
 
 ////////////////////////////////
 
-function goPlaces(){
+function goToJars(){
   window.location='https://intense-fjord-38137.herokuapp.com/web/Jars.php';
 }
 
@@ -70,3 +70,6 @@ function signOut(){
    window.location='https://intense-fjord-38137.herokuapp.com/web/Landing.php';
 }
 //////////////////////////////////
+function goToAccountPage(){
+  window.location='https://intense-fjord-38137.herokuapp.com/web/AccountPage.php';
+}

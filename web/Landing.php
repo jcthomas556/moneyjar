@@ -62,7 +62,7 @@ include('database_connection.php');
           
                         
                         echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success  btn-lg' aria-hidden='true'></span> </button>";
-                        echo "<button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success  btn-lg' aria-hidden='true'></span> </button>";
+                        echo "<button onclick='goToJars()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success  btn-lg' aria-hidden='true'></span> </button>";
                     }
                 }
         }
@@ -81,7 +81,7 @@ include('database_connection.php');
                     {
                         if($holder['user_id'] > 0){
                             $userSignedIn = true;
-                            echo 'Account created! Successfully logged in, welcome, ' . $holder['user_name'];
+                            echo "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
                         }
                     }
 
