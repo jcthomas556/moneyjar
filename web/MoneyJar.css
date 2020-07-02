@@ -7,7 +7,7 @@
 .sign-in-background{
      border : 2px grooved black;
      padding: 10px;
-    height: 150px;
+    height: 350px;
     background-color: yellow; /* For browsers that do not support gradients */
     background-image: linear-gradient(to top left, green, yellow, yellow); /* Standard syntax (must be last) */
 }
