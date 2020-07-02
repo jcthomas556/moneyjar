@@ -226,10 +226,11 @@ $userID = $_SESSION['user_id'];
                 </div>
             <!-- The Modal END--> 
 
+            <br>
             <form method="POST">
                 <input type="hidden" name="jarID" value="<?php echo $jarID ?>">
                 <input type="hidden" name="deleteRequest" value="true">
-                <button type="button" class="btn btn-danger">Delete Jar</button>
+                <button type="submit" class="btn btn-danger">Delete Jar</button>
             </form>
             
 
