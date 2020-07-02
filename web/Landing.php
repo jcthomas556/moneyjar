@@ -109,8 +109,7 @@ include('database_connection.php');
 
                 echo "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
                 echo "</p>";
-
-                
+               
             }
         ?>
        
