@@ -69,7 +69,11 @@ $userID = $_SESSION['user_id'];
 
 
     <div class="container text-center" id="cupboard">
-        <button onclick='goPlaces()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success btn-block' aria-hidden='true'></span> </button>"
+        <p >Go to Jars!</p>
+        <br>
+        <button onclick='goPlaces()' class='btn btn-success' aria-label='right Align'> 
+            <span class='glyphicon glyphicon-oil btn-success btn-lg' aria-hidden='true'></span> 
+        </button>
     </div>
 
     <div class="container text-center" id="cupboard">
