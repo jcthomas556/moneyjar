@@ -49,10 +49,10 @@ $userID = $_SESSION['user_id'];
         ?>
 
         <br><br><br>
-            <form method="POST">
+            <form method="POST" action="Landing.php">
                 <input type="hidden" name="userID" value="<?php echo $userID ?>">
                 <input type="hidden" name="deleteAccountRequest" value="true">
-                <button type="submit" onclick="location.href='https://intense-fjord-38137.herokuapp.com/web/Landing.php';" class="btn btn-warning">Delete My Account</button>
+                <button type="submit" class="btn btn-warning">Delete My Account</button>
             </form>
 
     </div>
