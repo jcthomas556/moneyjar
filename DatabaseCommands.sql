@@ -191,3 +191,5 @@ WHERE jar_id = 1;
      UPDATE jars
                         SET jar_Total = 35.43
                         WHERE jar_id = 1;
+
+update jars set jar_active = false where jar_id = 1;

@@ -56,7 +56,6 @@ $userID = $_SESSION['user_id'];
                             "SELECT UJ.user_id, J.jar_id, J.jar_total, J.jar_name, jar_invite_code, J.jar_active FROM users_jars AS UJ LEFT JOIN jars AS J ON (UJ.jar_id = J.jar_id) WHERE user_id = '$userID'", PDO::FETCH_ASSOC) as $holder)
                             {
                                 if($holder['jar_active'] == 't'){
-                                    //$tester="true!";
 
                         ?>
                                 <option value="
@@ -72,9 +71,6 @@ $userID = $_SESSION['user_id'];
                                 } }
                         ?> 
                                 </select>
-                            
-                            
-                       
                         <!-- This allows the php to end after the subject is inserted, so this subject of the jar names is inside the php loop -->
                 </form>
             </td>

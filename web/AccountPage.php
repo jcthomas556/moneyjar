@@ -51,7 +51,6 @@ $userID = $_SESSION['user_id'];
                         "SELECT user_id, user_name FROM accounts WHERE email=crypt('$email', email) AND passwords=crypt('$passwords', passwords)", PDO::FETCH_ASSOC) as $holder)
                         {
                             if($holder['user_id'] > 0){
-                                echo "test";
                                 echo 'Account created! Successfully logged in, welcome, ' . $holder['user_name'];
                                 header('Location: web/Jars.php');
                             }

@@ -60,9 +60,8 @@ include('database_connection.php');
 
                         $successMessage = "<button onclick='goToAccountPage()' class='btn btn-success' aria-label='right Align'> <span class='glyphicon glyphicon-user btn-success  btn-lg' aria-hidden='true'></span> </button>";
           
+                        displaySignedIn();
                         
-                        echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success  btn-lg' aria-hidden='true'></span> </button>";
-                        echo "<button onclick='goToJars()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success  btn-lg' aria-hidden='true'></span> </button>";
                     }
                 }
         }
@@ -81,7 +80,7 @@ include('database_connection.php');
                     {
                         if($holder['user_id'] > 0){
                             $userSignedIn = true;
-                            
+                            displaySignedIn();
                         }
                     }
 
@@ -104,8 +103,15 @@ include('database_connection.php');
     <div class="text-center">
         <h1>Money Jar</h1>
         <?php 
-            echo $successMessage;
-            echo "</p>";
+            function displaySignedIn(){
+                echo "<button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success  btn-lg' aria-hidden='true'></span> </button>";
+                echo "<button onclick='goToJars()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-oil btn-success  btn-lg' aria-hidden='true'></span> </button>";
+
+                echo $successMessage;
+                echo "</p>";
+
+                
+            }
         ?>
        
     </div>
