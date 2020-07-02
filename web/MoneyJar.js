@@ -87,7 +87,7 @@ function checkClicked(){
 }
 
 function checkToRun(){
-  if(checkClicked() == 'true'){
+  if(checkClicked() == true){
     alert("WINNER");
     signOut();
   }
