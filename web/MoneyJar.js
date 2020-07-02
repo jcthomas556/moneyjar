@@ -77,23 +77,18 @@ function goToAccountPage(){
 
 function markClicked(){
   var clicked = true;
-  alert("mark clicked value")
-  alert(clicked);
   return clicked;
 }
 
 function checkClicked(){
-  alert("checkClicked function =");
+  alert("only one that matters is next");
   alert(markClicked());
   markClicked();
 }
 
 function checkToRun(){
-  alert("value of check clicked = ");
-  alert(checkClicked());
   if(checkClicked()){
-    alert("check clicked game through");
-    alert(checkClicked);
+    alert("WINNER");
     signOut();
   }
 }
