@@ -78,10 +78,10 @@ $userID = $_SESSION['user_id'];
     <br><br>
 
         <?php
+      
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
                 $newJarName = $_GET["jarName"];
-                $newJarName = $_POST["jarName"];
                 $newJarCode = $_GET["jarCode"];
 
 
@@ -151,6 +151,7 @@ $userID = $_SESSION['user_id'];
                 header("Refresh:0");
             }
             if(isset($_POST['CreateJarRequest'], $_POST['newJarName'])){
+                $newJarName = $_POST["jarName"];
                 echo "Entered function";
                 insertNewJar($newJarName, $userID, $db);
             }
