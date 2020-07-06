@@ -197,6 +197,8 @@ $userID = $_SESSION['user_id'];
                     )"
                 );  
 
+                header("Refresh:0");
+
             }
                 
         
