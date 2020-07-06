@@ -128,6 +128,7 @@ $userID = $_SESSION['user_id'];
                                     <div class="sign-in-background">
                                         <div class="container">
                                             <br>
+                                            <input type="hidden" name="CreateJarRequest" value="true">
                                             <label for="jarName"><b>Jar Name</b></label>
                                             <input type="text" placeholder="Enter Name" name="jarName" required>
                                             <br><br>

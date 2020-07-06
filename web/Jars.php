@@ -78,19 +78,22 @@ $userID = $_SESSION['user_id'];
     <br><br>
 
         <?php
-            $newJarName = $_GET["jarName"];
-            $newJarCode = $_GET["jarCode"];
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
-                
+                $newJarName = $_GET["jarName"];
+                $newJarCode = $_GET["jarCode"];
 
-                if($newJarName != ""){
+
+                if(isset($_GET['CreateJarRequest'], $_GET['newJarName'])){
                     echo "Entered function";
                     insertNewJar($newJarName, $userID, $db);
-                    header("Refresh:0");
-                    
-                    $newJarName = "";
                 }
+
+                // if($newJarName != ""){
+                //     echo "Entered function";
+                //     insertNewJar($newJarName, $userID, $db);
+                    
+                // }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                     header("Refresh:0");
@@ -111,6 +114,8 @@ $userID = $_SESSION['user_id'];
                 if(array_key_exists('addMoney', $_GET)) { 
                    echo $jarID;
                 }    
+
+
                 
             }
             if(isset($_POST['jarID'], $_POST['emptyRequest'])){
