@@ -61,7 +61,6 @@ $userID = $_SESSION['user_id'];
          if(isset($_POST['userID'], $_POST['deleteAccountRequest'])){
 
             $userID = $_POST['userID'];
-            echo $userID;
 
             $db->query(
                 "DELETE 
@@ -83,9 +82,7 @@ $userID = $_SESSION['user_id'];
     ?>
     <?php
         function redirect(){
-            echo "TEST SUCCESS";
-            
-            //header("Location: https://intense-fjord-38137.herokuapp.com/web/Landing.php");
+            header("Location: https://intense-fjord-38137.herokuapp.com/web/Landing.php");
         }
     ?>
 
