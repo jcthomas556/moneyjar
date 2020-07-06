@@ -81,16 +81,17 @@ $userID = $_SESSION['user_id'];
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
                 $newJarName = $_GET["jarName"];
+                $newJarName = $_POST["jarName"];
                 $newJarCode = $_GET["jarCode"];
 
 
                 
 
-                if($newJarName != ""){
-                    echo "Entered function";
-                    insertNewJar($newJarName, $userID, $db);
+                // if($newJarName != ""){
+                //     echo "Entered function";
+                //     insertNewJar($newJarName, $userID, $db);
                     
-                }
+                // }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                     header("Refresh:0");
