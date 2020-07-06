@@ -86,8 +86,8 @@ function checkClicked(){
   markClicked();
 }
 
-function checkToRun(){
-  if(checkClicked() == true){
+function checkToRun(){//not sure why this isn't working
+  if(checkClicked() = "true"){
     alert("WINNER");
     signOut();
   }
