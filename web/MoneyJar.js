@@ -87,6 +87,8 @@ function checkClicked(){
 }
 
 function checkToRun(){//not sure why this isn't working
+alert("Entered the check to run function");
+alert(checkClicked());
   if(checkClicked() = "true"){
     alert("WINNER");
     signOut();
