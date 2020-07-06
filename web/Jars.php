@@ -141,7 +141,7 @@ $userID = $_SESSION['user_id'];
             }
             if(isset($_POST['joinJarRequest'], $_POST['jarCode'])){
                 echo "Entered function";
-                $newJarCode = $_GET["jarCode"];
+                $newJarCode = $_POST["jarCode"];
                 echo "new jar code =" . $newJarCode;
                 echo "user ID = " . $userID;
                 joinNewJar($userID, $db, $newJarCode);
