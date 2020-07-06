@@ -124,7 +124,7 @@ $userID = $_SESSION['user_id'];
                                     title="Close Modal">&times;</span>
 
                                 <!-- Modal Content -->
-                                <form class="modal-content animate" action="Jars.php" method="GET" action="AccountPage.php">
+                                <form class="modal-content animate" action="Jars.php" method="POST" action="AccountPage.php">
                                     <div class="sign-in-background">
                                         <div class="container">
                                             <br>

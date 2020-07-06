@@ -84,16 +84,13 @@ $userID = $_SESSION['user_id'];
                 $newJarCode = $_GET["jarCode"];
 
 
-                if(isset($_GET['CreateJarRequest'], $_GET['newJarName'])){
+                
+
+                if($newJarName != ""){
                     echo "Entered function";
                     insertNewJar($newJarName, $userID, $db);
-                }
-
-                // if($newJarName != ""){
-                //     echo "Entered function";
-                //     insertNewJar($newJarName, $userID, $db);
                     
-                // }
+                }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
                     header("Refresh:0");
@@ -152,6 +149,10 @@ $userID = $_SESSION['user_id'];
 
                 header("Refresh:0");
             }
+            if(isset($_POST['CreateJarRequest'], $_POST['newJarName'])){
+                echo "Entered function";
+                insertNewJar($newJarName, $userID, $db);
+            }
         ?>
 
         <?php
@@ -197,7 +198,7 @@ $userID = $_SESSION['user_id'];
                     )"
                 );  
 
-                header("Refresh:0");
+                //header("Refresh:0");
 
             }
                 
