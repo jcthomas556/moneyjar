@@ -129,6 +129,7 @@ $userID = $_SESSION['user_id'];
                                         <div class="container">
                                             <br>
                                             <input type="hidden" name="CreateJarRequest" value="true">
+                                            <input type="hidden" name="newJarName" value="true">
                                             <label for="jarName"><b>Jar Name</b></label>
                                             <input type="text" placeholder="Enter Name" name="jarName" required>
                                             <br><br>
