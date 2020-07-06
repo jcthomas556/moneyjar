@@ -85,11 +85,13 @@ $userID = $_SESSION['user_id'];
 
                 if($newJarName != ""){
                     insertNewJar($newJarName, $userID, $db);
+                    header("Refresh:0");
                     
                     //$newJarName = "";//TODO fix the 2 jar bug. related to the refresh required bug
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
+                    header("Refresh:0");
                 }                          
                     
                 $jarID = $_GET["jarSelector"];              
