@@ -81,16 +81,7 @@ $userID = $_SESSION['user_id'];
       
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
-                
-               
-
-                
-
-                if($newJarCode != ""){
-                    joinNewJar($userID, $db, $newJarCode);
-                    header("Refresh:0");
-                }                          
-                    
+            
                 $jarID = $_GET["jarSelector"];              
                 foreach($db->query(
                     "SELECT jar_invite_code, jar_total, jar_name FROM jars WHERE jar_id = '$jarID'", PDO::FETCH_ASSOC) as $holder)
@@ -149,6 +140,7 @@ $userID = $_SESSION['user_id'];
                 insertNewJar($newJarName, $userID, $db);
             }
             if(isset($_POST['joinJarRequest'], $_POST['jarCode'])){
+                echo "Entered function";
                 $newJarCode = $_GET["jarCode"];
                 joinNewJar($userID, $db, $newJarCode);
             }
