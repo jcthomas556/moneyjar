@@ -75,9 +75,18 @@ $userID = $_SESSION['user_id'];
             WHERE user_id = $userID"
             );
 
-            header("Refresh:0");
+            $done = true;
+
+            redirect();
         }
 
+    ?>
+    <?php
+        function redirect(){
+            echo "TEST SUCCESS";
+            
+            //header("Location: https://intense-fjord-38137.herokuapp.com/web/Landing.php");
+        }
     ?>
 
     
