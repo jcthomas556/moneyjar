@@ -80,6 +80,11 @@ include('database_connection.php');
                     {
                         if($holder['user_id'] > 0){
                             $userSignedIn = true;
+                            session_start();
+                            $userName = $holder['user_name'];
+                            $userID = $holder['user_id'];
+                            $_SESSION['username'] = $userName;
+                            $_SESSION['user_id'] = $userID;
                             displaySignedIn();
                         }
                     }

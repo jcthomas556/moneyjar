@@ -74,8 +74,6 @@ $userID = $_SESSION['user_id'];
             WHERE user_id = $userID"
             );
 
-            $done = true;
-
             redirect();
         }
 
