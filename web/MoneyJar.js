@@ -83,12 +83,12 @@ function markClicked(){
 function checkClicked(){
   // alert("only one that matters is next");
   // alert(markClicked());//this does = true
+  alert(markClicked());
   markClicked();
 }
 
 function checkToRun(){//not sure why this isn't working
-alert("Entered the check to run function");
-alert(checkClicked());
+
   if(checkClicked() = "true"){
     alert("WINNER");
     signOut();
