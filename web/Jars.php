@@ -97,8 +97,6 @@ $userID = $_SESSION['user_id'];
                 if(array_key_exists('addMoney', $_GET)) { 
                    echo $jarID;
                 }    
-
-
                 
             }
             if(isset($_POST['jarID'], $_POST['emptyRequest'])){
@@ -140,10 +138,7 @@ $userID = $_SESSION['user_id'];
                 insertNewJar($newJarName, $userID, $db);
             }
             if(isset($_POST['joinJarRequest'], $_POST['jarCode'])){
-                echo "Entered function";
                 $newJarCode = $_POST["jarCode"];
-                echo "new jar code =" . $newJarCode;
-                echo "user ID = " . $userID;
                 joinNewJar($userID, $db, $newJarCode);
             }
             
@@ -230,8 +225,6 @@ $userID = $_SESSION['user_id'];
             }
         ?>
       
-      
- 
     </div>
 
     <div class="container">
