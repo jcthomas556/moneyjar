@@ -78,16 +78,18 @@ $userID = $_SESSION['user_id'];
     <br><br>
 
         <?php
+            $newJarName = $_GET["jarName"];
+            $newJarCode = $_GET["jarCode"];
             if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 
-                $newJarName = $_GET["jarName"];
-                $newJarCode = $_GET["jarCode"];
+                
 
                 if($newJarName != ""){
+                    echo "Entered function";
                     insertNewJar($newJarName, $userID, $db);
                     header("Refresh:0");
                     
-                    //$newJarName = "";//TODO fix the 2 jar bug. related to the refresh required bug
+                    $newJarName = "";
                 }
                 if($newJarCode != ""){
                     joinNewJar($userID, $db, $newJarCode);
