@@ -148,7 +148,7 @@ $userID = $_SESSION['user_id'];
             function printTotal(){
                 echo "<p> $";
                 echo $GLOBALS['jarTotal']; 
-                echo "<br>"
+                echo "<br>";
                 echo $GLOBALS['jarName'];
                 echo "</p>";
                 
