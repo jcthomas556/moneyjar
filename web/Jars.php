@@ -166,6 +166,9 @@ $userID = $_SESSION['user_id'];
         <?php   
 
             function insertNewJar($newJarName, $userID, $db){
+                echo "USer ID = " . $userID;
+
+
                 $length = 7;
                 $nums = '0123456789';
                 for ($p = 0; $p < $length-1; $p++){
