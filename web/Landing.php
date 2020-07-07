@@ -140,7 +140,7 @@ include('database_connection.php');
                                 <label for="psw"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="password" required>
                                 <br><br>
-                                <button type="submit" onclick=checkCredentials();>Login</button>
+                                <button type="submit" onclick=checkCredentials(); class="btn btn-light">Login</button>
                                 <label>
                                     <input type="checkbox" checked="checked" name="remember"> Remember me
                                 </label>
@@ -176,7 +176,7 @@ include('database_connection.php');
                                 <label for="password"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="password2" required>
                                 <br><br>
-                                <button type="submit" onclick=checkCredentials();>Sign Up</button>
+                                <button type="submit" onclick=checkCredentials(); class="btn btn-light">Sign Up</button>
                                 
                             </div>
                         </div>

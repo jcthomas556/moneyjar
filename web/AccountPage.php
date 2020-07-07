@@ -92,7 +92,7 @@ $userID = $_SESSION['user_id'];
                             <br><br>
 
 
-                            <button onclick="document.getElementById('joinJar').style.display='block'">Join A Jar</button>
+                            <button onclick="document.getElementById('joinJar').style.display='block'" class="btn btn-light">Join A Jar</button>
                         
                             <!-- The Modal -->
                             <div id="joinJar" class="modal">
@@ -108,7 +108,7 @@ $userID = $_SESSION['user_id'];
                                             <input type="hidden" name="joinJarRequest" value="true">
                                             <input type="text" placeholder="Enter Code" name="jarCode"  value="true" required>
                                             <br><br>                                            
-                                            <button type="submit">Join Jar</button>
+                                            <button type="submit" class="btn btn-light">Join Jar</button>
                                             
                                         </div>
                                 </form>
@@ -117,7 +117,7 @@ $userID = $_SESSION['user_id'];
                              <!-- The Modal END-->
 
 
-                            <button onclick="document.getElementById('createJar').style.display='block'">Create New Jar</button>    
+                            <button onclick="document.getElementById('createJar').style.display='block'" class="btn btn-light">Create New Jar</button>    
                             <br><br><br>
                                 <!-- The Modal -->
                                 <div id="createJar" class="modal">
@@ -135,7 +135,7 @@ $userID = $_SESSION['user_id'];
                                             <input type="text" placeholder="Enter Name" name="jarName" required>
                                             <br><br>
                                             
-                                            <button type="submit">Create Jar</button>
+                                            <button type="submit" class="btn btn-light">Create Jar</button>
                                             
                                         </div>
                                 </form>
