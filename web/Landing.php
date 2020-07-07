@@ -121,7 +121,7 @@ include('database_connection.php');
     <div class="container">
         <div class="text-center">
             <h2>Sign in</h2>
-                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+                <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-light">Login</button>
 
                 <!-- The Modal -->
                 <div id="id01" class="modal">
@@ -155,7 +155,7 @@ include('database_connection.php');
                 
                 <br><br>
 
-                <button onclick="document.getElementById('id02').style.display='block'">Sign Up</button>
+                <button onclick="document.getElementById('id02').style.display='block'" class="btn btn-light">Sign Up</button>
                 <div id="id02" class="modal">
                     <span onclick="document.getElementById('id02').style.display='none'" class="close"
                         title="Close Modal">&times;</span>

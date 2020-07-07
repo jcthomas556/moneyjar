@@ -32,6 +32,7 @@ $userID = $_SESSION['user_id'];
 
     <div >
         <form action = "AccountPage.php", method = 'post'>
+        <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
             <button onclick="checkUserAccount()" type="submit" name="accountPageButton" class="btn btn-success pull-right" aria-label="right Align">
                 <span class="glyphicon glyphicon-user btn-success btn-lg" aria-hidden="true"></span>
             </button>
@@ -39,7 +40,7 @@ $userID = $_SESSION['user_id'];
             <button onclick='goToJars()' class='btn btn-success' aria-label='right Align'> 
                 <span class='glyphicon glyphicon-oil btn-success btn-lg' aria-hidden='true'></span> 
             </button>
-            <button onclick='signOut()' class='btn btn-success pull-right' aria-label='right Align'> <span class='glyphicon glyphicon-log-out btn-success btn-lg btn-block' aria-hidden='true'></span> </button>
+            
 
     </div>
 
