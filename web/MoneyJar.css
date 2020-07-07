@@ -86,3 +86,7 @@
   #signedInMessage{
     color: blue;
   }
+
+  h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
