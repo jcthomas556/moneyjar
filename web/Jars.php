@@ -146,11 +146,11 @@ $userID = $_SESSION['user_id'];
 
         <?php
             function printTotal(){
-                echo "<p> $";
-                echo $GLOBALS['jarTotal']; 
-                echo "<br>";
-                echo $GLOBALS['jarName'];
-                echo "</p>";
+                echo "<h3> $";
+                echo $GLOBALS['jarName']; 
+                echo " has <br>";
+                echo $GLOBALS['jarTotal'];
+                echo "in it. </h3>";
                 
             }
         ?>
