@@ -45,7 +45,7 @@ $userID = $_SESSION['user_id'];
         <h1>Your Jars</h1>
 
         <tr>
-            <td>Jars</td>
+            <td>""</td>
 
             <td>
                 <form action="Jars.php" method="GET">
